@@ -27384,19 +27384,19 @@ const MainView = ()=>{
         {
             id: 1,
             title: "Adaptation",
-            image: "https://images-na.ssl-images-amazon.com/images/I/51InjRPaF7L._SX377_BO1,204,203,200_.jpg",
+            image: "https://minimovieposters.com/cdn/shop/products/MPW-101495-a_1024x1024.jpg?v=1571439883",
             director: "Spike Jonze"
         },
         {
             id: 2,
             title: "I Heart Huckabees",
-            image: "https://images-na.ssl-images-amazon.com/images/I/51WAikRq37L._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
+            image: "https://imgs.search.brave.com/6hBIz1P3eKQq9Rao9fdLTezMUaAbr8ObXf5YlVCdGNc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/cG9zdGVyaXRhdGku/Y29tL3Bvc3RlcnMv/MDAwLzAwMC8wMzIv/MTU4L2ktaGVhcnQt/aHVja2FiZWVzLW1k/LXdlYi5qcGc",
             director: "David O. Russell"
         },
         {
             id: 3,
             title: "REDLINE",
-            image: "https://images-na.ssl-images-amazon.com/images/I/5131OWtQRaL._SX381_BO1,204,203,200_.jpg",
+            image: "https://m.media-amazon.com/images/I/61lT0bkuHkL._AC_.jpg",
             director: "Takeshi Koike"
         }
     ]);
@@ -27435,7 +27435,7 @@ const MainView = ()=>{
         columnNumber: 5
     }, undefined);
 };
-_s(MainView, "G2GJ+KMxPk/IMsC/NTXJaUzF7J8=");
+_s(MainView, "hJPZoz3ADb2iTC4lqjx6lEtzlFo=");
 _c = MainView;
 var _c;
 $RefreshReg$(_c, "MainView");
