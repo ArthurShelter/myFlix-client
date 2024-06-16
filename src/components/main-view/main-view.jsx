@@ -35,16 +35,10 @@ export const MainView = () => {
   useEffect(() => {
     fetch("https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/movies")
       .then((response) => response.json())
-      .then((data) => {
-        const moviesFromApi = data.docs.map((doc) => {
-          return {
-            id: doc.key,
-            title: doc.title,
-            director: doc.director
-          };
-        });
-        setMovies(moviesFromApi);
-      });
+      .then(movies => {
+        setMovies(movies)
+    })
+
   }, []);
 
   if (selectedMovie) {
@@ -62,7 +56,7 @@ export const MainView = () => {
       {movies.map((movie) => {
         return (
           <MovieCard
-            key={movie.id}
+            key={movie._id}
             movie={movie}
             onMovieClick={(newSelectedMovie) => {
               setSelectedMovie(newSelectedMovie);
