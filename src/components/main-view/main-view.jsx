@@ -4,6 +4,10 @@ import { MovieCard } from "../movie-card/movie-card";
 
 import { MovieView } from "../movie-view/movie-view";
 
+import { LoginView } from "../login-view/login-view";
+
+import { SignupView } from "../signup-view/signup-view";
+
 // {
 //   id: 1,
 //   title: "Adaptation",
@@ -27,19 +31,52 @@ import { MovieView } from "../movie-view/movie-view";
 // },
 
 export const MainView = () => {
+  const storedUser = JSON.parse(localStorage.getItem("user"));
+
+  const storedToken = localStorage.getItem("token");
+
+  const [user, setUser] = useState(null);
+
+  const [token, setToken] = useState(null);
+
   const [movies, setMovies] = useState([]);
 
   const [selectedMovie, setSelectedMovie] = useState(null);
 
-  
   useEffect(() => {
-    fetch("https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/movies")
-      .then((response) => response.json())
-      .then(movies => {
-        setMovies(movies)
-    })
 
-  }, []);
+    if (!token) return;
+
+    fetch("https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/movies", {headers: { Authorization: `Bearer ${token}`}, })
+      .then((response) => response.json())
+      .then((data) => {
+        const moviesFromApi = data.docs.map((doc) => {
+          return {
+            id: doc._id,
+            Title: doc.Title,
+            Director: doc.Director.name
+          };
+        });
+
+        setMovies(moviesFromApi);
+      });
+
+  }, [token]);
+
+  if (!user) {
+    return (
+      <>
+        <LoginView
+          onLoggedIn={(user, token) => {
+            setUser(user);
+            setToken(token);
+          }}
+        />
+        or
+        <SignupView />
+      </>
+    );
+  }
 
   if (selectedMovie) {
     return (
@@ -53,17 +90,29 @@ export const MainView = () => {
 
   return (
     <div>
-      {movies.map((movie) => {
-        return (
-          <MovieCard
-            key={movie._id}
-            movie={movie}
-            onMovieClick={(newSelectedMovie) => {
-              setSelectedMovie(newSelectedMovie);
-            }}
-          />
-        );
-      })}
+      <div>
+        {movies.map((movie) => {
+          return (
+            <MovieCard
+              key={movie.id}
+              movie={movie}
+              onMovieClick={(newSelectedMovie) => {
+                setSelectedMovie(newSelectedMovie);
+              }}
+            />
+          );
+        })}
+      </div>
+      <button
+        onClick={() => {
+          setUser(null);
+          setToken(null);
+          localStorage.clear();
+        }}
+      >
+        Logout
+      </button>
     </div>
+
   );
 };
