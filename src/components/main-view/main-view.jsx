@@ -28,14 +28,18 @@ export const MainView = () => {
     fetch("https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/movies", {headers: { Authorization: `Bearer ${token}`}, })
       .then((response) => response.json())
       .then((data) => {
-        const moviesFromApi = data.docs.map((doc) => {
+        console.log(data);
+        const moviesFromApi = data.map((movie) => {
           return {
-            id: doc._id,
-            Title: doc.Title,
-            Director: doc.Director.name
+            id: movie._id,
+            Title: movie.Title,
+            Genre: movie.Genre,
+            Description: movie.Description,
+            Director: movie.Director?.Name,
+            ImagePath: movie.ImagePath
           };
         });
-
+        console.log(moviesFromApi);
         setMovies(moviesFromApi);
       });
 
@@ -69,7 +73,7 @@ export const MainView = () => {
   return (
     <div>
       <div>
-        {movies.map((movie) => {
+        {movies.map((movie) => (
             <MovieCard
               key={movie.id}
               movie={movie}
@@ -78,7 +82,7 @@ export const MainView = () => {
               }}
             />
 
-        })}
+        ))}
       </div>
       <button
         onClick={() => {
