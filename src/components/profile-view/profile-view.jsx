@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from "react";
+import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
-import MovieCard from '../movie-card/movie-card';
+import { MovieCard } from "../movie-card/movie-card";
 
-const ProfileView = ({ user, token, movies, onLoggedOut }) => {
+export const ProfileView = ({ user, token, movies, onLoggedOut }) => {
   const [userInfo, setUserInfo] = useState({});
   const [favoriteMovies, setFavoriteMovies] = useState([]);
   const [formData, setFormData] = useState({
     username: '',
     password: '',
     email: '',
-    dateOfBirth: ''
+    BirthDate: ''
   });
 
   useEffect(() => {
@@ -27,7 +28,7 @@ const ProfileView = ({ user, token, movies, onLoggedOut }) => {
         username: data.Username,
         password: '',
         email: data.Email,
-        dateOfBirth: data.BirthDate
+        BirthDate: data.BirthDate
       });
       setFavoriteMovies(movies.filter(m => data.FavoriteMovies.includes(m._id)));
     })
@@ -47,7 +48,7 @@ const ProfileView = ({ user, token, movies, onLoggedOut }) => {
         Username: formData.username,
         Password: formData.password,
         Email: formData.email,
-        Birthday: formData.dateOfBirth
+        BirthDate: formData.BirthDate
       })
     })
     .then(response => response.json())
@@ -108,8 +109,8 @@ const ProfileView = ({ user, token, movies, onLoggedOut }) => {
         <label>Date of Birth:</label>
         <input
           type="date"
-          value={formData.dateOfBirth}
-          onChange={e => setFormData({ ...formData, dateOfBirth: e.target.value })}
+          value={formData.BirthDate}
+          onChange={e => setFormData({ ...formData, BirthDate: e.target.value })}
         />
       </div>
       <button onClick={handleUpdate}>Update Profile</button>
@@ -127,4 +128,5 @@ const ProfileView = ({ user, token, movies, onLoggedOut }) => {
   );
 };
 
-export default ProfileView;
+// I think not needed
+// export default ProfileView;
