@@ -7,7 +7,7 @@ export const SignupView = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const [birthday, setBirthday] = useState("");
+  const [BirthDate, setBirthDate] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -15,7 +15,7 @@ export const SignupView = () => {
       Username: username,
       Password: password,
       Email: email,
-      BirthDate: birthday,
+      BirthDate: BirthDate,
     };
 
     fetch("https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/users", {
@@ -66,8 +66,8 @@ export const SignupView = () => {
         <Form.Label>Birthday:</Form.Label>
         <Form.Control
           type="date"
-          value={birthday}
-          onChange={(e) => setBirthday(e.target.value)}
+          value={BirthdDate}
+          onChange={(e) => setBirthDate(e.target.value)}
           required
         />
       </Form.Group>
