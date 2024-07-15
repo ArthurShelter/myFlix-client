@@ -10,7 +10,7 @@ import { NavigationBar } from "../navigation-bar/navigation-bar";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, Link } from "react-router-dom";
 
 
 export const MainView = () => {
@@ -96,7 +96,7 @@ export const MainView = () => {
                 {!user ? (
                   <Navigate to="/login" replace />
                 ) : movies.length === 0 ? (
-                  <Col>The List is empty!</Col>
+                  <Col>The List is empty! movieId</Col>
                 ) : (
                   <Col md={8}>
                     <MovieView movies={movies} />
@@ -112,7 +112,7 @@ export const MainView = () => {
                 {!user ? (
                   <Navigate to="/login" replace />
                 ) : movies.length === 0 ? (
-                  <Col>The list is empty!</Col>
+                  <Col>The list is empty! slash </Col>
                 ) : (
                   <>
                     {movies.map((movie) => (
@@ -132,7 +132,7 @@ export const MainView = () => {
                 {!user ? (
                   <Navigate to="/login" replace />
                 ) : movies.length === 0 ? (
-                  <Col>The list is empty!</Col>
+                  <Col>The list is empty! profile </Col>
                 ) : (
                     <Col md={8}>
                       <ProfileView />
