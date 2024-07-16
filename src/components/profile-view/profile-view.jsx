@@ -10,7 +10,7 @@ export const ProfileView = ({ user, token, movies, onLoggedOut }) => {
     username: '',
     password: '',
     email: '',
-    BirthDate: ''
+    birthDate: ''
   });
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export const ProfileView = ({ user, token, movies, onLoggedOut }) => {
         username: data.Username,
         password: '',
         email: data.Email,
-        BirthDate: data.BirthDate
+        birthDate: data.BirthDate
       });
       setFavoriteMovies(movies.filter(m => data.FavoriteMovies.includes(m._id)));
     })
@@ -48,7 +48,7 @@ export const ProfileView = ({ user, token, movies, onLoggedOut }) => {
         Username: formData.username,
         Password: formData.password,
         Email: formData.email,
-        BirthDate: formData.BirthDate
+        BirthDate: formData.birthDate
       })
     })
     .then(response => response.json())
@@ -109,8 +109,8 @@ export const ProfileView = ({ user, token, movies, onLoggedOut }) => {
         <label>Date of Birth:</label>
         <input
           type="date"
-          value={formData.BirthDate}
-          onChange={e => setFormData({ ...formData, BirthDate: e.target.value })}
+          value={formData.birthDate}
+          onChange={e => setFormData({ ...formData, birthDate: e.target.value })}
         />
       </div>
       <button onClick={handleUpdate}>Update Profile</button>

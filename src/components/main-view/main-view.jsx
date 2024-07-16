@@ -51,7 +51,7 @@ export const MainView = () => {
 
   return (
     <BrowserRouter>
-      <NavigationBar onLoggedOut={() => {
+      <NavigationBar user={user} onLoggedOut={() => {
         setUser(null);
         setToken(null);
         localStorage.clear();
@@ -96,7 +96,7 @@ export const MainView = () => {
                 {!user ? (
                   <Navigate to="/login" replace />
                 ) : movies.length === 0 ? (
-                  <Col>The List is empty! movieId</Col>
+                  <Col>The List is empty!</Col>
                 ) : (
                   <Col md={8}>
                     <MovieView movies={movies} />
@@ -112,7 +112,7 @@ export const MainView = () => {
                 {!user ? (
                   <Navigate to="/login" replace />
                 ) : movies.length === 0 ? (
-                  <Col>The list is empty! slash </Col>
+                  <Col>The list is empty!</Col>
                 ) : (
                   <>
                     {movies.map((movie) => (
@@ -132,7 +132,7 @@ export const MainView = () => {
                 {!user ? (
                   <Navigate to="/login" replace />
                 ) : movies.length === 0 ? (
-                  <Col>The list is empty! profile </Col>
+                  <Col>The list is empty!</Col>
                 ) : (
                     <Col md={8}>
                       <ProfileView />
