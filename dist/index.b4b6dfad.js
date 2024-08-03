@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"3xV27":[function(require,module,exports) {
+})({"gjUm6":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -583,9 +583,9 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"aKYic":[function(require,module,exports) {
-var Refresh = require("e54a9075079e6e7e");
-var ErrorOverlay = require("c081a8d205bd62f1");
+},{}],"1xC6H":[function(require,module,exports) {
+var Refresh = require("6d18d6bd340e7473");
+var ErrorOverlay = require("74ad5ea14201648c");
 Refresh.injectIntoGlobalHook(window);
 window.$RefreshReg$ = function() {};
 window.$RefreshSig$ = function() {
@@ -604,11 +604,11 @@ window.addEventListener("parcelhmraccept", ()=>{
     ErrorOverlay.dismissRuntimeErrors();
 });
 
-},{"e54a9075079e6e7e":"lUXNp","c081a8d205bd62f1":"8RALx"}],"lUXNp":[function(require,module,exports) {
+},{"6d18d6bd340e7473":"786KC","74ad5ea14201648c":"1dldy"}],"786KC":[function(require,module,exports) {
 "use strict";
-module.exports = require("f56a1e2a028114ea");
+module.exports = require("96622d495519d4e");
 
-},{"f56a1e2a028114ea":"5dItj"}],"5dItj":[function(require,module,exports) {
+},{"96622d495519d4e":"hdge7"}],"hdge7":[function(require,module,exports) {
 /** @license React v0.9.0
  * react-refresh-runtime.development.js
  *
@@ -1068,8 +1068,8 @@ module.exports = require("f56a1e2a028114ea");
     exports.setSignature = setSignature;
 })();
 
-},{}],"8RALx":[function(require,module,exports) {
-var process = require("97461f699270475");
+},{}],"1dldy":[function(require,module,exports) {
+var process = require("d1546958eb39fdcf");
 !function(e, t) {
     module.exports = t();
 }(window, function() {
@@ -2799,7 +2799,7 @@ var process = require("97461f699270475");
     ]);
 });
 
-},{"97461f699270475":"d5jf4"}],"d5jf4":[function(require,module,exports) {
+},{"d1546958eb39fdcf":"d5jf4"}],"d5jf4":[function(require,module,exports) {
 // shim for using process in browser
 var process = module.exports = {};
 // cached from whatever global is present so that test runners that stub it
@@ -2991,7 +2991,7 @@ $RefreshReg$(_c, "MyFlixApplication");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./index.scss":"lJZlQ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"k2eh7","./components/main-view/main-view":"4gflv","react-bootstrap/Container":"hEdsw","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./index.scss":"lJZlQ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/main-view/main-view":"4gflv","react-bootstrap/Container":"hEdsw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27234,9 +27234,9 @@ module.exports = require("ef03b89c8fe2794e");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"lJZlQ":[function() {},{}],"k2eh7":[function(require,module,exports) {
+},{}],"lJZlQ":[function() {},{}],"km3Ru":[function(require,module,exports) {
 "use strict";
-var Refresh = require("906111486d12b5e");
+var Refresh = require("7422ead32dcc1e6b");
 function debounce(func, delay) {
     {
         let timeout = undefined;
@@ -27372,7 +27372,7 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"906111486d12b5e":"lUXNp"}],"4gflv":[function(require,module,exports) {
+},{"7422ead32dcc1e6b":"786KC"}],"4gflv":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$f7a6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27560,7 +27560,10 @@ const MainView = ()=>{
                                 }, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                                     children: movies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                             className: "mb-4",
-                                            md: 3,
+                                            xs: 12,
+                                            sm: 6,
+                                            md: 4,
+                                            lg: 3,
                                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
                                                 movie: movie
                                             }, void 0, false, {
@@ -27598,7 +27601,9 @@ const MainView = ()=>{
                                     columnNumber: 19
                                 }, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                     md: 8,
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileView.ProfileView), {}, void 0, false, {
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileView.ProfileView), {
+                                        user: user
+                                    }, void 0, false, {
                                         fileName: "src/components/main-view/main-view.jsx",
                                         lineNumber: 138,
                                         columnNumber: 23
@@ -27642,7 +27647,7 @@ $RefreshReg$(_c, "MainView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../movie-card/movie-card":"bwuIu","../movie-view/movie-view":"ggaUx","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"k2eh7","../login-view/login-view":"9YtA0","../signup-view/signup-view":"4OGiN","react-bootstrap/Row":"cMC39","react-bootstrap/Col":"2L2I6","../navigation-bar/navigation-bar":"bsPVM","react-router-dom":"9xmpe","../profile-view/profile-view":"2vVqf"}],"bwuIu":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../movie-card/movie-card":"bwuIu","../movie-view/movie-view":"ggaUx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../login-view/login-view":"9YtA0","../signup-view/signup-view":"4OGiN","react-bootstrap/Row":"cMC39","react-bootstrap/Col":"2L2I6","../navigation-bar/navigation-bar":"bsPVM","react-router-dom":"9xmpe","../profile-view/profile-view":"2vVqf"}],"bwuIu":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$67b2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27659,23 +27664,33 @@ var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _reactBootstrap = require("react-bootstrap");
 var _reactRouterDom = require("react-router-dom");
+var _movieCardScss = require("./movie-card.scss");
 const MovieCard = ({ movie })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card), {
         className: "h-100",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Body, {
             children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Img, {
+                    variant: "top",
+                    className: "card-poster",
+                    src: movie.ImagePath
+                }, void 0, false, {
+                    fileName: "src/components/movie-card/movie-card.jsx",
+                    lineNumber: 12,
+                    columnNumber: 9
+                }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Title, {
                     children: movie.Title
                 }, void 0, false, {
                     fileName: "src/components/movie-card/movie-card.jsx",
-                    lineNumber: 12,
+                    lineNumber: 13,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Text, {
                     children: movie.Director
                 }, void 0, false, {
                     fileName: "src/components/movie-card/movie-card.jsx",
-                    lineNumber: 13,
+                    lineNumber: 14,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -27685,12 +27700,12 @@ const MovieCard = ({ movie })=>{
                         children: "Open"
                     }, void 0, false, {
                         fileName: "src/components/movie-card/movie-card.jsx",
-                        lineNumber: 15,
+                        lineNumber: 16,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/movie-card/movie-card.jsx",
-                    lineNumber: 14,
+                    lineNumber: 15,
                     columnNumber: 9
                 }, undefined)
             ]
@@ -27721,7 +27736,7 @@ $RefreshReg$(_c, "MovieCard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"k2eh7","prop-types":"7wKI2","react-bootstrap":"3AD9A","react-router-dom":"9xmpe","react":"21dqq"}],"di2gD":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","prop-types":"7wKI2","react-bootstrap":"3AD9A","react-router-dom":"9xmpe","react":"21dqq","./movie-card.scss":"d6HH4"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -28836,7 +28851,7 @@ var _toggleButtonGroupDefault = parcelHelpers.interopDefault(_toggleButtonGroup)
 var _tooltip = require("./Tooltip");
 var _tooltipDefault = parcelHelpers.interopDefault(_tooltip);
 
-},{"./Accordion":false,"./AccordionContext":false,"./AccordionCollapse":false,"./AccordionButton":false,"./AccordionBody":false,"./AccordionHeader":false,"./AccordionItem":false,"./Alert":false,"./AlertHeading":false,"./AlertLink":false,"./Anchor":false,"./Badge":false,"./Breadcrumb":false,"./BreadcrumbItem":false,"./Button":"aPzUt","./ButtonGroup":false,"./ButtonToolbar":false,"./Card":"lAynp","./CardBody":false,"./CardFooter":false,"./CardGroup":false,"./CardHeader":false,"./CardImg":false,"./CardImgOverlay":false,"./CardLink":false,"./CardSubtitle":false,"./CardText":false,"./CardTitle":false,"./Carousel":false,"./CarouselCaption":false,"./CarouselItem":false,"./CloseButton":false,"./Col":false,"./Collapse":false,"./Container":"hEdsw","./Dropdown":false,"./DropdownButton":false,"./DropdownDivider":false,"./DropdownHeader":false,"./DropdownItem":false,"./DropdownItemText":false,"./DropdownMenu":false,"./DropdownToggle":false,"./Fade":false,"./Figure":false,"./FigureCaption":false,"./FigureImage":false,"./Form":false,"./FormControl":false,"./FormCheck":false,"./FormFloating":false,"./FloatingLabel":false,"./FormGroup":false,"./FormLabel":false,"./FormText":false,"./FormSelect":false,"./Image":false,"./InputGroup":false,"./ListGroup":false,"./ListGroupItem":false,"./Modal":false,"./ModalBody":false,"./ModalDialog":false,"./ModalFooter":false,"./ModalHeader":false,"./ModalTitle":false,"./Nav":"cXyL2","./Navbar":"1mHjo","./NavbarBrand":false,"./NavbarCollapse":false,"./NavbarOffcanvas":false,"./NavbarText":false,"./NavbarToggle":false,"./NavDropdown":false,"./NavItem":false,"./NavLink":false,"./Offcanvas":false,"./OffcanvasBody":false,"./OffcanvasHeader":false,"./OffcanvasTitle":false,"./OffcanvasToggling":false,"./Overlay":false,"./OverlayTrigger":false,"./PageItem":false,"./Pagination":false,"./Placeholder":false,"./PlaceholderButton":false,"./Popover":false,"./PopoverBody":false,"./PopoverHeader":false,"./ProgressBar":false,"./Ratio":false,"./Row":false,"./Spinner":false,"./SplitButton":false,"./SSRProvider":false,"./Stack":false,"./Tab":false,"./TabContainer":false,"./TabContent":false,"./Table":false,"./TabPane":false,"./Tabs":false,"./ThemeProvider":false,"./Toast":false,"./ToastBody":false,"./ToastContainer":false,"./ToastHeader":false,"./ToggleButton":false,"./ToggleButtonGroup":false,"./Tooltip":false,"@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"aPzUt":[function(require,module,exports) {
+},{"./Accordion":false,"./AccordionContext":false,"./AccordionCollapse":false,"./AccordionButton":false,"./AccordionBody":false,"./AccordionHeader":false,"./AccordionItem":false,"./Alert":false,"./AlertHeading":false,"./AlertLink":false,"./Anchor":false,"./Badge":false,"./Breadcrumb":false,"./BreadcrumbItem":false,"./Button":"aPzUt","./ButtonGroup":false,"./ButtonToolbar":false,"./Card":"lAynp","./CardBody":false,"./CardFooter":false,"./CardGroup":false,"./CardHeader":false,"./CardImg":false,"./CardImgOverlay":false,"./CardLink":false,"./CardSubtitle":false,"./CardText":false,"./CardTitle":false,"./Carousel":false,"./CarouselCaption":false,"./CarouselItem":false,"./CloseButton":false,"./Col":"2L2I6","./Collapse":false,"./Container":"hEdsw","./Dropdown":false,"./DropdownButton":false,"./DropdownDivider":false,"./DropdownHeader":false,"./DropdownItem":false,"./DropdownItemText":false,"./DropdownMenu":false,"./DropdownToggle":false,"./Fade":false,"./Figure":false,"./FigureCaption":false,"./FigureImage":false,"./Form":false,"./FormControl":false,"./FormCheck":false,"./FormFloating":false,"./FloatingLabel":false,"./FormGroup":false,"./FormLabel":false,"./FormText":false,"./FormSelect":false,"./Image":false,"./InputGroup":false,"./ListGroup":false,"./ListGroupItem":false,"./Modal":false,"./ModalBody":false,"./ModalDialog":false,"./ModalFooter":false,"./ModalHeader":false,"./ModalTitle":false,"./Nav":"cXyL2","./Navbar":"1mHjo","./NavbarBrand":false,"./NavbarCollapse":false,"./NavbarOffcanvas":false,"./NavbarText":false,"./NavbarToggle":false,"./NavDropdown":false,"./NavItem":false,"./NavLink":false,"./Offcanvas":false,"./OffcanvasBody":false,"./OffcanvasHeader":false,"./OffcanvasTitle":false,"./OffcanvasToggling":false,"./Overlay":false,"./OverlayTrigger":false,"./PageItem":false,"./Pagination":false,"./Placeholder":false,"./PlaceholderButton":false,"./Popover":false,"./PopoverBody":false,"./PopoverHeader":false,"./ProgressBar":false,"./Ratio":false,"./Row":"cMC39","./Spinner":false,"./SplitButton":false,"./SSRProvider":false,"./Stack":false,"./Tab":false,"./TabContainer":false,"./TabContent":false,"./Table":false,"./TabPane":false,"./Tabs":false,"./ThemeProvider":false,"./Toast":false,"./ToastBody":false,"./ToastContainer":false,"./ToastHeader":false,"./ToggleButton":false,"./ToggleButtonGroup":false,"./Tooltip":false,"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aPzUt":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -28865,7 +28880,7 @@ const Button = /*#__PURE__*/ _react.forwardRef(({ as, bsPrefix, variant = "prima
 Button.displayName = "Button";
 exports.default = Button;
 
-},{"classnames":"jocGM","react":"21dqq","@restart/ui/Button":"8YUbR","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"jocGM":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","@restart/ui/Button":"8YUbR","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jocGM":[function(require,module,exports) {
 /*!
 	Copyright (c) 2018 Jed Watson.
 	Licensed under the MIT License (MIT), see
@@ -28995,7 +29010,7 @@ const Button = /*#__PURE__*/ _react.forwardRef((_ref, ref)=>{
 Button.displayName = "Button";
 exports.default = Button;
 
-},{"react":"21dqq","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"6AEwr":[function(require,module,exports) {
+},{"react":"21dqq","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6AEwr":[function(require,module,exports) {
 "use strict";
 module.exports = require("c4c10cbba9862d5f");
 
@@ -29939,7 +29954,7 @@ function createBootstrapComponent(Component, opts) {
 }
 exports.default = ThemeProvider;
 
-},{"react":"21dqq","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"lAynp":[function(require,module,exports) {
+},{"react":"21dqq","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lAynp":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -29991,7 +30006,7 @@ exports.default = Object.assign(Card, {
     ImgOverlay: (0, _cardImgOverlayDefault.default)
 });
 
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","./CardBody":"iN1Jc","./CardFooter":"jUi26","./CardHeader":"dXnnx","./CardImg":"1reTi","./CardImgOverlay":"Bi8dC","./CardLink":"9uFCo","./CardSubtitle":"i2BiN","./CardText":"aUUmg","./CardTitle":"79rSZ","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"iN1Jc":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","./CardBody":"iN1Jc","./CardFooter":"jUi26","./CardHeader":"dXnnx","./CardImg":"1reTi","./CardImgOverlay":"Bi8dC","./CardLink":"9uFCo","./CardSubtitle":"i2BiN","./CardText":"aUUmg","./CardTitle":"79rSZ","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iN1Jc":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -30011,7 +30026,7 @@ const CardBody = /*#__PURE__*/ _react.forwardRef(({ className, bsPrefix, as: Com
 CardBody.displayName = "CardBody";
 exports.default = CardBody;
 
-},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"jUi26":[function(require,module,exports) {
+},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jUi26":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -30031,7 +30046,7 @@ const CardFooter = /*#__PURE__*/ _react.forwardRef(({ className, bsPrefix, as: C
 CardFooter.displayName = "CardFooter";
 exports.default = CardFooter;
 
-},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"dXnnx":[function(require,module,exports) {
+},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dXnnx":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -30062,7 +30077,7 @@ as: Component = "div", ...props }, ref)=>{
 CardHeader.displayName = "CardHeader";
 exports.default = CardHeader;
 
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","./CardHeaderContext":"36cNB","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"36cNB":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","./CardHeaderContext":"36cNB","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"36cNB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -30071,7 +30086,7 @@ const context = /*#__PURE__*/ _react.createContext(null);
 context.displayName = "CardHeaderContext";
 exports.default = context;
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"1reTi":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1reTi":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -30092,7 +30107,7 @@ const CardImg = /*#__PURE__*/ _react.forwardRef(// Need to define the default "a
 CardImg.displayName = "CardImg";
 exports.default = CardImg;
 
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"Bi8dC":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"Bi8dC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -30112,7 +30127,7 @@ const CardImgOverlay = /*#__PURE__*/ _react.forwardRef(({ className, bsPrefix, a
 CardImgOverlay.displayName = "CardImgOverlay";
 exports.default = CardImgOverlay;
 
-},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"9uFCo":[function(require,module,exports) {
+},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9uFCo":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -30132,7 +30147,7 @@ const CardLink = /*#__PURE__*/ _react.forwardRef(({ className, bsPrefix, as: Com
 CardLink.displayName = "CardLink";
 exports.default = CardLink;
 
-},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"i2BiN":[function(require,module,exports) {
+},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"i2BiN":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -30155,7 +30170,7 @@ const CardSubtitle = /*#__PURE__*/ _react.forwardRef(({ className, bsPrefix, as:
 CardSubtitle.displayName = "CardSubtitle";
 exports.default = CardSubtitle;
 
-},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","./divWithClassName":"eDg7t","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"eDg7t":[function(require,module,exports) {
+},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","./divWithClassName":"eDg7t","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eDg7t":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -30168,7 +30183,7 @@ exports.default = (className)=>/*#__PURE__*/ _react.forwardRef((p, ref)=>/*#__PU
             className: (0, _classnamesDefault.default)(p.className, className)
         }));
 
-},{"react":"21dqq","classnames":"jocGM","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"aUUmg":[function(require,module,exports) {
+},{"react":"21dqq","classnames":"jocGM","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aUUmg":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -30188,7 +30203,7 @@ const CardText = /*#__PURE__*/ _react.forwardRef(({ className, bsPrefix, as: Com
 CardText.displayName = "CardText";
 exports.default = CardText;
 
-},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"79rSZ":[function(require,module,exports) {
+},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"79rSZ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -30211,7 +30226,7 @@ const CardTitle = /*#__PURE__*/ _react.forwardRef(({ className, bsPrefix, as: Co
 CardTitle.displayName = "CardTitle";
 exports.default = CardTitle;
 
-},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","./divWithClassName":"eDg7t","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"1wmVl":[function(require,module,exports) {
+},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","./divWithClassName":"eDg7t","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1wmVl":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _propTypes = require("prop-types");
@@ -30242,7 +30257,7 @@ CloseButton.displayName = "CloseButton";
 CloseButton.propTypes = propTypes;
 exports.default = CloseButton;
 
-},{"prop-types":"7wKI2","react":"21dqq","classnames":"jocGM","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"2L2I6":[function(require,module,exports) {
+},{"prop-types":"7wKI2","react":"21dqq","classnames":"jocGM","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2L2I6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "useCol", ()=>useCol);
@@ -30295,7 +30310,7 @@ const Col = /*#__PURE__*/ _react.forwardRef(// Need to define the default "as" d
 Col.displayName = "Col";
 exports.default = Col;
 
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"acuzI":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"acuzI":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -30398,7 +30413,7 @@ const Collapse = /*#__PURE__*/ (0, _reactDefault.default).forwardRef(({ onEnter,
 // @ts-ignore
 exports.default = Collapse;
 
-},{"classnames":"jocGM","dom-helpers/css":"klmhr","react":"21dqq","react-transition-group/Transition":"cKsrS","./transitionEndListener":"68oh7","./createChainedFunction":"1KNLM","./triggerBrowserReflow":"eWjs5","./TransitionWrapper":"jKUqZ","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"klmhr":[function(require,module,exports) {
+},{"classnames":"jocGM","dom-helpers/css":"klmhr","react":"21dqq","react-transition-group/Transition":"cKsrS","./transitionEndListener":"68oh7","./createChainedFunction":"1KNLM","./triggerBrowserReflow":"eWjs5","./TransitionWrapper":"jKUqZ","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"klmhr":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _getComputedStyle = require("./getComputedStyle");
@@ -30422,7 +30437,7 @@ function style(node, property) {
 }
 exports.default = style;
 
-},{"./getComputedStyle":"adqGa","./hyphenateStyle":"hbsNp","./isTransform":"gnxjD","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"adqGa":[function(require,module,exports) {
+},{"./getComputedStyle":"adqGa","./hyphenateStyle":"hbsNp","./isTransform":"gnxjD","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"adqGa":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>getComputedStyle);
@@ -30432,7 +30447,7 @@ function getComputedStyle(node, psuedoElement) {
     return (0, _ownerWindowDefault.default)(node).getComputedStyle(node, psuedoElement);
 }
 
-},{"./ownerWindow":"3nPSD","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"3nPSD":[function(require,module,exports) {
+},{"./ownerWindow":"3nPSD","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3nPSD":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>ownerWindow);
@@ -30443,7 +30458,7 @@ function ownerWindow(node) {
     return doc && doc.defaultView || window;
 }
 
-},{"./ownerDocument":"2WpOk","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"2WpOk":[function(require,module,exports) {
+},{"./ownerDocument":"2WpOk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2WpOk":[function(require,module,exports) {
 /**
  * Returns the owner document of a given element.
  * 
@@ -30455,7 +30470,7 @@ function ownerDocument(node) {
     return node && node.ownerDocument || document;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"hbsNp":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hbsNp":[function(require,module,exports) {
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -30470,7 +30485,7 @@ function hyphenateStyleName(string) {
     return (0, _hyphenateDefault.default)(string).replace(msPattern, "-ms-");
 }
 
-},{"./hyphenate":"3UJRr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"3UJRr":[function(require,module,exports) {
+},{"./hyphenate":"3UJRr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3UJRr":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>hyphenate);
@@ -30479,7 +30494,7 @@ function hyphenate(string) {
     return string.replace(rUpper, "-$1").toLowerCase();
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"gnxjD":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gnxjD":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>isTransform);
@@ -30488,7 +30503,7 @@ function isTransform(value) {
     return !!(value && supportedTransforms.test(value));
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"cKsrS":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cKsrS":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "UNMOUNTED", ()=>UNMOUNTED);
@@ -31004,7 +31019,7 @@ Transition.ENTERED = ENTERED;
 Transition.EXITING = EXITING;
 exports.default = Transition;
 
-},{"@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"adHgr","@babel/runtime/helpers/esm/inheritsLoose":"9u2Z8","prop-types":"7wKI2","react":"21dqq","react-dom":"j6uA9","./config":"cepoZ","./utils/PropTypes":"9Zqaa","./TransitionGroupContext":"47LXo","./utils/reflow":"V4VjQ","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"adHgr":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"adHgr","@babel/runtime/helpers/esm/inheritsLoose":"9u2Z8","prop-types":"7wKI2","react":"21dqq","react-dom":"j6uA9","./config":"cepoZ","./utils/PropTypes":"9Zqaa","./TransitionGroupContext":"47LXo","./utils/reflow":"V4VjQ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"adHgr":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>_objectWithoutPropertiesLoose);
@@ -31018,7 +31033,7 @@ function _objectWithoutPropertiesLoose(r, e) {
     return t;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"9u2Z8":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9u2Z8":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>_inheritsLoose);
@@ -31028,7 +31043,7 @@ function _inheritsLoose(t, o) {
     t.prototype = Object.create(o.prototype), t.prototype.constructor = t, (0, _setPrototypeOfJsDefault.default)(t, o);
 }
 
-},{"./setPrototypeOf.js":"3XDFA","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"3XDFA":[function(require,module,exports) {
+},{"./setPrototypeOf.js":"3XDFA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3XDFA":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>_setPrototypeOf);
@@ -31038,14 +31053,14 @@ function _setPrototypeOf(t, e) {
     }, _setPrototypeOf(t, e);
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"cepoZ":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cepoZ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 exports.default = {
     disabled: false
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"9Zqaa":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9Zqaa":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "timeoutsShape", ()=>timeoutsShape);
@@ -31077,14 +31092,14 @@ var classNamesShape = (0, _propTypesDefault.default).oneOfType([
     })
 ]);
 
-},{"prop-types":"7wKI2","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"47LXo":[function(require,module,exports) {
+},{"prop-types":"7wKI2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"47LXo":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 exports.default = (0, _reactDefault.default).createContext(null);
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"V4VjQ":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"V4VjQ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "forceReflow", ()=>forceReflow);
@@ -31092,7 +31107,7 @@ var forceReflow = function forceReflow(node) {
     return node.scrollTop;
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"68oh7":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"68oh7":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>transitionEndListener);
@@ -31116,7 +31131,7 @@ function transitionEndListener(element, handler) {
     }, duration + delay);
 }
 
-},{"dom-helpers/css":"klmhr","dom-helpers/transitionEnd":"7hVJq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"7hVJq":[function(require,module,exports) {
+},{"dom-helpers/css":"klmhr","dom-helpers/transitionEnd":"7hVJq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7hVJq":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>transitionEnd);
@@ -31157,7 +31172,7 @@ function transitionEnd(element, handler, duration, padding) {
     };
 }
 
-},{"./css":"klmhr","./listen":"1i4e7","./triggerEvent":"lQ70W","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"1i4e7":[function(require,module,exports) {
+},{"./css":"klmhr","./listen":"1i4e7","./triggerEvent":"lQ70W","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1i4e7":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _addEventListener = require("./addEventListener");
@@ -31172,7 +31187,7 @@ function listen(node, eventName, handler, options) {
 }
 exports.default = listen;
 
-},{"./addEventListener":"c5x2p","./removeEventListener":"la8JB","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"c5x2p":[function(require,module,exports) {
+},{"./addEventListener":"c5x2p","./removeEventListener":"la8JB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"c5x2p":[function(require,module,exports) {
 /* eslint-disable no-return-assign */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "optionsSupported", ()=>optionsSupported);
@@ -31221,12 +31236,12 @@ try {
 }
 exports.default = addEventListener;
 
-},{"./canUseDOM":"9AwUB","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"9AwUB":[function(require,module,exports) {
+},{"./canUseDOM":"9AwUB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9AwUB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 exports.default = !!(typeof window !== "undefined" && window.document && window.document.createElement);
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"la8JB":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"la8JB":[function(require,module,exports) {
 /**
  * A `removeEventListener` ponyfill
  * 
@@ -31243,7 +31258,7 @@ function removeEventListener(node, eventName, handler, options) {
 }
 exports.default = removeEventListener;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"lQ70W":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lQ70W":[function(require,module,exports) {
 /**
  * Triggers an event on a given element.
  * 
@@ -31264,7 +31279,7 @@ function triggerEvent(node, eventName, bubbles, cancelable) {
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"1KNLM":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1KNLM":[function(require,module,exports) {
 /**
  * Safe chained function
  *
@@ -31289,7 +31304,7 @@ function createChainedFunction(...funcs) {
 }
 exports.default = createChainedFunction;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"eWjs5":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eWjs5":[function(require,module,exports) {
 // reading a dimension prop will cause the browser to recalculate,
 // which will let our animations work
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -31300,7 +31315,7 @@ function triggerBrowserReflow(node) {
     node.offsetHeight;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"jKUqZ":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jKUqZ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -31366,7 +31381,7 @@ const TransitionWrapper = /*#__PURE__*/ (0, _reactDefault.default).forwardRef(({
 });
 exports.default = TransitionWrapper;
 
-},{"react":"21dqq","react-transition-group/Transition":"cKsrS","@restart/hooks/useMergedRefs":"6hhuo","./safeFindDOMNode":"XsXw9","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"6hhuo":[function(require,module,exports) {
+},{"react":"21dqq","react-transition-group/Transition":"cKsrS","@restart/hooks/useMergedRefs":"6hhuo","./safeFindDOMNode":"XsXw9","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6hhuo":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "mergeRefs", ()=>mergeRefs);
@@ -31405,7 +31420,7 @@ function mergeRefs(refA, refB) {
 }
 exports.default = useMergedRefs;
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"XsXw9":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"XsXw9":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>safeFindDOMNode);
@@ -31416,7 +31431,7 @@ function safeFindDOMNode(componentOrElement) {
     return componentOrElement != null ? componentOrElement : null;
 }
 
-},{"react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"hEdsw":[function(require,module,exports) {
+},{"react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hEdsw":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -31438,7 +31453,7 @@ as: Component = "div", className, ...props }, ref)=>{
 Container.displayName = "Container";
 exports.default = Container;
 
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"aH18S":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aH18S":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -31486,7 +31501,7 @@ const Fade = /*#__PURE__*/ _react.forwardRef(({ className, children, transitionC
 Fade.displayName = "Fade";
 exports.default = Fade;
 
-},{"classnames":"jocGM","react":"21dqq","react-transition-group/Transition":"cKsrS","./transitionEndListener":"68oh7","./triggerBrowserReflow":"eWjs5","./TransitionWrapper":"jKUqZ","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"iBZ80":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","react-transition-group/Transition":"cKsrS","./transitionEndListener":"68oh7","./triggerBrowserReflow":"eWjs5","./TransitionWrapper":"jKUqZ","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iBZ80":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -31551,7 +31566,7 @@ exports.default = Object.assign(Form, {
     FloatingLabel: (0, _floatingLabelDefault.default)
 });
 
-},{"classnames":"jocGM","prop-types":"7wKI2","react":"21dqq","./FormCheck":"idkr0","./FormControl":"iynMc","./FormFloating":"aj346","./FormGroup":"1qBHH","./FormLabel":"66epi","./FormRange":"8zsCO","./FormSelect":"hHWyB","./FormText":"ffeC7","./Switch":"9O81i","./FloatingLabel":"coYzo","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"idkr0":[function(require,module,exports) {
+},{"classnames":"jocGM","prop-types":"7wKI2","react":"21dqq","./FormCheck":"idkr0","./FormControl":"iynMc","./FormFloating":"aj346","./FormGroup":"1qBHH","./FormLabel":"66epi","./FormRange":"8zsCO","./FormSelect":"hHWyB","./FormText":"ffeC7","./Switch":"9O81i","./FloatingLabel":"coYzo","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"idkr0":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -31618,7 +31633,7 @@ exports.default = Object.assign(FormCheck, {
     Label: (0, _formCheckLabelDefault.default)
 });
 
-},{"classnames":"jocGM","react":"21dqq","./Feedback":"aWeg2","./FormCheckInput":"dPzD9","./FormCheckLabel":"fGhS2","./FormContext":"gjvSt","./ThemeProvider":"dVixI","./ElementChildren":"fdyAp","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"aWeg2":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","./Feedback":"aWeg2","./FormCheckInput":"dPzD9","./FormCheckLabel":"fGhS2","./FormContext":"gjvSt","./ThemeProvider":"dVixI","./ElementChildren":"fdyAp","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aWeg2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -31646,7 +31661,7 @@ Feedback.displayName = "Feedback";
 Feedback.propTypes = propTypes;
 exports.default = Feedback;
 
-},{"classnames":"jocGM","react":"21dqq","prop-types":"7wKI2","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"dPzD9":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","prop-types":"7wKI2","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dPzD9":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -31672,7 +31687,7 @@ as: Component = "input", ...props }, ref)=>{
 FormCheckInput.displayName = "FormCheckInput";
 exports.default = FormCheckInput;
 
-},{"classnames":"jocGM","react":"21dqq","./FormContext":"gjvSt","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"gjvSt":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","./FormContext":"gjvSt","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gjvSt":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -31681,7 +31696,7 @@ var _react = require("react");
 const FormContext = /*#__PURE__*/ _react.createContext({});
 exports.default = FormContext;
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"fGhS2":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fGhS2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -31705,7 +31720,7 @@ const FormCheckLabel = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, className, h
 FormCheckLabel.displayName = "FormCheckLabel";
 exports.default = FormCheckLabel;
 
-},{"classnames":"jocGM","react":"21dqq","./FormContext":"gjvSt","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"fdyAp":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","./FormContext":"gjvSt","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fdyAp":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "map", ()=>map);
@@ -31741,7 +31756,7 @@ var _react = require("react");
     return _react.Children.toArray(children).some((child)=>/*#__PURE__*/ _react.isValidElement(child) && child.type === type);
 }
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"iynMc":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iynMc":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -31776,7 +31791,7 @@ exports.default = Object.assign(FormControl, {
     Feedback: (0, _feedbackDefault.default)
 });
 
-},{"classnames":"jocGM","react":"21dqq","warning":"eUVzU","./Feedback":"aWeg2","./FormContext":"gjvSt","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"eUVzU":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","warning":"eUVzU","./Feedback":"aWeg2","./FormContext":"gjvSt","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eUVzU":[function(require,module,exports) {
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -31839,7 +31854,7 @@ const FormFloating = /*#__PURE__*/ _react.forwardRef(({ className, bsPrefix, as:
 FormFloating.displayName = "FormFloating";
 exports.default = FormFloating;
 
-},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"1qBHH":[function(require,module,exports) {
+},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1qBHH":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -31864,7 +31879,7 @@ as: Component = "div", ...props }, ref)=>{
 FormGroup.displayName = "FormGroup";
 exports.default = FormGroup;
 
-},{"react":"21dqq","./FormContext":"gjvSt","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"66epi":[function(require,module,exports) {
+},{"react":"21dqq","./FormContext":"gjvSt","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"66epi":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -31906,7 +31921,7 @@ as: Component = "label", bsPrefix, column = false, visuallyHidden = false, class
 FormLabel.displayName = "FormLabel";
 exports.default = FormLabel;
 
-},{"classnames":"jocGM","react":"21dqq","warning":"eUVzU","./Col":"2L2I6","./FormContext":"gjvSt","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"8zsCO":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","warning":"eUVzU","./Col":"2L2I6","./FormContext":"gjvSt","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8zsCO":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -31931,7 +31946,7 @@ const FormRange = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, className, id, ..
 FormRange.displayName = "FormRange";
 exports.default = FormRange;
 
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","./FormContext":"gjvSt","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"hHWyB":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","./FormContext":"gjvSt","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hHWyB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -31956,7 +31971,7 @@ const FormSelect = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, size, htmlSize, 
 FormSelect.displayName = "FormSelect";
 exports.default = FormSelect;
 
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","./FormContext":"gjvSt","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"ffeC7":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","./FormContext":"gjvSt","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ffeC7":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -31977,7 +31992,7 @@ const FormText = /*#__PURE__*/ _react.forwardRef(// Need to define the default "
 FormText.displayName = "FormText";
 exports.default = FormText;
 
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"9O81i":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9O81i":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -31995,7 +32010,7 @@ exports.default = Object.assign(Switch, {
     Label: (0, _formCheckDefault.default).Label
 });
 
-},{"react":"21dqq","./FormCheck":"idkr0","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"coYzo":[function(require,module,exports) {
+},{"react":"21dqq","./FormCheck":"idkr0","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"coYzo":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -32025,7 +32040,7 @@ const FloatingLabel = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, className, ch
 FloatingLabel.displayName = "FloatingLabel";
 exports.default = FloatingLabel;
 
-},{"classnames":"jocGM","react":"21dqq","./FormGroup":"1qBHH","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"cXyL2":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","./FormGroup":"1qBHH","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cXyL2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -32083,7 +32098,7 @@ exports.default = Object.assign(Nav, {
     Link: (0, _navLinkDefault.default)
 });
 
-},{"classnames":"jocGM","prop-types-extra/lib/all":"37Ank","react":"21dqq","uncontrollable":"b3yWY","@restart/ui/Nav":"fZdNd","./ThemeProvider":"dVixI","./NavbarContext":"dpn1g","./CardHeaderContext":"36cNB","./NavItem":"ew05W","./NavLink":"7geL8","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"37Ank":[function(require,module,exports) {
+},{"classnames":"jocGM","prop-types-extra/lib/all":"37Ank","react":"21dqq","uncontrollable":"b3yWY","@restart/ui/Nav":"fZdNd","./ThemeProvider":"dVixI","./NavbarContext":"dpn1g","./CardHeaderContext":"36cNB","./NavItem":"ew05W","./NavLink":"7geL8","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"37Ank":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -32160,7 +32175,7 @@ var _hookDefault = parcelHelpers.interopDefault(_hook);
 var _uncontrollable = require("./uncontrollable");
 var _uncontrollableDefault = parcelHelpers.interopDefault(_uncontrollable);
 
-},{"./hook":"cv9oS","./uncontrollable":"aqbCD","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"cv9oS":[function(require,module,exports) {
+},{"./hook":"cv9oS","./uncontrollable":"aqbCD","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cv9oS":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "useUncontrolledProp", ()=>useUncontrolledProp);
@@ -32221,7 +32236,7 @@ function useUncontrolled(props, config) {
     }, props);
 }
 
-},{"@babel/runtime/helpers/esm/extends":"fTBFS","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"adHgr","react":"21dqq","./utils":"7UQ73","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"fTBFS":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"fTBFS","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"adHgr","react":"21dqq","./utils":"7UQ73","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fTBFS":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>_extends);
@@ -32235,7 +32250,7 @@ function _extends() {
     }, _extends.apply(null, arguments);
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"7UQ73":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7UQ73":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "uncontrolledPropTypes", ()=>uncontrolledPropTypes);
@@ -32280,7 +32295,7 @@ function canAcceptRef(component) {
     return !!component && (typeof component !== "function" || component.prototype && component.prototype.isReactComponent);
 }
 
-},{"invariant":"d1QgR","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"d1QgR":[function(require,module,exports) {
+},{"invariant":"d1QgR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"d1QgR":[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -32468,7 +32483,7 @@ function uncontrollable(Component, controlledValues, methods) {
     return WrappedComponent;
 }
 
-},{"@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"adHgr","@babel/runtime/helpers/esm/extends":"fTBFS","@babel/runtime/helpers/esm/inheritsLoose":"9u2Z8","react":"21dqq","react-lifecycles-compat":"3f3fU","invariant":"d1QgR","./utils":"7UQ73","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"3f3fU":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"adHgr","@babel/runtime/helpers/esm/extends":"fTBFS","@babel/runtime/helpers/esm/inheritsLoose":"9u2Z8","react":"21dqq","react-lifecycles-compat":"3f3fU","invariant":"d1QgR","./utils":"7UQ73","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3f3fU":[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -32561,7 +32576,7 @@ function polyfill(Component) {
     return Component;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"fZdNd":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fZdNd":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _querySelectorAll = require("dom-helpers/querySelectorAll");
@@ -32692,7 +32707,7 @@ exports.default = Object.assign(Nav, {
     Item: (0, _navItemDefault.default)
 });
 
-},{"dom-helpers/querySelectorAll":"g5Sx6","react":"21dqq","@restart/hooks/useForceUpdate":"3Y4bz","@restart/hooks/useMergedRefs":"6hhuo","./NavContext":"j1SMA","./SelectableContext":"8zLqy","./TabContext":"cI3G3","./DataKey":"9vwZh","./NavItem":"2cGYS","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"g5Sx6":[function(require,module,exports) {
+},{"dom-helpers/querySelectorAll":"g5Sx6","react":"21dqq","@restart/hooks/useForceUpdate":"3Y4bz","@restart/hooks/useMergedRefs":"6hhuo","./NavContext":"j1SMA","./SelectableContext":"8zLqy","./TabContext":"cI3G3","./DataKey":"9vwZh","./NavItem":"2cGYS","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"g5Sx6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>qsa);
@@ -32701,7 +32716,7 @@ function qsa(element, selector) {
     return toArray(element.querySelectorAll(selector));
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"3Y4bz":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3Y4bz":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>useForceUpdate);
@@ -32713,7 +32728,7 @@ function useForceUpdate() {
     return dispatch;
 }
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"j1SMA":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"j1SMA":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -32721,7 +32736,7 @@ const NavContext = /*#__PURE__*/ _react.createContext(null);
 NavContext.displayName = "NavContext";
 exports.default = NavContext;
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"8zLqy":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8zLqy":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "makeEventKey", ()=>makeEventKey);
@@ -32733,14 +32748,14 @@ const makeEventKey = (eventKey, href = null)=>{
 };
 exports.default = SelectableContext;
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"cI3G3":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cI3G3":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
 const TabContext = /*#__PURE__*/ _react.createContext(null);
 exports.default = TabContext;
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"9vwZh":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9vwZh":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ATTRIBUTE_PREFIX", ()=>ATTRIBUTE_PREFIX);
@@ -32756,7 +32771,7 @@ function dataProp(property) {
     return `${PROPERTY_PREFIX}${property}`;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"2cGYS":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2cGYS":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "useNavItem", ()=>useNavItem);
@@ -32852,7 +32867,7 @@ const NavItem = /*#__PURE__*/ _react.forwardRef((_ref, ref)=>{
 NavItem.displayName = "NavItem";
 exports.default = NavItem;
 
-},{"react":"21dqq","@restart/hooks/useEventCallback":"7ONdq","./NavContext":"j1SMA","./SelectableContext":"8zLqy","./Button":"8YUbR","./DataKey":"9vwZh","./TabContext":"cI3G3","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"7ONdq":[function(require,module,exports) {
+},{"react":"21dqq","@restart/hooks/useEventCallback":"7ONdq","./NavContext":"j1SMA","./SelectableContext":"8zLqy","./Button":"8YUbR","./DataKey":"9vwZh","./TabContext":"cI3G3","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7ONdq":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>useEventCallback);
@@ -32868,7 +32883,7 @@ function useEventCallback(fn) {
     ]);
 }
 
-},{"react":"21dqq","./useCommittedRef":"g5BYG","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"g5BYG":[function(require,module,exports) {
+},{"react":"21dqq","./useCommittedRef":"g5BYG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"g5BYG":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -32891,7 +32906,7 @@ var _react = require("react");
 }
 exports.default = useCommittedRef;
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"dpn1g":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dpn1g":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -32901,7 +32916,7 @@ const context = /*#__PURE__*/ _react.createContext(null);
 context.displayName = "NavbarContext";
 exports.default = context;
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"ew05W":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ew05W":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -32921,7 +32936,7 @@ const NavItem = /*#__PURE__*/ _react.forwardRef(({ className, bsPrefix, as: Comp
 NavItem.displayName = "NavItem";
 exports.default = NavItem;
 
-},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"7geL8":[function(require,module,exports) {
+},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7geL8":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -32953,7 +32968,7 @@ const NavLink = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, className, as: Comp
 NavLink.displayName = "NavLink";
 exports.default = NavLink;
 
-},{"classnames":"jocGM","react":"21dqq","@restart/ui/Anchor":"cQOWi","@restart/ui/NavItem":"2cGYS","@restart/ui/SelectableContext":"8zLqy","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"cQOWi":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","@restart/ui/Anchor":"cQOWi","@restart/ui/NavItem":"2cGYS","@restart/ui/SelectableContext":"8zLqy","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cQOWi":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "isTrivialHref", ()=>isTrivialHref);
@@ -33005,7 +33020,7 @@ function isTrivialHref(href) {
 Anchor.displayName = "Anchor";
 exports.default = Anchor;
 
-},{"react":"21dqq","@restart/hooks":"5ErkJ","./Button":"8YUbR","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"5ErkJ":[function(require,module,exports) {
+},{"react":"21dqq","@restart/hooks":"5ErkJ","./Button":"8YUbR","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5ErkJ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "useCallbackRef", ()=>(0, _useCallbackRefDefault.default));
@@ -33048,7 +33063,7 @@ var _useImageDefault = parcelHelpers.interopDefault(_useImage);
 var _useResizeObserver = require("./useResizeObserver");
 var _useResizeObserverDefault = parcelHelpers.interopDefault(_useResizeObserver);
 
-},{"./useCallbackRef":"82p6M","./useCommittedRef":"g5BYG","./useEventCallback":"7ONdq","./useEventListener":"dBDI3","./useGlobalListener":"iey73","./useInterval":"hnmo4","./useRafInterval":"4qbLw","./useMergeState":"7E8IK","./useMergeStateFromProps":"6f6Me","./useMounted":"iK6A1","./usePrevious":"gDCGm","./useImage":"iuAlv","./useResizeObserver":"edwGv","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"82p6M":[function(require,module,exports) {
+},{"./useCallbackRef":"82p6M","./useCommittedRef":"g5BYG","./useEventCallback":"7ONdq","./useEventListener":"dBDI3","./useGlobalListener":"iey73","./useInterval":"hnmo4","./useRafInterval":"4qbLw","./useMergeState":"7E8IK","./useMergeStateFromProps":"6f6Me","./useMounted":"iK6A1","./usePrevious":"gDCGm","./useImage":"iuAlv","./useResizeObserver":"edwGv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"82p6M":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>useCallbackRef);
@@ -33057,7 +33072,7 @@ function useCallbackRef() {
     return (0, _react.useState)(null);
 }
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"dBDI3":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dBDI3":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>useEventListener);
@@ -33075,7 +33090,7 @@ function useEventListener(eventTarget, event, listener, capture = false) {
     ]);
 }
 
-},{"react":"21dqq","./useEventCallback":"7ONdq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"iey73":[function(require,module,exports) {
+},{"react":"21dqq","./useEventCallback":"7ONdq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iey73":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>useGlobalListener);
@@ -33087,7 +33102,7 @@ function useGlobalListener(event, handler, capture = false) {
     return (0, _useEventListenerDefault.default)(documentTarget, event, handler, capture);
 }
 
-},{"./useEventListener":"dBDI3","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"hnmo4":[function(require,module,exports) {
+},{"./useEventListener":"dBDI3","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hnmo4":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -33173,7 +33188,7 @@ var _useCommittedRefDefault = parcelHelpers.interopDefault(_useCommittedRef);
 }
 exports.default = useInterval;
 
-},{"react":"21dqq","./useCommittedRef":"g5BYG","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"4qbLw":[function(require,module,exports) {
+},{"react":"21dqq","./useCommittedRef":"g5BYG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4qbLw":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -33204,7 +33219,7 @@ function useRafInterval(fn, ms, paused = false) {
 }
 exports.default = useRafInterval;
 
-},{"react":"21dqq","./useCommittedRef":"g5BYG","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"7E8IK":[function(require,module,exports) {
+},{"react":"21dqq","./useCommittedRef":"g5BYG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7E8IK":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>useMergeState);
@@ -33227,7 +33242,7 @@ function useMergeState(initialState) {
     ];
 }
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"6f6Me":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6f6Me":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>useMergeStateFromProps);
@@ -33243,7 +33258,7 @@ function useMergeStateFromProps(props, gDSFP, initialState) {
     ];
 }
 
-},{"./useMergeState":"7E8IK","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"iK6A1":[function(require,module,exports) {
+},{"./useMergeState":"7E8IK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iK6A1":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>useMounted);
@@ -33260,7 +33275,7 @@ function useMounted() {
     return isMounted.current;
 }
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"gDCGm":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gDCGm":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>usePrevious);
@@ -33273,7 +33288,7 @@ function usePrevious(value) {
     return ref.current;
 }
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"iuAlv":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iuAlv":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>useImage);
@@ -33325,7 +33340,7 @@ function useImage(imageOrUrl, crossOrigin) {
     return state;
 }
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"edwGv":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"edwGv":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>useResizeObserver);
@@ -33361,7 +33376,7 @@ function useResizeObserver(element) {
     return rect;
 }
 
-},{"react":"21dqq","./useIsomorphicEffect":"e8blq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"e8blq":[function(require,module,exports) {
+},{"react":"21dqq","./useIsomorphicEffect":"e8blq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"e8blq":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -33379,7 +33394,7 @@ const isDOM = typeof document !== "undefined";
  * @category effects
  */ exports.default = isDOM || isReactNative ? (0, _react.useLayoutEffect) : (0, _react.useEffect);
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"1mHjo":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1mHjo":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -33456,7 +33471,7 @@ exports.default = Object.assign(Navbar, {
     Toggle: (0, _navbarToggleDefault.default)
 });
 
-},{"classnames":"jocGM","react":"21dqq","@restart/ui/SelectableContext":"8zLqy","uncontrollable":"b3yWY","./NavbarBrand":"iOo4v","./NavbarCollapse":"eNSCC","./NavbarToggle":"7vOXv","./NavbarOffcanvas":"fOxoE","./ThemeProvider":"dVixI","./NavbarContext":"dpn1g","./NavbarText":"76xFa","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"iOo4v":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","@restart/ui/SelectableContext":"8zLqy","uncontrollable":"b3yWY","./NavbarBrand":"iOo4v","./NavbarCollapse":"eNSCC","./NavbarToggle":"7vOXv","./NavbarOffcanvas":"fOxoE","./ThemeProvider":"dVixI","./NavbarContext":"dpn1g","./NavbarText":"76xFa","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iOo4v":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -33477,7 +33492,7 @@ const NavbarBrand = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, className, as, 
 NavbarBrand.displayName = "NavbarBrand";
 exports.default = NavbarBrand;
 
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"eNSCC":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eNSCC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -33504,7 +33519,7 @@ const NavbarCollapse = /*#__PURE__*/ _react.forwardRef(({ children, bsPrefix, ..
 NavbarCollapse.displayName = "NavbarCollapse";
 exports.default = NavbarCollapse;
 
-},{"react":"21dqq","./Collapse":"acuzI","./ThemeProvider":"dVixI","./NavbarContext":"dpn1g","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"7vOXv":[function(require,module,exports) {
+},{"react":"21dqq","./Collapse":"acuzI","./ThemeProvider":"dVixI","./NavbarContext":"dpn1g","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7vOXv":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -33540,7 +33555,7 @@ as: Component = "button", onClick, ...props }, ref)=>{
 NavbarToggle.displayName = "NavbarToggle";
 exports.default = NavbarToggle;
 
-},{"classnames":"jocGM","react":"21dqq","@restart/hooks/useEventCallback":"7ONdq","./ThemeProvider":"dVixI","./NavbarContext":"dpn1g","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"fOxoE":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","@restart/hooks/useEventCallback":"7ONdq","./ThemeProvider":"dVixI","./NavbarContext":"dpn1g","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fOxoE":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -33562,7 +33577,7 @@ const NavbarOffcanvas = /*#__PURE__*/ _react.forwardRef((props, ref)=>{
 NavbarOffcanvas.displayName = "NavbarOffcanvas";
 exports.default = NavbarOffcanvas;
 
-},{"react":"21dqq","./Offcanvas":"eC3RS","./NavbarContext":"dpn1g","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"eC3RS":[function(require,module,exports) {
+},{"react":"21dqq","./Offcanvas":"eC3RS","./NavbarContext":"dpn1g","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eC3RS":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -33702,7 +33717,7 @@ exports.default = Object.assign(Offcanvas, {
     Title: (0, _offcanvasTitleDefault.default)
 });
 
-},{"classnames":"jocGM","@restart/hooks/useBreakpoint":"2c4de","@restart/hooks/useEventCallback":"7ONdq","react":"21dqq","@restart/ui/Modal":"crj1M","./Fade":"aH18S","./OffcanvasBody":"fX7Bo","./OffcanvasToggling":"eGvzt","./ModalContext":"2U4Zk","./NavbarContext":"dpn1g","./OffcanvasHeader":"a6xAh","./OffcanvasTitle":"77qdX","./ThemeProvider":"dVixI","./BootstrapModalManager":"lr1Yp","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"2c4de":[function(require,module,exports) {
+},{"classnames":"jocGM","@restart/hooks/useBreakpoint":"2c4de","@restart/hooks/useEventCallback":"7ONdq","react":"21dqq","@restart/ui/Modal":"crj1M","./Fade":"aH18S","./OffcanvasBody":"fX7Bo","./OffcanvasToggling":"eGvzt","./ModalContext":"2U4Zk","./NavbarContext":"dpn1g","./OffcanvasHeader":"a6xAh","./OffcanvasTitle":"77qdX","./ThemeProvider":"dVixI","./BootstrapModalManager":"lr1Yp","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2c4de":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 /**
@@ -33813,7 +33828,7 @@ const useBreakpoint = createBreakpointHook({
 });
 exports.default = useBreakpoint;
 
-},{"./useMediaQuery":"etGLg","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"etGLg":[function(require,module,exports) {
+},{"./useMediaQuery":"etGLg","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"etGLg":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>useMediaQuery);
@@ -33858,7 +33873,7 @@ function useMediaQuery(query, targetWindow = typeof window === "undefined" ? und
     return matches;
 }
 
-},{"./useIsomorphicEffect":"e8blq","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"crj1M":[function(require,module,exports) {
+},{"./useIsomorphicEffect":"e8blq","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"crj1M":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 /* eslint-disable @typescript-eslint/no-use-before-define, react/prop-types */ var _activeElement = require("dom-helpers/activeElement");
@@ -34106,7 +34121,7 @@ exports.default = Object.assign(Modal, {
     Manager: (0, _modalManagerDefault.default)
 });
 
-},{"dom-helpers/activeElement":"5ShA6","dom-helpers/contains":"KpRFS","dom-helpers/canUseDOM":"9AwUB","dom-helpers/listen":"1i4e7","react":"21dqq","react-dom":"j6uA9","@restart/hooks/useMounted":"iK6A1","@restart/hooks/useWillUnmount":"2OOXI","@restart/hooks/usePrevious":"gDCGm","@restart/hooks/useEventCallback":"7ONdq","./ModalManager":"5alMm","./useWaitForDOMRef":"83lRQ","./useWindow":"4AsJ2","./ImperativeTransition":"j0Jao","./utils":"2Fmci","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"5ShA6":[function(require,module,exports) {
+},{"dom-helpers/activeElement":"5ShA6","dom-helpers/contains":"KpRFS","dom-helpers/canUseDOM":"9AwUB","dom-helpers/listen":"1i4e7","react":"21dqq","react-dom":"j6uA9","@restart/hooks/useMounted":"iK6A1","@restart/hooks/useWillUnmount":"2OOXI","@restart/hooks/usePrevious":"gDCGm","@restart/hooks/useEventCallback":"7ONdq","./ModalManager":"5alMm","./useWaitForDOMRef":"83lRQ","./useWindow":"4AsJ2","./ImperativeTransition":"j0Jao","./utils":"2Fmci","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5ShA6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>activeElement);
@@ -34126,7 +34141,7 @@ function activeElement(doc) {
     }
 }
 
-},{"./ownerDocument":"2WpOk","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"KpRFS":[function(require,module,exports) {
+},{"./ownerDocument":"2WpOk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"KpRFS":[function(require,module,exports) {
 /* eslint-disable no-bitwise, no-cond-assign */ /**
  * Checks if an element contains another given element.
  * 
@@ -34142,7 +34157,7 @@ function contains(context, node) {
     if (context.compareDocumentPosition) return context === node || !!(context.compareDocumentPosition(node) & 16);
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"2OOXI":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2OOXI":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>useWillUnmount);
@@ -34154,7 +34169,7 @@ function useWillUnmount(fn) {
     (0, _react.useEffect)(()=>()=>onUnmount.current(), []);
 }
 
-},{"./useUpdatedRef":"cfaLu","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"cfaLu":[function(require,module,exports) {
+},{"./useUpdatedRef":"cfaLu","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cfaLu":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>useUpdatedRef);
@@ -34165,7 +34180,7 @@ function useUpdatedRef(value) {
     return valueRef;
 }
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"5alMm":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5alMm":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "OPEN_DATA_ATTRIBUTE", ()=>OPEN_DATA_ATTRIBUTE);
@@ -34254,7 +34269,7 @@ const OPEN_DATA_ATTRIBUTE = (0, _dataKey.dataAttr)("modal-open");
 }
 exports.default = ModalManager;
 
-},{"dom-helpers/css":"klmhr","./DataKey":"9vwZh","./getScrollbarWidth":"9IxEN","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"9IxEN":[function(require,module,exports) {
+},{"dom-helpers/css":"klmhr","./DataKey":"9vwZh","./getScrollbarWidth":"9IxEN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9IxEN":[function(require,module,exports) {
 /**
  * Get the width of the vertical window scrollbar if it's visible
  */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -34265,7 +34280,7 @@ function getBodyScrollbarWidth(ownerDocument = document) {
     return Math.abs(window.innerWidth - ownerDocument.documentElement.clientWidth);
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"83lRQ":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"83lRQ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "resolveContainerRef", ()=>resolveContainerRef);
@@ -34308,7 +34323,7 @@ function useWaitForDOMRef(ref, onResolved) {
     return resolvedRef;
 }
 
-},{"dom-helpers/ownerDocument":"2WpOk","dom-helpers/canUseDOM":"9AwUB","react":"21dqq","./useWindow":"4AsJ2","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"4AsJ2":[function(require,module,exports) {
+},{"dom-helpers/ownerDocument":"2WpOk","dom-helpers/canUseDOM":"9AwUB","react":"21dqq","./useWindow":"4AsJ2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4AsJ2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "WindowProvider", ()=>WindowProvider);
@@ -34322,7 +34337,7 @@ function useWindow() {
     return (0, _react.useContext)(Context);
 }
 
-},{"react":"21dqq","dom-helpers/canUseDOM":"9AwUB","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"j0Jao":[function(require,module,exports) {
+},{"react":"21dqq","dom-helpers/canUseDOM":"9AwUB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"j0Jao":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "useTransition", ()=>useTransition);
@@ -34406,7 +34421,7 @@ function renderTransition(component, runTransition, props) {
     return /*#__PURE__*/ (0, _jsxRuntime.jsx)((0, _noopTransitionDefault.default), Object.assign({}, props));
 }
 
-},{"@restart/hooks/useMergedRefs":"6hhuo","@restart/hooks/useEventCallback":"7ONdq","@restart/hooks/useIsomorphicEffect":"e8blq","react":"21dqq","./NoopTransition":"cwnaj","./RTGTransition":"IPK9l","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"cwnaj":[function(require,module,exports) {
+},{"@restart/hooks/useMergedRefs":"6hhuo","@restart/hooks/useEventCallback":"7ONdq","@restart/hooks/useIsomorphicEffect":"e8blq","react":"21dqq","./NoopTransition":"cwnaj","./RTGTransition":"IPK9l","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cwnaj":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _useEventCallback = require("@restart/hooks/useEventCallback");
@@ -34436,7 +34451,7 @@ function NoopTransition({ children, in: inProp, onExited, mountOnEnter, unmountO
 }
 exports.default = NoopTransition;
 
-},{"@restart/hooks/useEventCallback":"7ONdq","@restart/hooks/useMergedRefs":"6hhuo","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"IPK9l":[function(require,module,exports) {
+},{"@restart/hooks/useEventCallback":"7ONdq","@restart/hooks/useMergedRefs":"6hhuo","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"IPK9l":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -34468,7 +34483,7 @@ const RTGTransition = /*#__PURE__*/ _react.forwardRef((_ref, ref)=>{
 });
 exports.default = RTGTransition;
 
-},{"react":"21dqq","./useRTGTransitionProps":"gtjjK","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"gtjjK":[function(require,module,exports) {
+},{"react":"21dqq","./useRTGTransitionProps":"gtjjK","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gtjjK":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>useRTGTransitionProps);
@@ -34554,7 +34569,7 @@ function useRTGTransitionProps(_ref) {
     });
 }
 
-},{"react":"21dqq","@restart/hooks/useMergedRefs":"6hhuo","./utils":"2Fmci","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"2Fmci":[function(require,module,exports) {
+},{"react":"21dqq","@restart/hooks/useMergedRefs":"6hhuo","./utils":"2Fmci","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2Fmci":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "isEscKey", ()=>isEscKey);
@@ -34572,7 +34587,7 @@ function getReactVersion() {
     };
 }
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"fX7Bo":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fX7Bo":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -34592,7 +34607,7 @@ const OffcanvasBody = /*#__PURE__*/ _react.forwardRef(({ className, bsPrefix, as
 OffcanvasBody.displayName = "OffcanvasBody";
 exports.default = OffcanvasBody;
 
-},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"eGvzt":[function(require,module,exports) {
+},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eGvzt":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -34630,7 +34645,7 @@ const OffcanvasToggling = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, className
 OffcanvasToggling.displayName = "OffcanvasToggling";
 exports.default = OffcanvasToggling;
 
-},{"classnames":"jocGM","react":"21dqq","react-transition-group/Transition":"cKsrS","./transitionEndListener":"68oh7","./TransitionWrapper":"jKUqZ","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"2U4Zk":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","react-transition-group/Transition":"cKsrS","./transitionEndListener":"68oh7","./TransitionWrapper":"jKUqZ","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2U4Zk":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -34641,7 +34656,7 @@ const ModalContext = /*#__PURE__*/ _react.createContext({
 });
 exports.default = ModalContext;
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"a6xAh":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"a6xAh":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -34665,7 +34680,7 @@ const OffcanvasHeader = /*#__PURE__*/ _react.forwardRef(({ bsPrefix, className, 
 OffcanvasHeader.displayName = "OffcanvasHeader";
 exports.default = OffcanvasHeader;
 
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","./AbstractModalHeader":"hPF8S","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"hPF8S":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","./AbstractModalHeader":"hPF8S","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hPF8S":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -34698,7 +34713,7 @@ const AbstractModalHeader = /*#__PURE__*/ _react.forwardRef(({ closeLabel = "Clo
 });
 exports.default = AbstractModalHeader;
 
-},{"react":"21dqq","@restart/hooks/useEventCallback":"7ONdq","./CloseButton":"1wmVl","./ModalContext":"2U4Zk","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"77qdX":[function(require,module,exports) {
+},{"react":"21dqq","@restart/hooks/useEventCallback":"7ONdq","./CloseButton":"1wmVl","./ModalContext":"2U4Zk","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"77qdX":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -34721,7 +34736,7 @@ const OffcanvasTitle = /*#__PURE__*/ _react.forwardRef(({ className, bsPrefix, a
 OffcanvasTitle.displayName = "OffcanvasTitle";
 exports.default = OffcanvasTitle;
 
-},{"react":"21dqq","classnames":"jocGM","./divWithClassName":"eDg7t","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"lr1Yp":[function(require,module,exports) {
+},{"react":"21dqq","classnames":"jocGM","./divWithClassName":"eDg7t","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lr1Yp":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getSharedManager", ()=>getSharedManager);
@@ -34788,7 +34803,7 @@ function getSharedManager(options) {
 }
 exports.default = BootstrapModalManager;
 
-},{"dom-helpers/addClass":"7dIIz","dom-helpers/css":"klmhr","dom-helpers/querySelectorAll":"g5Sx6","dom-helpers/removeClass":"66hgg","@restart/ui/ModalManager":"5alMm","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"7dIIz":[function(require,module,exports) {
+},{"dom-helpers/addClass":"7dIIz","dom-helpers/css":"klmhr","dom-helpers/querySelectorAll":"g5Sx6","dom-helpers/removeClass":"66hgg","@restart/ui/ModalManager":"5alMm","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7dIIz":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>addClass);
@@ -34802,7 +34817,7 @@ function addClass(element, className) {
     }
 }
 
-},{"./hasClass":"6sJz4","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"6sJz4":[function(require,module,exports) {
+},{"./hasClass":"6sJz4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6sJz4":[function(require,module,exports) {
 /**
  * Checks if a given element has a CSS class.
  * 
@@ -34816,7 +34831,7 @@ function hasClass(element, className) {
     return (" " + (element.className.baseVal || element.className) + " ").indexOf(" " + className + " ") !== -1;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"66hgg":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"66hgg":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>removeClass);
@@ -34829,7 +34844,7 @@ function removeClass(element, className) {
     else element.setAttribute("class", replaceClassName(element.className && element.className.baseVal || "", className));
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"76xFa":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"76xFa":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -34849,7 +34864,7 @@ const NavbarText = /*#__PURE__*/ _react.forwardRef(({ className, bsPrefix, as: C
 NavbarText.displayName = "NavbarText";
 exports.default = NavbarText;
 
-},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"cMC39":[function(require,module,exports) {
+},{"react":"21dqq","classnames":"jocGM","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cMC39":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _classnames = require("classnames");
@@ -34883,7 +34898,7 @@ as: Component = "div", ...props }, ref)=>{
 Row.displayName = "Row";
 exports.default = Row;
 
-},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"9xmpe":[function(require,module,exports) {
+},{"classnames":"jocGM","react":"21dqq","./ThemeProvider":"dVixI","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.24.1
  *
@@ -36312,7 +36327,7 @@ let savedScrollPositions = {};
     return (0, _router.matchPath)(path.pathname, nextPath) != null || (0, _router.matchPath)(path.pathname, currentPath) != null;
 }
 
-},{"react":"21dqq","react-dom":"j6uA9","react-router":"dbWyW","@remix-run/router":"5ncDG","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"dbWyW":[function(require,module,exports) {
+},{"react":"21dqq","react-dom":"j6uA9","react-router":"dbWyW","@remix-run/router":"5ncDG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dbWyW":[function(require,module,exports) {
 /**
  * React Router v6.24.1
  *
@@ -37580,7 +37595,7 @@ function createMemoryRouter(routes, opts) {
     }).initialize();
 }
 
-},{"react":"21dqq","@remix-run/router":"5ncDG","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"5ncDG":[function(require,module,exports) {
+},{"react":"21dqq","@remix-run/router":"5ncDG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5ncDG":[function(require,module,exports) {
 /**
  * @remix-run/router v1.17.1
  *
@@ -41937,7 +41952,7 @@ function persistAppliedTransitions(_window, transitions) {
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"di2gD"}],"ggaUx":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"d6HH4":[function() {},{}],"ggaUx":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$e9f6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -41952,34 +41967,73 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouter = require("react-router");
 var _reactRouterDom = require("react-router-dom");
+var _reactTooltip = require("react-tooltip");
 var _movieViewScss = require("./movie-view.scss");
 var _s = $RefreshSig$();
 const MovieView = ({ movies })=>{
     _s();
     const { movieId } = (0, _reactRouter.useParams)();
     const movie = movies.find((m)=>m.id === movieId);
+    const [isFavorite, setToFavorite] = (0, _react.useState)(false);
+    console.log(movie.ImagePath);
+    const handleAddToFavorites = async (movieId)=>{
+        // event.preventDefault();
+        //add in "try {}"?
+        // necessary?
+        const user = JSON.parse(localStorage.getItem("user"));
+        const response = await fetch(`https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/users/${user.Username}/movies/${movieId}`, {
+            method: "POST",
+            // body: JSON.stringify(data),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then((response)=>{
+            if (response.ok) alert("Favorite successful!");
+            else alert("Favorite failed");
+        });
+        const updatedUser = await response.json();
+        localStorage.setItem("user", JSON.stringify(updatedUser));
+        setToFavorite(true);
+        // what is this?
+        updateAction(movieId);
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    className: "view-poster",
+                    src: movie.ImagePath,
+                    alt: movie.Title
+                }, void 0, false, {
+                    fileName: "src/components/movie-view/movie-view.jsx",
+                    lineNumber: 53,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/movie-view/movie-view.jsx",
+                lineNumber: 52,
+                columnNumber: 7
+            }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         children: "Title: "
                     }, void 0, false, {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 14,
+                        lineNumber: 56,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         children: movie.Title
                     }, void 0, false, {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 15,
+                        lineNumber: 57,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/movie-view/movie-view.jsx",
-                lineNumber: 13,
+                lineNumber: 55,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41988,45 +42042,149 @@ const MovieView = ({ movies })=>{
                         children: "Director: "
                     }, void 0, false, {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 18,
+                        lineNumber: 60,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         children: movie.Director
                     }, void 0, false, {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 19,
+                        lineNumber: 61,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/movie-view/movie-view.jsx",
-                lineNumber: 17,
+                lineNumber: 59,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                to: `/`,
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                    className: "back-button",
-                    children: "Back"
-                }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        children: "Genre: "
+                    }, void 0, false, {
+                        fileName: "src/components/movie-view/movie-view.jsx",
+                        lineNumber: 64,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "genre-container",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                "data-tooltip-id": "my-genre-tooltip",
+                                children: [
+                                    movie.Genre.Name,
+                                    " (mouse over for genre description)"
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 66,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactTooltip.Tooltip), {
+                                id: "my-genre-tooltip",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    children: movie.Genre.Description
+                                }, void 0, false, {
+                                    fileName: "src/components/movie-view/movie-view.jsx",
+                                    lineNumber: 68,
+                                    columnNumber: 13
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 67,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/movie-view/movie-view.jsx",
+                        lineNumber: 65,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/movie-view/movie-view.jsx",
+                lineNumber: 63,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            children: "Description: "
+                        }, void 0, false, {
+                            fileName: "src/components/movie-view/movie-view.jsx",
+                            lineNumber: 74,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            children: movie.Description
+                        }, void 0, false, {
+                            fileName: "src/components/movie-view/movie-view.jsx",
+                            lineNumber: 75,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
                     fileName: "src/components/movie-view/movie-view.jsx",
-                    lineNumber: 22,
+                    lineNumber: 73,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/movie-view/movie-view.jsx",
-                lineNumber: 21,
+                lineNumber: 72,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "favorite-button",
+                        onClick: ()=>handleAddToFavorites(movie._id),
+                        children: "Add to Favorites"
+                    }, void 0, false, {
+                        fileName: "src/components/movie-view/movie-view.jsx",
+                        lineNumber: 80,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/movie-view/movie-view.jsx",
+                    lineNumber: 79,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/movie-view/movie-view.jsx",
+                lineNumber: 78,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                    to: `/`,
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "back-button",
+                        children: "Back"
+                    }, void 0, false, {
+                        fileName: "src/components/movie-view/movie-view.jsx",
+                        lineNumber: 85,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/movie-view/movie-view.jsx",
+                    lineNumber: 84,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/movie-view/movie-view.jsx",
+                lineNumber: 83,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/movie-view/movie-view.jsx",
-        lineNumber: 12,
+        lineNumber: 51,
         columnNumber: 5
     }, undefined);
 };
-_s(MovieView, "e2L2DPdRH1AShA7yIOCsYRlzvlI=", false, function() {
+_s(MovieView, "NxjV6s10MOZwuBY/XeXNHts5m+c=", false, function() {
     return [
         (0, _reactRouter.useParams)
     ];
@@ -42040,7 +42198,2661 @@ $RefreshReg$(_c, "MovieView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"k2eh7","./movie-view.scss":"jnlR5","react-router":"dbWyW","react-router-dom":"9xmpe","react":"21dqq"}],"jnlR5":[function() {},{}],"9YtA0":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./movie-view.scss":"jnlR5","react-router":"dbWyW","react-router-dom":"9xmpe","react":"21dqq","react-tooltip":"cpz88"}],"jnlR5":[function() {},{}],"cpz88":[function(require,module,exports) {
+/*
+* React Tooltip
+* {@link https://github.com/ReactTooltip/react-tooltip}
+* @copyright ReactTooltip Team
+* @license MIT
+*/ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Tooltip", ()=>M);
+parcelHelpers.export(exports, "TooltipProvider", ()=>I);
+parcelHelpers.export(exports, "TooltipWrapper", ()=>B);
+parcelHelpers.export(exports, "removeStyle", ()=>g);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _dom = require("@floating-ui/dom");
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var process = require("77bfce2cff29bcf2");
+const h = "react-tooltip-core-styles", w = "react-tooltip-base-styles", b = {
+    core: !1,
+    base: !1
+};
+function S({ css: e, id: t = w, type: o = "base", ref: l }) {
+    var r, n;
+    if (!e || "undefined" == typeof document || b[o]) return;
+    if ("core" === o && "undefined" != typeof process && (null === (r = null === process || void 0 === process ? void 0 : process.env) || void 0 === r ? void 0 : r.REACT_TOOLTIP_DISABLE_CORE_STYLES)) return;
+    if ("base" !== o && "undefined" != typeof process && (null === (n = null === process || void 0 === process ? void 0 : process.env) || void 0 === n ? void 0 : n.REACT_TOOLTIP_DISABLE_BASE_STYLES)) return;
+    "core" === o && (t = h), l || (l = {});
+    const { insertAt: i } = l;
+    if (document.getElementById(t)) return;
+    const c = document.head || document.getElementsByTagName("head")[0], s = document.createElement("style");
+    s.id = t, s.type = "text/css", "top" === i && c.firstChild ? c.insertBefore(s, c.firstChild) : c.appendChild(s), s.styleSheet ? s.styleSheet.cssText = e : s.appendChild(document.createTextNode(e)), b[o] = !0;
+}
+function g({ type: e = "base", id: t = w } = {}) {
+    if (!b[e]) return;
+    "core" === e && (t = h);
+    const o = document.getElementById(t);
+    "style" === (null == o ? void 0 : o.tagName) ? null == o || o.remove() : console.warn(`[react-tooltip] Failed to remove 'style' element with id '${t}'. Call \`injectStyle()\` first`), b[e] = !1;
+}
+const E = async ({ elementReference: e = null, tooltipReference: t = null, tooltipArrowReference: o = null, place: l = "top", offset: r = 10, strategy: n = "absolute", middlewares: i = [
+    (0, _dom.offset)(Number(r)),
+    (0, _dom.flip)({
+        fallbackAxisSideDirection: "start"
+    }),
+    (0, _dom.shift)({
+        padding: 5
+    })
+], border: c })=>{
+    if (!e) return {
+        tooltipStyles: {},
+        tooltipArrowStyles: {},
+        place: l
+    };
+    if (null === t) return {
+        tooltipStyles: {},
+        tooltipArrowStyles: {},
+        place: l
+    };
+    const s = i;
+    return o ? (s.push((0, _dom.arrow)({
+        element: o,
+        padding: 5
+    })), (0, _dom.computePosition)(e, t, {
+        placement: l,
+        strategy: n,
+        middleware: s
+    }).then(({ x: e, y: t, placement: o, middlewareData: l })=>{
+        var r, n;
+        const i = {
+            left: `${e}px`,
+            top: `${t}px`,
+            border: c
+        }, { x: s, y: a } = null !== (r = l.arrow) && void 0 !== r ? r : {
+            x: 0,
+            y: 0
+        }, u = null !== (n = ({
+            top: "bottom",
+            right: "left",
+            bottom: "top",
+            left: "right"
+        })[o.split("-")[0]]) && void 0 !== n ? n : "bottom", d = c && {
+            borderBottom: c,
+            borderRight: c
+        };
+        let p = 0;
+        if (c) {
+            const e = `${c}`.match(/(\d+)px/);
+            p = (null == e ? void 0 : e[1]) ? Number(e[1]) : 1;
+        }
+        return {
+            tooltipStyles: i,
+            tooltipArrowStyles: {
+                left: null != s ? `${s}px` : "",
+                top: null != a ? `${a}px` : "",
+                right: "",
+                bottom: "",
+                ...d,
+                [u]: `-${4 + p}px`
+            },
+            place: o
+        };
+    })) : (0, _dom.computePosition)(e, t, {
+        placement: "bottom",
+        strategy: n,
+        middleware: s
+    }).then(({ x: e, y: t, placement: o })=>({
+            tooltipStyles: {
+                left: `${e}px`,
+                top: `${t}px`
+            },
+            tooltipArrowStyles: {},
+            place: o
+        }));
+}, A = (e, t)=>!("CSS" in window && "supports" in window.CSS) || window.CSS.supports(e, t), _ = (e, t, o)=>{
+    let l = null;
+    const r = function(...r) {
+        const n = ()=>{
+            l = null, o || e.apply(this, r);
+        };
+        o && !l && (e.apply(this, r), l = setTimeout(n, t)), o || (l && clearTimeout(l), l = setTimeout(n, t));
+    };
+    return r.cancel = ()=>{
+        l && (clearTimeout(l), l = null);
+    }, r;
+}, O = (e)=>null !== e && !Array.isArray(e) && "object" == typeof e, k = (e, t)=>{
+    if (e === t) return !0;
+    if (Array.isArray(e) && Array.isArray(t)) return e.length === t.length && e.every((e, o)=>k(e, t[o]));
+    if (Array.isArray(e) !== Array.isArray(t)) return !1;
+    if (!O(e) || !O(t)) return e === t;
+    const o = Object.keys(e), l = Object.keys(t);
+    return o.length === l.length && o.every((o)=>k(e[o], t[o]));
+}, T = (e)=>{
+    if (!(e instanceof HTMLElement || e instanceof SVGElement)) return !1;
+    const t = getComputedStyle(e);
+    return [
+        "overflow",
+        "overflow-x",
+        "overflow-y"
+    ].some((e)=>{
+        const o = t.getPropertyValue(e);
+        return "auto" === o || "scroll" === o;
+    });
+}, L = (e)=>{
+    if (!e) return null;
+    let t = e.parentElement;
+    for(; t;){
+        if (T(t)) return t;
+        t = t.parentElement;
+    }
+    return document.scrollingElement || document.documentElement;
+}, C = "undefined" != typeof window ? (0, _react.useLayoutEffect) : (0, _react.useEffect), R = (e)=>{
+    e.current && (clearTimeout(e.current), e.current = null);
+}, x = "DEFAULT_TOOLTIP_ID", N = {
+    anchorRefs: new Set,
+    activeAnchor: {
+        current: null
+    },
+    attach: ()=>{},
+    detach: ()=>{},
+    setActiveAnchor: ()=>{}
+}, $ = (0, _react.createContext)({
+    getTooltipData: ()=>N
+}), I = ({ children: t })=>{
+    const [o, l] = (0, _react.useState)({
+        [x]: new Set
+    }), [c, s] = (0, _react.useState)({
+        [x]: {
+            current: null
+        }
+    }), a = (e, ...t)=>{
+        l((o)=>{
+            var l;
+            const r = null !== (l = o[e]) && void 0 !== l ? l : new Set;
+            return t.forEach((e)=>r.add(e)), {
+                ...o,
+                [e]: new Set(r)
+            };
+        });
+    }, u = (e, ...t)=>{
+        l((o)=>{
+            const l = o[e];
+            return l ? (t.forEach((e)=>l.delete(e)), {
+                ...o
+            }) : o;
+        });
+    }, d = (0, _react.useCallback)((e = x)=>{
+        var t, l;
+        return {
+            anchorRefs: null !== (t = o[e]) && void 0 !== t ? t : new Set,
+            activeAnchor: null !== (l = c[e]) && void 0 !== l ? l : {
+                current: null
+            },
+            attach: (...t)=>a(e, ...t),
+            detach: (...t)=>u(e, ...t),
+            setActiveAnchor: (t)=>((e, t)=>{
+                    s((o)=>{
+                        var l;
+                        return (null === (l = o[e]) || void 0 === l ? void 0 : l.current) === t.current ? o : {
+                            ...o,
+                            [e]: t
+                        };
+                    });
+                })(e, t)
+        };
+    }, [
+        o,
+        c,
+        a,
+        u
+    ]), p = (0, _react.useMemo)(()=>({
+            getTooltipData: d
+        }), [
+        d
+    ]);
+    return (0, _reactDefault.default).createElement($.Provider, {
+        value: p
+    }, t);
+};
+function j(e = x) {
+    return (0, _react.useContext)($).getTooltipData(e);
+}
+const B = ({ tooltipId: t, children: l, className: r, place: n, content: i, html: c, variant: a, offset: u, wrapper: d, events: p, positionStrategy: v, delayShow: m, delayHide: f })=>{
+    const { attach: h, detach: w } = j(t), b = (0, _react.useRef)(null);
+    return (0, _react.useEffect)(()=>(h(b), ()=>{
+            w(b);
+        }), []), (0, _reactDefault.default).createElement("span", {
+        ref: b,
+        className: (0, _classnamesDefault.default)("react-tooltip-wrapper", r),
+        "data-tooltip-place": n,
+        "data-tooltip-content": i,
+        "data-tooltip-html": c,
+        "data-tooltip-variant": a,
+        "data-tooltip-offset": u,
+        "data-tooltip-wrapper": d,
+        "data-tooltip-events": p,
+        "data-tooltip-position-strategy": v,
+        "data-tooltip-delay-show": m,
+        "data-tooltip-delay-hide": f
+    }, l);
+};
+var z = {
+    tooltip: "core-styles-module_tooltip__3vRRp",
+    fixed: "core-styles-module_fixed__pcSol",
+    arrow: "core-styles-module_arrow__cvMwQ",
+    noArrow: "core-styles-module_noArrow__xock6",
+    clickable: "core-styles-module_clickable__ZuTTB",
+    show: "core-styles-module_show__Nt9eE",
+    closing: "core-styles-module_closing__sGnxF"
+}, D = {
+    tooltip: "styles-module_tooltip__mnnfp",
+    arrow: "styles-module_arrow__K0L3T",
+    dark: "styles-module_dark__xNqje",
+    light: "styles-module_light__Z6W-X",
+    success: "styles-module_success__A2AKt",
+    warning: "styles-module_warning__SCK0X",
+    error: "styles-module_error__JvumD",
+    info: "styles-module_info__BWdHW"
+};
+const q = ({ forwardRef: t, id: l, className: i, classNameArrow: c, variant: u = "dark", anchorId: d, anchorSelect: p, place: v = "top", offset: m = 10, events: h = [
+    "hover"
+], openOnClick: w = !1, positionStrategy: b = "absolute", middlewares: S, wrapper: g, delayShow: A = 0, delayHide: O = 0, float: T = !1, hidden: x = !1, noArrow: N = !1, clickable: $ = !1, closeOnEsc: I = !1, closeOnScroll: B = !1, closeOnResize: q = !1, openEvents: H, closeEvents: M, globalCloseEvents: W, imperativeModeOnly: P, style: V, position: F, afterShow: K, afterHide: U, content: X, contentWrapperRef: Y, isOpen: G, defaultIsOpen: Z = !1, setIsOpen: J, activeAnchor: Q, setActiveAnchor: ee, border: te, opacity: oe, arrowColor: le, role: re = "tooltip" })=>{
+    var ne;
+    const ie = (0, _react.useRef)(null), ce = (0, _react.useRef)(null), se = (0, _react.useRef)(null), ae = (0, _react.useRef)(null), ue = (0, _react.useRef)(null), [de, pe] = (0, _react.useState)({
+        tooltipStyles: {},
+        tooltipArrowStyles: {},
+        place: v
+    }), [ve, me] = (0, _react.useState)(!1), [fe, ye] = (0, _react.useState)(!1), [he, we] = (0, _react.useState)(null), be = (0, _react.useRef)(!1), Se = (0, _react.useRef)(null), { anchorRefs: ge, setActiveAnchor: Ee } = j(l), Ae = (0, _react.useRef)(!1), [_e, Oe] = (0, _react.useState)([]), ke = (0, _react.useRef)(!1), Te = w || h.includes("click"), Le = Te || (null == H ? void 0 : H.click) || (null == H ? void 0 : H.dblclick) || (null == H ? void 0 : H.mousedown), Ce = H ? {
+        ...H
+    } : {
+        mouseover: !0,
+        focus: !0,
+        mouseenter: !1,
+        click: !1,
+        dblclick: !1,
+        mousedown: !1
+    };
+    !H && Te && Object.assign(Ce, {
+        mouseenter: !1,
+        focus: !1,
+        mouseover: !1,
+        click: !0
+    });
+    const Re = M ? {
+        ...M
+    } : {
+        mouseout: !0,
+        blur: !0,
+        mouseleave: !1,
+        click: !1,
+        dblclick: !1,
+        mouseup: !1
+    };
+    !M && Te && Object.assign(Re, {
+        mouseleave: !1,
+        blur: !1,
+        mouseout: !1
+    });
+    const xe = W ? {
+        ...W
+    } : {
+        escape: I || !1,
+        scroll: B || !1,
+        resize: q || !1,
+        clickOutsideAnchor: Le || !1
+    };
+    P && (Object.assign(Ce, {
+        mouseenter: !1,
+        focus: !1,
+        click: !1,
+        dblclick: !1,
+        mousedown: !1
+    }), Object.assign(Re, {
+        mouseleave: !1,
+        blur: !1,
+        click: !1,
+        dblclick: !1,
+        mouseup: !1
+    }), Object.assign(xe, {
+        escape: !1,
+        scroll: !1,
+        resize: !1,
+        clickOutsideAnchor: !1
+    })), C(()=>(ke.current = !0, ()=>{
+            ke.current = !1;
+        }), []);
+    const Ne = (e)=>{
+        ke.current && (e && ye(!0), setTimeout(()=>{
+            ke.current && (null == J || J(e), void 0 === G && me(e));
+        }, 10));
+    };
+    (0, _react.useEffect)(()=>{
+        if (void 0 === G) return ()=>null;
+        G && ye(!0);
+        const e = setTimeout(()=>{
+            me(G);
+        }, 10);
+        return ()=>{
+            clearTimeout(e);
+        };
+    }, [
+        G
+    ]), (0, _react.useEffect)(()=>{
+        if (ve !== be.current) {
+            if (R(ue), be.current = ve, ve) null == K || K();
+            else {
+                const e = ((e)=>{
+                    const t = e.match(/^([\d.]+)(ms|s)$/);
+                    if (!t) return 0;
+                    const [, o, l] = t;
+                    return Number(o) * ("ms" === l ? 1 : 1e3);
+                })(getComputedStyle(document.body).getPropertyValue("--rt-transition-show-delay"));
+                ue.current = setTimeout(()=>{
+                    ye(!1), we(null), null == U || U();
+                }, e + 25);
+            }
+        }
+    }, [
+        ve
+    ]);
+    const $e = (e)=>{
+        pe((t)=>k(t, e) ? t : e);
+    }, Ie = (e = A)=>{
+        R(se), fe ? Ne(!0) : se.current = setTimeout(()=>{
+            Ne(!0);
+        }, e);
+    }, je = (e = O)=>{
+        R(ae), ae.current = setTimeout(()=>{
+            Ae.current || Ne(!1);
+        }, e);
+    }, Be = (e)=>{
+        var t;
+        if (!e) return;
+        const o = null !== (t = e.currentTarget) && void 0 !== t ? t : e.target;
+        if (!(null == o ? void 0 : o.isConnected)) return ee(null), void Ee({
+            current: null
+        });
+        A ? Ie() : Ne(!0), ee(o), Ee({
+            current: o
+        }), R(ae);
+    }, ze = ()=>{
+        $ ? je(O || 100) : O ? je() : Ne(!1), R(se);
+    }, De = ({ x: e, y: t })=>{
+        var o;
+        const l = {
+            getBoundingClientRect: ()=>({
+                    x: e,
+                    y: t,
+                    width: 0,
+                    height: 0,
+                    top: t,
+                    left: e,
+                    right: e,
+                    bottom: t
+                })
+        };
+        E({
+            place: null !== (o = null == he ? void 0 : he.place) && void 0 !== o ? o : v,
+            offset: m,
+            elementReference: l,
+            tooltipReference: ie.current,
+            tooltipArrowReference: ce.current,
+            strategy: b,
+            middlewares: S,
+            border: te
+        }).then((e)=>{
+            $e(e);
+        });
+    }, qe = (e)=>{
+        if (!e) return;
+        const t = e, o = {
+            x: t.clientX,
+            y: t.clientY
+        };
+        De(o), Se.current = o;
+    }, He = (e)=>{
+        var t;
+        if (!ve) return;
+        const o = e.target;
+        if (!o.isConnected) return;
+        if (null === (t = ie.current) || void 0 === t ? void 0 : t.contains(o)) return;
+        [
+            document.querySelector(`[id='${d}']`),
+            ..._e
+        ].some((e)=>null == e ? void 0 : e.contains(o)) || (Ne(!1), R(se));
+    }, Me = _(Be, 50, !0), We = _(ze, 50, !0), Pe = (e)=>{
+        We.cancel(), Me(e);
+    }, Ve = ()=>{
+        Me.cancel(), We();
+    }, Fe = (0, _react.useCallback)(()=>{
+        var e, t;
+        const o = null !== (e = null == he ? void 0 : he.position) && void 0 !== e ? e : F;
+        o ? De(o) : T ? Se.current && De(Se.current) : (null == Q ? void 0 : Q.isConnected) && E({
+            place: null !== (t = null == he ? void 0 : he.place) && void 0 !== t ? t : v,
+            offset: m,
+            elementReference: Q,
+            tooltipReference: ie.current,
+            tooltipArrowReference: ce.current,
+            strategy: b,
+            middlewares: S,
+            border: te
+        }).then((e)=>{
+            ke.current && $e(e);
+        });
+    }, [
+        ve,
+        Q,
+        X,
+        V,
+        v,
+        null == he ? void 0 : he.place,
+        m,
+        b,
+        F,
+        null == he ? void 0 : he.position,
+        T
+    ]);
+    (0, _react.useEffect)(()=>{
+        var e, t;
+        const o = new Set(ge);
+        _e.forEach((e)=>{
+            o.add({
+                current: e
+            });
+        });
+        const l = document.querySelector(`[id='${d}']`);
+        l && o.add({
+            current: l
+        });
+        const r = ()=>{
+            Ne(!1);
+        }, n = L(Q), i = L(ie.current);
+        xe.scroll && (window.addEventListener("scroll", r), null == n || n.addEventListener("scroll", r), null == i || i.addEventListener("scroll", r));
+        let c = null;
+        xe.resize ? window.addEventListener("resize", r) : Q && ie.current && (c = (0, _dom.autoUpdate)(Q, ie.current, Fe, {
+            ancestorResize: !0,
+            elementResize: !0,
+            layoutShift: !0
+        }));
+        const s = (e)=>{
+            "Escape" === e.key && Ne(!1);
+        };
+        xe.escape && window.addEventListener("keydown", s), xe.clickOutsideAnchor && window.addEventListener("click", He);
+        const a = [], u = (e)=>{
+            ve && (null == e ? void 0 : e.target) === Q || Be(e);
+        }, p = (e)=>{
+            ve && (null == e ? void 0 : e.target) === Q && ze();
+        }, v = [
+            "mouseover",
+            "mouseout",
+            "mouseenter",
+            "mouseleave",
+            "focus",
+            "blur"
+        ], m = [
+            "click",
+            "dblclick",
+            "mousedown",
+            "mouseup"
+        ];
+        Object.entries(Ce).forEach(([e, t])=>{
+            t && (v.includes(e) ? a.push({
+                event: e,
+                listener: Pe
+            }) : m.includes(e) && a.push({
+                event: e,
+                listener: u
+            }));
+        }), Object.entries(Re).forEach(([e, t])=>{
+            t && (v.includes(e) ? a.push({
+                event: e,
+                listener: Ve
+            }) : m.includes(e) && a.push({
+                event: e,
+                listener: p
+            }));
+        }), T && a.push({
+            event: "pointermove",
+            listener: qe
+        });
+        const y = ()=>{
+            Ae.current = !0;
+        }, h = ()=>{
+            Ae.current = !1, ze();
+        };
+        return $ && !Le && (null === (e = ie.current) || void 0 === e || e.addEventListener("mouseenter", y), null === (t = ie.current) || void 0 === t || t.addEventListener("mouseleave", h)), a.forEach(({ event: e, listener: t })=>{
+            o.forEach((o)=>{
+                var l;
+                null === (l = o.current) || void 0 === l || l.addEventListener(e, t);
+            });
+        }), ()=>{
+            var e, t;
+            xe.scroll && (window.removeEventListener("scroll", r), null == n || n.removeEventListener("scroll", r), null == i || i.removeEventListener("scroll", r)), xe.resize ? window.removeEventListener("resize", r) : null == c || c(), xe.clickOutsideAnchor && window.removeEventListener("click", He), xe.escape && window.removeEventListener("keydown", s), $ && !Le && (null === (e = ie.current) || void 0 === e || e.removeEventListener("mouseenter", y), null === (t = ie.current) || void 0 === t || t.removeEventListener("mouseleave", h)), a.forEach(({ event: e, listener: t })=>{
+                o.forEach((o)=>{
+                    var l;
+                    null === (l = o.current) || void 0 === l || l.removeEventListener(e, t);
+                });
+            });
+        };
+    }, [
+        Q,
+        Fe,
+        fe,
+        ge,
+        _e,
+        H,
+        M,
+        W,
+        Te,
+        A,
+        O
+    ]), (0, _react.useEffect)(()=>{
+        var e, t;
+        let o = null !== (t = null !== (e = null == he ? void 0 : he.anchorSelect) && void 0 !== e ? e : p) && void 0 !== t ? t : "";
+        !o && l && (o = `[data-tooltip-id='${l.replace(/'/g, "\\'")}']`);
+        const r = new MutationObserver((e)=>{
+            const t = [], r = [];
+            e.forEach((e)=>{
+                if ("attributes" === e.type && "data-tooltip-id" === e.attributeName) e.target.getAttribute("data-tooltip-id") === l ? t.push(e.target) : e.oldValue === l && r.push(e.target);
+                if ("childList" === e.type) {
+                    if (Q) {
+                        const t = [
+                            ...e.removedNodes
+                        ].filter((e)=>1 === e.nodeType);
+                        if (o) try {
+                            r.push(...t.filter((e)=>e.matches(o))), r.push(...t.flatMap((e)=>[
+                                    ...e.querySelectorAll(o)
+                                ]));
+                        } catch (e) {}
+                        t.some((e)=>{
+                            var t;
+                            return !!(null === (t = null == e ? void 0 : e.contains) || void 0 === t ? void 0 : t.call(e, Q)) && (ye(!1), Ne(!1), ee(null), R(se), R(ae), !0);
+                        });
+                    }
+                    if (o) try {
+                        const l = [
+                            ...e.addedNodes
+                        ].filter((e)=>1 === e.nodeType);
+                        t.push(...l.filter((e)=>e.matches(o))), t.push(...l.flatMap((e)=>[
+                                ...e.querySelectorAll(o)
+                            ]));
+                    } catch (e) {}
+                }
+            }), (t.length || r.length) && Oe((e)=>[
+                    ...e.filter((e)=>!r.includes(e)),
+                    ...t
+                ]);
+        });
+        return r.observe(document.body, {
+            childList: !0,
+            subtree: !0,
+            attributes: !0,
+            attributeFilter: [
+                "data-tooltip-id"
+            ],
+            attributeOldValue: !0
+        }), ()=>{
+            r.disconnect();
+        };
+    }, [
+        l,
+        p,
+        null == he ? void 0 : he.anchorSelect,
+        Q
+    ]), (0, _react.useEffect)(()=>{
+        Fe();
+    }, [
+        Fe
+    ]), (0, _react.useEffect)(()=>{
+        if (!(null == Y ? void 0 : Y.current)) return ()=>null;
+        const e = new ResizeObserver(()=>{
+            setTimeout(()=>Fe());
+        });
+        return e.observe(Y.current), ()=>{
+            e.disconnect();
+        };
+    }, [
+        X,
+        null == Y ? void 0 : Y.current
+    ]), (0, _react.useEffect)(()=>{
+        var e;
+        const t = document.querySelector(`[id='${d}']`), o = [
+            ..._e,
+            t
+        ];
+        Q && o.includes(Q) || ee(null !== (e = _e[0]) && void 0 !== e ? e : t);
+    }, [
+        d,
+        _e,
+        Q
+    ]), (0, _react.useEffect)(()=>(Z && Ne(!0), ()=>{
+            R(se), R(ae);
+        }), []), (0, _react.useEffect)(()=>{
+        var e;
+        let t = null !== (e = null == he ? void 0 : he.anchorSelect) && void 0 !== e ? e : p;
+        if (!t && l && (t = `[data-tooltip-id='${l.replace(/'/g, "\\'")}']`), t) try {
+            const e = Array.from(document.querySelectorAll(t));
+            Oe(e);
+        } catch (e) {
+            Oe([]);
+        }
+    }, [
+        l,
+        p,
+        null == he ? void 0 : he.anchorSelect
+    ]), (0, _react.useEffect)(()=>{
+        se.current && (R(se), Ie(A));
+    }, [
+        A
+    ]);
+    const Ke = null !== (ne = null == he ? void 0 : he.content) && void 0 !== ne ? ne : X, Ue = ve && Object.keys(de.tooltipStyles).length > 0;
+    return (0, _react.useImperativeHandle)(t, ()=>({
+            open: (e)=>{
+                if (null == e ? void 0 : e.anchorSelect) try {
+                    document.querySelector(e.anchorSelect);
+                } catch (t) {
+                    return void console.warn(`[react-tooltip] "${e.anchorSelect}" is not a valid CSS selector`);
+                }
+                we(null != e ? e : null), (null == e ? void 0 : e.delay) ? Ie(e.delay) : Ne(!0);
+            },
+            close: (e)=>{
+                (null == e ? void 0 : e.delay) ? je(e.delay) : Ne(!1);
+            },
+            activeAnchor: Q,
+            place: de.place,
+            isOpen: Boolean(fe && !x && Ke && Ue)
+        })), fe && !x && Ke ? (0, _reactDefault.default).createElement(g, {
+        id: l,
+        role: re,
+        className: (0, _classnamesDefault.default)("react-tooltip", z.tooltip, D.tooltip, D[u], i, `react-tooltip__place-${de.place}`, z[Ue ? "show" : "closing"], Ue ? "react-tooltip__show" : "react-tooltip__closing", "fixed" === b && z.fixed, $ && z.clickable),
+        onTransitionEnd: (e)=>{
+            R(ue), ve || "opacity" !== e.propertyName || (ye(!1), we(null), null == U || U());
+        },
+        style: {
+            ...V,
+            ...de.tooltipStyles,
+            opacity: void 0 !== oe && Ue ? oe : void 0
+        },
+        ref: ie
+    }, Ke, (0, _reactDefault.default).createElement(g, {
+        className: (0, _classnamesDefault.default)("react-tooltip-arrow", z.arrow, D.arrow, c, N && z.noArrow),
+        style: {
+            ...de.tooltipArrowStyles,
+            background: le ? `linear-gradient(to right bottom, transparent 50%, ${le} 50%)` : void 0
+        },
+        ref: ce
+    })) : null;
+}, H = ({ content: t })=>(0, _reactDefault.default).createElement("span", {
+        dangerouslySetInnerHTML: {
+            __html: t
+        }
+    }), M = (0, _reactDefault.default).forwardRef(({ id: t, anchorId: l, anchorSelect: n, content: i, html: c, render: a, className: u, classNameArrow: d, variant: p = "dark", place: v = "top", offset: m = 10, wrapper: f = "div", children: h = null, events: w = [
+    "hover"
+], openOnClick: b = !1, positionStrategy: S = "absolute", middlewares: g, delayShow: E = 0, delayHide: _ = 0, float: O = !1, hidden: k = !1, noArrow: T = !1, clickable: L = !1, closeOnEsc: C = !1, closeOnScroll: R = !1, closeOnResize: x = !1, openEvents: N, closeEvents: $, globalCloseEvents: I, imperativeModeOnly: B = !1, style: z, position: D, isOpen: M, defaultIsOpen: W = !1, disableStyleInjection: P = !1, border: V, opacity: F, arrowColor: K, setIsOpen: U, afterShow: X, afterHide: Y, role: G = "tooltip" }, Z)=>{
+    const [J, Q] = (0, _react.useState)(i), [ee, te] = (0, _react.useState)(c), [oe, le] = (0, _react.useState)(v), [re, ne] = (0, _react.useState)(p), [ie, ce] = (0, _react.useState)(m), [se, ae] = (0, _react.useState)(E), [ue, de] = (0, _react.useState)(_), [pe, ve] = (0, _react.useState)(O), [me, fe] = (0, _react.useState)(k), [ye, he] = (0, _react.useState)(f), [we, be] = (0, _react.useState)(w), [Se, ge] = (0, _react.useState)(S), [Ee, Ae] = (0, _react.useState)(null), [_e, Oe] = (0, _react.useState)(null), ke = (0, _react.useRef)(P), { anchorRefs: Te, activeAnchor: Le } = j(t), Ce = (e)=>null == e ? void 0 : e.getAttributeNames().reduce((t, o)=>{
+            var l;
+            if (o.startsWith("data-tooltip-")) t[o.replace(/^data-tooltip-/, "")] = null !== (l = null == e ? void 0 : e.getAttribute(o)) && void 0 !== l ? l : null;
+            return t;
+        }, {}), Re = (e)=>{
+        const t = {
+            place: (e)=>{
+                var t;
+                le(null !== (t = e) && void 0 !== t ? t : v);
+            },
+            content: (e)=>{
+                Q(null != e ? e : i);
+            },
+            html: (e)=>{
+                te(null != e ? e : c);
+            },
+            variant: (e)=>{
+                var t;
+                ne(null !== (t = e) && void 0 !== t ? t : p);
+            },
+            offset: (e)=>{
+                ce(null === e ? m : Number(e));
+            },
+            wrapper: (e)=>{
+                var t;
+                he(null !== (t = e) && void 0 !== t ? t : f);
+            },
+            events: (e)=>{
+                const t = null == e ? void 0 : e.split(" ");
+                be(null != t ? t : w);
+            },
+            "position-strategy": (e)=>{
+                var t;
+                ge(null !== (t = e) && void 0 !== t ? t : S);
+            },
+            "delay-show": (e)=>{
+                ae(null === e ? E : Number(e));
+            },
+            "delay-hide": (e)=>{
+                de(null === e ? _ : Number(e));
+            },
+            float: (e)=>{
+                ve(null === e ? O : "true" === e);
+            },
+            hidden: (e)=>{
+                fe(null === e ? k : "true" === e);
+            },
+            "class-name": (e)=>{
+                Ae(e);
+            }
+        };
+        Object.values(t).forEach((e)=>e(null)), Object.entries(e).forEach(([e, o])=>{
+            var l;
+            null === (l = t[e]) || void 0 === l || l.call(t, o);
+        });
+    };
+    (0, _react.useEffect)(()=>{
+        Q(i);
+    }, [
+        i
+    ]), (0, _react.useEffect)(()=>{
+        te(c);
+    }, [
+        c
+    ]), (0, _react.useEffect)(()=>{
+        le(v);
+    }, [
+        v
+    ]), (0, _react.useEffect)(()=>{
+        ne(p);
+    }, [
+        p
+    ]), (0, _react.useEffect)(()=>{
+        ce(m);
+    }, [
+        m
+    ]), (0, _react.useEffect)(()=>{
+        ae(E);
+    }, [
+        E
+    ]), (0, _react.useEffect)(()=>{
+        de(_);
+    }, [
+        _
+    ]), (0, _react.useEffect)(()=>{
+        ve(O);
+    }, [
+        O
+    ]), (0, _react.useEffect)(()=>{
+        fe(k);
+    }, [
+        k
+    ]), (0, _react.useEffect)(()=>{
+        ge(S);
+    }, [
+        S
+    ]), (0, _react.useEffect)(()=>{
+        ke.current !== P && console.warn("[react-tooltip] Do not change `disableStyleInjection` dynamically.");
+    }, [
+        P
+    ]), (0, _react.useEffect)(()=>{
+        "undefined" != typeof window && window.dispatchEvent(new CustomEvent("react-tooltip-inject-styles", {
+            detail: {
+                disableCore: "core" === P,
+                disableBase: P
+            }
+        }));
+    }, []), (0, _react.useEffect)(()=>{
+        var e;
+        const o = new Set(Te);
+        let r = n;
+        if (!r && t && (r = `[data-tooltip-id='${t.replace(/'/g, "\\'")}']`), r) try {
+            document.querySelectorAll(r).forEach((e)=>{
+                o.add({
+                    current: e
+                });
+            });
+        } catch (e) {
+            console.warn(`[react-tooltip] "${r}" is not a valid CSS selector`);
+        }
+        const i = document.querySelector(`[id='${l}']`);
+        if (i && o.add({
+            current: i
+        }), !o.size) return ()=>null;
+        const c = null !== (e = null != _e ? _e : i) && void 0 !== e ? e : Le.current, s = new MutationObserver((e)=>{
+            e.forEach((e)=>{
+                var t;
+                if (!c || "attributes" !== e.type || !(null === (t = e.attributeName) || void 0 === t ? void 0 : t.startsWith("data-tooltip-"))) return;
+                const o = Ce(c);
+                Re(o);
+            });
+        }), a = {
+            attributes: !0,
+            childList: !1,
+            subtree: !1
+        };
+        if (c) {
+            const e = Ce(c);
+            Re(e), s.observe(c, a);
+        }
+        return ()=>{
+            s.disconnect();
+        };
+    }, [
+        Te,
+        Le,
+        _e,
+        l,
+        n
+    ]), (0, _react.useEffect)(()=>{
+        (null == z ? void 0 : z.border) && console.warn("[react-tooltip] Do not set `style.border`. Use `border` prop instead."), V && !A("border", `${V}`) && console.warn(`[react-tooltip] "${V}" is not a valid \`border\`.`), (null == z ? void 0 : z.opacity) && console.warn("[react-tooltip] Do not set `style.opacity`. Use `opacity` prop instead."), F && !A("opacity", `${F}`) && console.warn(`[react-tooltip] "${F}" is not a valid \`opacity\`.`);
+    }, []);
+    let xe = h;
+    const Ne = (0, _react.useRef)(null);
+    if (a) {
+        const t = a({
+            content: (null == _e ? void 0 : _e.getAttribute("data-tooltip-content")) || J || null,
+            activeAnchor: _e
+        });
+        xe = t ? (0, _reactDefault.default).createElement("div", {
+            ref: Ne,
+            className: "react-tooltip-content-wrapper"
+        }, t) : null;
+    } else J && (xe = J);
+    ee && (xe = (0, _reactDefault.default).createElement(H, {
+        content: ee
+    }));
+    const $e = {
+        forwardRef: Z,
+        id: t,
+        anchorId: l,
+        anchorSelect: n,
+        className: (0, _classnamesDefault.default)(u, Ee),
+        classNameArrow: d,
+        content: xe,
+        contentWrapperRef: Ne,
+        place: oe,
+        variant: re,
+        offset: ie,
+        wrapper: ye,
+        events: we,
+        openOnClick: b,
+        positionStrategy: Se,
+        middlewares: g,
+        delayShow: se,
+        delayHide: ue,
+        float: pe,
+        hidden: me,
+        noArrow: T,
+        clickable: L,
+        closeOnEsc: C,
+        closeOnScroll: R,
+        closeOnResize: x,
+        openEvents: N,
+        closeEvents: $,
+        globalCloseEvents: I,
+        imperativeModeOnly: B,
+        style: z,
+        position: D,
+        isOpen: M,
+        defaultIsOpen: W,
+        border: V,
+        opacity: F,
+        arrowColor: K,
+        setIsOpen: U,
+        afterShow: X,
+        afterHide: Y,
+        activeAnchor: _e,
+        setActiveAnchor: (e)=>Oe(e),
+        role: G
+    };
+    return (0, _reactDefault.default).createElement(q, {
+        ...$e
+    });
+});
+"undefined" != typeof window && window.addEventListener("react-tooltip-inject-styles", (e)=>{
+    e.detail.disableCore || S({
+        css: `:root{--rt-color-white:#fff;--rt-color-dark:#222;--rt-color-success:#8dc572;--rt-color-error:#be6464;--rt-color-warning:#f0ad4e;--rt-color-info:#337ab7;--rt-opacity:0.9;--rt-transition-show-delay:0.15s;--rt-transition-closing-delay:0.15s}.core-styles-module_tooltip__3vRRp{position:absolute;top:0;left:0;pointer-events:none;opacity:0;will-change:opacity}.core-styles-module_fixed__pcSol{position:fixed}.core-styles-module_arrow__cvMwQ{position:absolute;background:inherit}.core-styles-module_noArrow__xock6{display:none}.core-styles-module_clickable__ZuTTB{pointer-events:auto}.core-styles-module_show__Nt9eE{opacity:var(--rt-opacity);transition:opacity var(--rt-transition-show-delay)ease-out}.core-styles-module_closing__sGnxF{opacity:0;transition:opacity var(--rt-transition-closing-delay)ease-in}`,
+        type: "core"
+    }), e.detail.disableBase || S({
+        css: `
+.styles-module_tooltip__mnnfp{padding:8px 16px;border-radius:3px;font-size:90%;width:max-content}.styles-module_arrow__K0L3T{width:8px;height:8px}[class*='react-tooltip__place-top']>.styles-module_arrow__K0L3T{transform:rotate(45deg)}[class*='react-tooltip__place-right']>.styles-module_arrow__K0L3T{transform:rotate(135deg)}[class*='react-tooltip__place-bottom']>.styles-module_arrow__K0L3T{transform:rotate(225deg)}[class*='react-tooltip__place-left']>.styles-module_arrow__K0L3T{transform:rotate(315deg)}.styles-module_dark__xNqje{background:var(--rt-color-dark);color:var(--rt-color-white)}.styles-module_light__Z6W-X{background-color:var(--rt-color-white);color:var(--rt-color-dark)}.styles-module_success__A2AKt{background-color:var(--rt-color-success);color:var(--rt-color-white)}.styles-module_warning__SCK0X{background-color:var(--rt-color-warning);color:var(--rt-color-white)}.styles-module_error__JvumD{background-color:var(--rt-color-error);color:var(--rt-color-white)}.styles-module_info__BWdHW{background-color:var(--rt-color-info);color:var(--rt-color-white)}`,
+        type: "base"
+    });
+});
+
+},{"77bfce2cff29bcf2":"d5jf4","react":"21dqq","@floating-ui/dom":"1xb7B","classnames":"jocGM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1xb7B":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getOverflowAncestors", ()=>(0, _dom.getOverflowAncestors));
+parcelHelpers.export(exports, "arrow", ()=>arrow);
+parcelHelpers.export(exports, "autoPlacement", ()=>autoPlacement);
+parcelHelpers.export(exports, "autoUpdate", ()=>autoUpdate);
+parcelHelpers.export(exports, "computePosition", ()=>computePosition);
+parcelHelpers.export(exports, "detectOverflow", ()=>detectOverflow);
+parcelHelpers.export(exports, "flip", ()=>flip);
+parcelHelpers.export(exports, "hide", ()=>hide);
+parcelHelpers.export(exports, "inline", ()=>inline);
+parcelHelpers.export(exports, "limitShift", ()=>limitShift);
+parcelHelpers.export(exports, "offset", ()=>offset);
+parcelHelpers.export(exports, "platform", ()=>platform);
+parcelHelpers.export(exports, "shift", ()=>shift);
+parcelHelpers.export(exports, "size", ()=>size);
+var _core = require("@floating-ui/core");
+var _utils = require("@floating-ui/utils");
+var _dom = require("@floating-ui/utils/dom");
+function getCssDimensions(element) {
+    const css = (0, _dom.getComputedStyle)(element);
+    // In testing environments, the `width` and `height` properties are empty
+    // strings for SVG elements, returning NaN. Fallback to `0` in this case.
+    let width = parseFloat(css.width) || 0;
+    let height = parseFloat(css.height) || 0;
+    const hasOffset = (0, _dom.isHTMLElement)(element);
+    const offsetWidth = hasOffset ? element.offsetWidth : width;
+    const offsetHeight = hasOffset ? element.offsetHeight : height;
+    const shouldFallback = (0, _utils.round)(width) !== offsetWidth || (0, _utils.round)(height) !== offsetHeight;
+    if (shouldFallback) {
+        width = offsetWidth;
+        height = offsetHeight;
+    }
+    return {
+        width,
+        height,
+        $: shouldFallback
+    };
+}
+function unwrapElement(element) {
+    return !(0, _dom.isElement)(element) ? element.contextElement : element;
+}
+function getScale(element) {
+    const domElement = unwrapElement(element);
+    if (!(0, _dom.isHTMLElement)(domElement)) return (0, _utils.createCoords)(1);
+    const rect = domElement.getBoundingClientRect();
+    const { width, height, $ } = getCssDimensions(domElement);
+    let x = ($ ? (0, _utils.round)(rect.width) : rect.width) / width;
+    let y = ($ ? (0, _utils.round)(rect.height) : rect.height) / height;
+    // 0, NaN, or Infinity should always fallback to 1.
+    if (!x || !Number.isFinite(x)) x = 1;
+    if (!y || !Number.isFinite(y)) y = 1;
+    return {
+        x,
+        y
+    };
+}
+const noOffsets = /*#__PURE__*/ (0, _utils.createCoords)(0);
+function getVisualOffsets(element) {
+    const win = (0, _dom.getWindow)(element);
+    if (!(0, _dom.isWebKit)() || !win.visualViewport) return noOffsets;
+    return {
+        x: win.visualViewport.offsetLeft,
+        y: win.visualViewport.offsetTop
+    };
+}
+function shouldAddVisualOffsets(element, isFixed, floatingOffsetParent) {
+    if (isFixed === void 0) isFixed = false;
+    if (!floatingOffsetParent || isFixed && floatingOffsetParent !== (0, _dom.getWindow)(element)) return false;
+    return isFixed;
+}
+function getBoundingClientRect(element, includeScale, isFixedStrategy, offsetParent) {
+    if (includeScale === void 0) includeScale = false;
+    if (isFixedStrategy === void 0) isFixedStrategy = false;
+    const clientRect = element.getBoundingClientRect();
+    const domElement = unwrapElement(element);
+    let scale = (0, _utils.createCoords)(1);
+    if (includeScale) {
+        if (offsetParent) {
+            if ((0, _dom.isElement)(offsetParent)) scale = getScale(offsetParent);
+        } else scale = getScale(element);
+    }
+    const visualOffsets = shouldAddVisualOffsets(domElement, isFixedStrategy, offsetParent) ? getVisualOffsets(domElement) : (0, _utils.createCoords)(0);
+    let x = (clientRect.left + visualOffsets.x) / scale.x;
+    let y = (clientRect.top + visualOffsets.y) / scale.y;
+    let width = clientRect.width / scale.x;
+    let height = clientRect.height / scale.y;
+    if (domElement) {
+        const win = (0, _dom.getWindow)(domElement);
+        const offsetWin = offsetParent && (0, _dom.isElement)(offsetParent) ? (0, _dom.getWindow)(offsetParent) : offsetParent;
+        let currentWin = win;
+        let currentIFrame = currentWin.frameElement;
+        while(currentIFrame && offsetParent && offsetWin !== currentWin){
+            const iframeScale = getScale(currentIFrame);
+            const iframeRect = currentIFrame.getBoundingClientRect();
+            const css = (0, _dom.getComputedStyle)(currentIFrame);
+            const left = iframeRect.left + (currentIFrame.clientLeft + parseFloat(css.paddingLeft)) * iframeScale.x;
+            const top = iframeRect.top + (currentIFrame.clientTop + parseFloat(css.paddingTop)) * iframeScale.y;
+            x *= iframeScale.x;
+            y *= iframeScale.y;
+            width *= iframeScale.x;
+            height *= iframeScale.y;
+            x += left;
+            y += top;
+            currentWin = (0, _dom.getWindow)(currentIFrame);
+            currentIFrame = currentWin.frameElement;
+        }
+    }
+    return (0, _core.rectToClientRect)({
+        width,
+        height,
+        x,
+        y
+    });
+}
+function convertOffsetParentRelativeRectToViewportRelativeRect(_ref) {
+    let { elements, rect, offsetParent, strategy } = _ref;
+    const isFixed = strategy === "fixed";
+    const documentElement = (0, _dom.getDocumentElement)(offsetParent);
+    const topLayer = elements ? (0, _dom.isTopLayer)(elements.floating) : false;
+    if (offsetParent === documentElement || topLayer && isFixed) return rect;
+    let scroll = {
+        scrollLeft: 0,
+        scrollTop: 0
+    };
+    let scale = (0, _utils.createCoords)(1);
+    const offsets = (0, _utils.createCoords)(0);
+    const isOffsetParentAnElement = (0, _dom.isHTMLElement)(offsetParent);
+    if (isOffsetParentAnElement || !isOffsetParentAnElement && !isFixed) {
+        if ((0, _dom.getNodeName)(offsetParent) !== "body" || (0, _dom.isOverflowElement)(documentElement)) scroll = (0, _dom.getNodeScroll)(offsetParent);
+        if ((0, _dom.isHTMLElement)(offsetParent)) {
+            const offsetRect = getBoundingClientRect(offsetParent);
+            scale = getScale(offsetParent);
+            offsets.x = offsetRect.x + offsetParent.clientLeft;
+            offsets.y = offsetRect.y + offsetParent.clientTop;
+        }
+    }
+    return {
+        width: rect.width * scale.x,
+        height: rect.height * scale.y,
+        x: rect.x * scale.x - scroll.scrollLeft * scale.x + offsets.x,
+        y: rect.y * scale.y - scroll.scrollTop * scale.y + offsets.y
+    };
+}
+function getClientRects(element) {
+    return Array.from(element.getClientRects());
+}
+function getWindowScrollBarX(element) {
+    // If <html> has a CSS width greater than the viewport, then this will be
+    // incorrect for RTL.
+    return getBoundingClientRect((0, _dom.getDocumentElement)(element)).left + (0, _dom.getNodeScroll)(element).scrollLeft;
+}
+// Gets the entire size of the scrollable document area, even extending outside
+// of the `<html>` and `<body>` rect bounds if horizontally scrollable.
+function getDocumentRect(element) {
+    const html = (0, _dom.getDocumentElement)(element);
+    const scroll = (0, _dom.getNodeScroll)(element);
+    const body = element.ownerDocument.body;
+    const width = (0, _utils.max)(html.scrollWidth, html.clientWidth, body.scrollWidth, body.clientWidth);
+    const height = (0, _utils.max)(html.scrollHeight, html.clientHeight, body.scrollHeight, body.clientHeight);
+    let x = -scroll.scrollLeft + getWindowScrollBarX(element);
+    const y = -scroll.scrollTop;
+    if ((0, _dom.getComputedStyle)(body).direction === "rtl") x += (0, _utils.max)(html.clientWidth, body.clientWidth) - width;
+    return {
+        width,
+        height,
+        x,
+        y
+    };
+}
+function getViewportRect(element, strategy) {
+    const win = (0, _dom.getWindow)(element);
+    const html = (0, _dom.getDocumentElement)(element);
+    const visualViewport = win.visualViewport;
+    let width = html.clientWidth;
+    let height = html.clientHeight;
+    let x = 0;
+    let y = 0;
+    if (visualViewport) {
+        width = visualViewport.width;
+        height = visualViewport.height;
+        const visualViewportBased = (0, _dom.isWebKit)();
+        if (!visualViewportBased || visualViewportBased && strategy === "fixed") {
+            x = visualViewport.offsetLeft;
+            y = visualViewport.offsetTop;
+        }
+    }
+    return {
+        width,
+        height,
+        x,
+        y
+    };
+}
+// Returns the inner client rect, subtracting scrollbars if present.
+function getInnerBoundingClientRect(element, strategy) {
+    const clientRect = getBoundingClientRect(element, true, strategy === "fixed");
+    const top = clientRect.top + element.clientTop;
+    const left = clientRect.left + element.clientLeft;
+    const scale = (0, _dom.isHTMLElement)(element) ? getScale(element) : (0, _utils.createCoords)(1);
+    const width = element.clientWidth * scale.x;
+    const height = element.clientHeight * scale.y;
+    const x = left * scale.x;
+    const y = top * scale.y;
+    return {
+        width,
+        height,
+        x,
+        y
+    };
+}
+function getClientRectFromClippingAncestor(element, clippingAncestor, strategy) {
+    let rect;
+    if (clippingAncestor === "viewport") rect = getViewportRect(element, strategy);
+    else if (clippingAncestor === "document") rect = getDocumentRect((0, _dom.getDocumentElement)(element));
+    else if ((0, _dom.isElement)(clippingAncestor)) rect = getInnerBoundingClientRect(clippingAncestor, strategy);
+    else {
+        const visualOffsets = getVisualOffsets(element);
+        rect = {
+            ...clippingAncestor,
+            x: clippingAncestor.x - visualOffsets.x,
+            y: clippingAncestor.y - visualOffsets.y
+        };
+    }
+    return (0, _core.rectToClientRect)(rect);
+}
+function hasFixedPositionAncestor(element, stopNode) {
+    const parentNode = (0, _dom.getParentNode)(element);
+    if (parentNode === stopNode || !(0, _dom.isElement)(parentNode) || (0, _dom.isLastTraversableNode)(parentNode)) return false;
+    return (0, _dom.getComputedStyle)(parentNode).position === "fixed" || hasFixedPositionAncestor(parentNode, stopNode);
+}
+// A "clipping ancestor" is an `overflow` element with the characteristic of
+// clipping (or hiding) child elements. This returns all clipping ancestors
+// of the given element up the tree.
+function getClippingElementAncestors(element, cache) {
+    const cachedResult = cache.get(element);
+    if (cachedResult) return cachedResult;
+    let result = (0, _dom.getOverflowAncestors)(element, [], false).filter((el)=>(0, _dom.isElement)(el) && (0, _dom.getNodeName)(el) !== "body");
+    let currentContainingBlockComputedStyle = null;
+    const elementIsFixed = (0, _dom.getComputedStyle)(element).position === "fixed";
+    let currentNode = elementIsFixed ? (0, _dom.getParentNode)(element) : element;
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block
+    while((0, _dom.isElement)(currentNode) && !(0, _dom.isLastTraversableNode)(currentNode)){
+        const computedStyle = (0, _dom.getComputedStyle)(currentNode);
+        const currentNodeIsContaining = (0, _dom.isContainingBlock)(currentNode);
+        if (!currentNodeIsContaining && computedStyle.position === "fixed") currentContainingBlockComputedStyle = null;
+        const shouldDropCurrentNode = elementIsFixed ? !currentNodeIsContaining && !currentContainingBlockComputedStyle : !currentNodeIsContaining && computedStyle.position === "static" && !!currentContainingBlockComputedStyle && [
+            "absolute",
+            "fixed"
+        ].includes(currentContainingBlockComputedStyle.position) || (0, _dom.isOverflowElement)(currentNode) && !currentNodeIsContaining && hasFixedPositionAncestor(element, currentNode);
+        if (shouldDropCurrentNode) // Drop non-containing blocks.
+        result = result.filter((ancestor)=>ancestor !== currentNode);
+        else // Record last containing block for next iteration.
+        currentContainingBlockComputedStyle = computedStyle;
+        currentNode = (0, _dom.getParentNode)(currentNode);
+    }
+    cache.set(element, result);
+    return result;
+}
+// Gets the maximum area that the element is visible in due to any number of
+// clipping ancestors.
+function getClippingRect(_ref) {
+    let { element, boundary, rootBoundary, strategy } = _ref;
+    const elementClippingAncestors = boundary === "clippingAncestors" ? (0, _dom.isTopLayer)(element) ? [] : getClippingElementAncestors(element, this._c) : [].concat(boundary);
+    const clippingAncestors = [
+        ...elementClippingAncestors,
+        rootBoundary
+    ];
+    const firstClippingAncestor = clippingAncestors[0];
+    const clippingRect = clippingAncestors.reduce((accRect, clippingAncestor)=>{
+        const rect = getClientRectFromClippingAncestor(element, clippingAncestor, strategy);
+        accRect.top = (0, _utils.max)(rect.top, accRect.top);
+        accRect.right = (0, _utils.min)(rect.right, accRect.right);
+        accRect.bottom = (0, _utils.min)(rect.bottom, accRect.bottom);
+        accRect.left = (0, _utils.max)(rect.left, accRect.left);
+        return accRect;
+    }, getClientRectFromClippingAncestor(element, firstClippingAncestor, strategy));
+    return {
+        width: clippingRect.right - clippingRect.left,
+        height: clippingRect.bottom - clippingRect.top,
+        x: clippingRect.left,
+        y: clippingRect.top
+    };
+}
+function getDimensions(element) {
+    const { width, height } = getCssDimensions(element);
+    return {
+        width,
+        height
+    };
+}
+function getRectRelativeToOffsetParent(element, offsetParent, strategy) {
+    const isOffsetParentAnElement = (0, _dom.isHTMLElement)(offsetParent);
+    const documentElement = (0, _dom.getDocumentElement)(offsetParent);
+    const isFixed = strategy === "fixed";
+    const rect = getBoundingClientRect(element, true, isFixed, offsetParent);
+    let scroll = {
+        scrollLeft: 0,
+        scrollTop: 0
+    };
+    const offsets = (0, _utils.createCoords)(0);
+    if (isOffsetParentAnElement || !isOffsetParentAnElement && !isFixed) {
+        if ((0, _dom.getNodeName)(offsetParent) !== "body" || (0, _dom.isOverflowElement)(documentElement)) scroll = (0, _dom.getNodeScroll)(offsetParent);
+        if (isOffsetParentAnElement) {
+            const offsetRect = getBoundingClientRect(offsetParent, true, isFixed, offsetParent);
+            offsets.x = offsetRect.x + offsetParent.clientLeft;
+            offsets.y = offsetRect.y + offsetParent.clientTop;
+        } else if (documentElement) offsets.x = getWindowScrollBarX(documentElement);
+    }
+    const x = rect.left + scroll.scrollLeft - offsets.x;
+    const y = rect.top + scroll.scrollTop - offsets.y;
+    return {
+        x,
+        y,
+        width: rect.width,
+        height: rect.height
+    };
+}
+function isStaticPositioned(element) {
+    return (0, _dom.getComputedStyle)(element).position === "static";
+}
+function getTrueOffsetParent(element, polyfill) {
+    if (!(0, _dom.isHTMLElement)(element) || (0, _dom.getComputedStyle)(element).position === "fixed") return null;
+    if (polyfill) return polyfill(element);
+    return element.offsetParent;
+}
+// Gets the closest ancestor positioned element. Handles some edge cases,
+// such as table ancestors and cross browser bugs.
+function getOffsetParent(element, polyfill) {
+    const win = (0, _dom.getWindow)(element);
+    if ((0, _dom.isTopLayer)(element)) return win;
+    if (!(0, _dom.isHTMLElement)(element)) {
+        let svgOffsetParent = (0, _dom.getParentNode)(element);
+        while(svgOffsetParent && !(0, _dom.isLastTraversableNode)(svgOffsetParent)){
+            if ((0, _dom.isElement)(svgOffsetParent) && !isStaticPositioned(svgOffsetParent)) return svgOffsetParent;
+            svgOffsetParent = (0, _dom.getParentNode)(svgOffsetParent);
+        }
+        return win;
+    }
+    let offsetParent = getTrueOffsetParent(element, polyfill);
+    while(offsetParent && (0, _dom.isTableElement)(offsetParent) && isStaticPositioned(offsetParent))offsetParent = getTrueOffsetParent(offsetParent, polyfill);
+    if (offsetParent && (0, _dom.isLastTraversableNode)(offsetParent) && isStaticPositioned(offsetParent) && !(0, _dom.isContainingBlock)(offsetParent)) return win;
+    return offsetParent || (0, _dom.getContainingBlock)(element) || win;
+}
+const getElementRects = async function(data) {
+    const getOffsetParentFn = this.getOffsetParent || getOffsetParent;
+    const getDimensionsFn = this.getDimensions;
+    const floatingDimensions = await getDimensionsFn(data.floating);
+    return {
+        reference: getRectRelativeToOffsetParent(data.reference, await getOffsetParentFn(data.floating), data.strategy),
+        floating: {
+            x: 0,
+            y: 0,
+            width: floatingDimensions.width,
+            height: floatingDimensions.height
+        }
+    };
+};
+function isRTL(element) {
+    return (0, _dom.getComputedStyle)(element).direction === "rtl";
+}
+const platform = {
+    convertOffsetParentRelativeRectToViewportRelativeRect,
+    getDocumentElement: (0, _dom.getDocumentElement),
+    getClippingRect,
+    getOffsetParent,
+    getElementRects,
+    getClientRects,
+    getDimensions,
+    getScale,
+    isElement: (0, _dom.isElement),
+    isRTL
+};
+// https://samthor.au/2021/observing-dom/
+function observeMove(element, onMove) {
+    let io = null;
+    let timeoutId;
+    const root = (0, _dom.getDocumentElement)(element);
+    function cleanup() {
+        var _io;
+        clearTimeout(timeoutId);
+        (_io = io) == null || _io.disconnect();
+        io = null;
+    }
+    function refresh(skip, threshold) {
+        if (skip === void 0) skip = false;
+        if (threshold === void 0) threshold = 1;
+        cleanup();
+        const { left, top, width, height } = element.getBoundingClientRect();
+        if (!skip) onMove();
+        if (!width || !height) return;
+        const insetTop = (0, _utils.floor)(top);
+        const insetRight = (0, _utils.floor)(root.clientWidth - (left + width));
+        const insetBottom = (0, _utils.floor)(root.clientHeight - (top + height));
+        const insetLeft = (0, _utils.floor)(left);
+        const rootMargin = -insetTop + "px " + -insetRight + "px " + -insetBottom + "px " + -insetLeft + "px";
+        const options = {
+            rootMargin,
+            threshold: (0, _utils.max)(0, (0, _utils.min)(1, threshold)) || 1
+        };
+        let isFirstUpdate = true;
+        function handleObserve(entries) {
+            const ratio = entries[0].intersectionRatio;
+            if (ratio !== threshold) {
+                if (!isFirstUpdate) return refresh();
+                if (!ratio) // If the reference is clipped, the ratio is 0. Throttle the refresh
+                // to prevent an infinite loop of updates.
+                timeoutId = setTimeout(()=>{
+                    refresh(false, 1e-7);
+                }, 1000);
+                else refresh(false, ratio);
+            }
+            isFirstUpdate = false;
+        }
+        // Older browsers don't support a `document` as the root and will throw an
+        // error.
+        try {
+            io = new IntersectionObserver(handleObserve, {
+                ...options,
+                // Handle <iframe>s
+                root: root.ownerDocument
+            });
+        } catch (e) {
+            io = new IntersectionObserver(handleObserve, options);
+        }
+        io.observe(element);
+    }
+    refresh(true);
+    return cleanup;
+}
+/**
+ * Automatically updates the position of the floating element when necessary.
+ * Should only be called when the floating element is mounted on the DOM or
+ * visible on the screen.
+ * @returns cleanup function that should be invoked when the floating element is
+ * removed from the DOM or hidden from the screen.
+ * @see https://floating-ui.com/docs/autoUpdate
+ */ function autoUpdate(reference, floating, update, options) {
+    if (options === void 0) options = {};
+    const { ancestorScroll = true, ancestorResize = true, elementResize = typeof ResizeObserver === "function", layoutShift = typeof IntersectionObserver === "function", animationFrame = false } = options;
+    const referenceEl = unwrapElement(reference);
+    const ancestors = ancestorScroll || ancestorResize ? [
+        ...referenceEl ? (0, _dom.getOverflowAncestors)(referenceEl) : [],
+        ...(0, _dom.getOverflowAncestors)(floating)
+    ] : [];
+    ancestors.forEach((ancestor)=>{
+        ancestorScroll && ancestor.addEventListener("scroll", update, {
+            passive: true
+        });
+        ancestorResize && ancestor.addEventListener("resize", update);
+    });
+    const cleanupIo = referenceEl && layoutShift ? observeMove(referenceEl, update) : null;
+    let reobserveFrame = -1;
+    let resizeObserver = null;
+    if (elementResize) {
+        resizeObserver = new ResizeObserver((_ref)=>{
+            let [firstEntry] = _ref;
+            if (firstEntry && firstEntry.target === referenceEl && resizeObserver) {
+                // Prevent update loops when using the `size` middleware.
+                // https://github.com/floating-ui/floating-ui/issues/1740
+                resizeObserver.unobserve(floating);
+                cancelAnimationFrame(reobserveFrame);
+                reobserveFrame = requestAnimationFrame(()=>{
+                    var _resizeObserver;
+                    (_resizeObserver = resizeObserver) == null || _resizeObserver.observe(floating);
+                });
+            }
+            update();
+        });
+        if (referenceEl && !animationFrame) resizeObserver.observe(referenceEl);
+        resizeObserver.observe(floating);
+    }
+    let frameId;
+    let prevRefRect = animationFrame ? getBoundingClientRect(reference) : null;
+    if (animationFrame) frameLoop();
+    function frameLoop() {
+        const nextRefRect = getBoundingClientRect(reference);
+        if (prevRefRect && (nextRefRect.x !== prevRefRect.x || nextRefRect.y !== prevRefRect.y || nextRefRect.width !== prevRefRect.width || nextRefRect.height !== prevRefRect.height)) update();
+        prevRefRect = nextRefRect;
+        frameId = requestAnimationFrame(frameLoop);
+    }
+    update();
+    return ()=>{
+        var _resizeObserver2;
+        ancestors.forEach((ancestor)=>{
+            ancestorScroll && ancestor.removeEventListener("scroll", update);
+            ancestorResize && ancestor.removeEventListener("resize", update);
+        });
+        cleanupIo == null || cleanupIo();
+        (_resizeObserver2 = resizeObserver) == null || _resizeObserver2.disconnect();
+        resizeObserver = null;
+        if (animationFrame) cancelAnimationFrame(frameId);
+    };
+}
+/**
+ * Resolves with an object of overflow side offsets that determine how much the
+ * element is overflowing a given clipping boundary on each side.
+ * - positive = overflowing the boundary by that number of pixels
+ * - negative = how many pixels left before it will overflow
+ * - 0 = lies flush with the boundary
+ * @see https://floating-ui.com/docs/detectOverflow
+ */ const detectOverflow = (0, _core.detectOverflow);
+/**
+ * Modifies the placement by translating the floating element along the
+ * specified axes.
+ * A number (shorthand for `mainAxis` or distance), or an axes configuration
+ * object may be passed.
+ * @see https://floating-ui.com/docs/offset
+ */ const offset = (0, _core.offset);
+/**
+ * Optimizes the visibility of the floating element by choosing the placement
+ * that has the most space available automatically, without needing to specify a
+ * preferred placement. Alternative to `flip`.
+ * @see https://floating-ui.com/docs/autoPlacement
+ */ const autoPlacement = (0, _core.autoPlacement);
+/**
+ * Optimizes the visibility of the floating element by shifting it in order to
+ * keep it in view when it will overflow the clipping boundary.
+ * @see https://floating-ui.com/docs/shift
+ */ const shift = (0, _core.shift);
+/**
+ * Optimizes the visibility of the floating element by flipping the `placement`
+ * in order to keep it in view when the preferred placement(s) will overflow the
+ * clipping boundary. Alternative to `autoPlacement`.
+ * @see https://floating-ui.com/docs/flip
+ */ const flip = (0, _core.flip);
+/**
+ * Provides data that allows you to change the size of the floating element —
+ * for instance, prevent it from overflowing the clipping boundary or match the
+ * width of the reference element.
+ * @see https://floating-ui.com/docs/size
+ */ const size = (0, _core.size);
+/**
+ * Provides data to hide the floating element in applicable situations, such as
+ * when it is not in the same clipping context as the reference element.
+ * @see https://floating-ui.com/docs/hide
+ */ const hide = (0, _core.hide);
+/**
+ * Provides data to position an inner element of the floating element so that it
+ * appears centered to the reference element.
+ * @see https://floating-ui.com/docs/arrow
+ */ const arrow = (0, _core.arrow);
+/**
+ * Provides improved positioning for inline reference elements that can span
+ * over multiple lines, such as hyperlinks or range selections.
+ * @see https://floating-ui.com/docs/inline
+ */ const inline = (0, _core.inline);
+/**
+ * Built-in `limiter` that will stop `shift()` at a certain point.
+ */ const limitShift = (0, _core.limitShift);
+/**
+ * Computes the `x` and `y` coordinates that will place the floating element
+ * next to a given reference element.
+ */ const computePosition = (reference, floating, options)=>{
+    // This caches the expensive `getClippingElementAncestors` function so that
+    // multiple lifecycle resets re-use the same result. It only lives for a
+    // single call. If other functions become expensive, we can add them as well.
+    const cache = new Map();
+    const mergedOptions = {
+        platform,
+        ...options
+    };
+    const platformWithCache = {
+        ...mergedOptions.platform,
+        _c: cache
+    };
+    return (0, _core.computePosition)(reference, floating, {
+        ...mergedOptions,
+        platform: platformWithCache
+    });
+};
+
+},{"@floating-ui/core":"dgWsp","@floating-ui/utils":"cIhJF","@floating-ui/utils/dom":"aBFfa","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dgWsp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "rectToClientRect", ()=>(0, _utils.rectToClientRect));
+parcelHelpers.export(exports, "arrow", ()=>arrow);
+parcelHelpers.export(exports, "autoPlacement", ()=>autoPlacement);
+parcelHelpers.export(exports, "computePosition", ()=>computePosition);
+parcelHelpers.export(exports, "detectOverflow", ()=>detectOverflow);
+parcelHelpers.export(exports, "flip", ()=>flip);
+parcelHelpers.export(exports, "hide", ()=>hide);
+parcelHelpers.export(exports, "inline", ()=>inline);
+parcelHelpers.export(exports, "limitShift", ()=>limitShift);
+parcelHelpers.export(exports, "offset", ()=>offset);
+parcelHelpers.export(exports, "shift", ()=>shift);
+parcelHelpers.export(exports, "size", ()=>size);
+var _utils = require("@floating-ui/utils");
+function computeCoordsFromPlacement(_ref, placement, rtl) {
+    let { reference, floating } = _ref;
+    const sideAxis = (0, _utils.getSideAxis)(placement);
+    const alignmentAxis = (0, _utils.getAlignmentAxis)(placement);
+    const alignLength = (0, _utils.getAxisLength)(alignmentAxis);
+    const side = (0, _utils.getSide)(placement);
+    const isVertical = sideAxis === "y";
+    const commonX = reference.x + reference.width / 2 - floating.width / 2;
+    const commonY = reference.y + reference.height / 2 - floating.height / 2;
+    const commonAlign = reference[alignLength] / 2 - floating[alignLength] / 2;
+    let coords;
+    switch(side){
+        case "top":
+            coords = {
+                x: commonX,
+                y: reference.y - floating.height
+            };
+            break;
+        case "bottom":
+            coords = {
+                x: commonX,
+                y: reference.y + reference.height
+            };
+            break;
+        case "right":
+            coords = {
+                x: reference.x + reference.width,
+                y: commonY
+            };
+            break;
+        case "left":
+            coords = {
+                x: reference.x - floating.width,
+                y: commonY
+            };
+            break;
+        default:
+            coords = {
+                x: reference.x,
+                y: reference.y
+            };
+    }
+    switch((0, _utils.getAlignment)(placement)){
+        case "start":
+            coords[alignmentAxis] -= commonAlign * (rtl && isVertical ? -1 : 1);
+            break;
+        case "end":
+            coords[alignmentAxis] += commonAlign * (rtl && isVertical ? -1 : 1);
+            break;
+    }
+    return coords;
+}
+/**
+ * Computes the `x` and `y` coordinates that will place the floating element
+ * next to a given reference element.
+ *
+ * This export does not have any `platform` interface logic. You will need to
+ * write one for the platform you are using Floating UI with.
+ */ const computePosition = async (reference, floating, config)=>{
+    const { placement = "bottom", strategy = "absolute", middleware = [], platform } = config;
+    const validMiddleware = middleware.filter(Boolean);
+    const rtl = await (platform.isRTL == null ? void 0 : platform.isRTL(floating));
+    let rects = await platform.getElementRects({
+        reference,
+        floating,
+        strategy
+    });
+    let { x, y } = computeCoordsFromPlacement(rects, placement, rtl);
+    let statefulPlacement = placement;
+    let middlewareData = {};
+    let resetCount = 0;
+    for(let i = 0; i < validMiddleware.length; i++){
+        const { name, fn } = validMiddleware[i];
+        const { x: nextX, y: nextY, data, reset } = await fn({
+            x,
+            y,
+            initialPlacement: placement,
+            placement: statefulPlacement,
+            strategy,
+            middlewareData,
+            rects,
+            platform,
+            elements: {
+                reference,
+                floating
+            }
+        });
+        x = nextX != null ? nextX : x;
+        y = nextY != null ? nextY : y;
+        middlewareData = {
+            ...middlewareData,
+            [name]: {
+                ...middlewareData[name],
+                ...data
+            }
+        };
+        if (reset && resetCount <= 50) {
+            resetCount++;
+            if (typeof reset === "object") {
+                if (reset.placement) statefulPlacement = reset.placement;
+                if (reset.rects) rects = reset.rects === true ? await platform.getElementRects({
+                    reference,
+                    floating,
+                    strategy
+                }) : reset.rects;
+                ({ x, y } = computeCoordsFromPlacement(rects, statefulPlacement, rtl));
+            }
+            i = -1;
+        }
+    }
+    return {
+        x,
+        y,
+        placement: statefulPlacement,
+        strategy,
+        middlewareData
+    };
+};
+/**
+ * Resolves with an object of overflow side offsets that determine how much the
+ * element is overflowing a given clipping boundary on each side.
+ * - positive = overflowing the boundary by that number of pixels
+ * - negative = how many pixels left before it will overflow
+ * - 0 = lies flush with the boundary
+ * @see https://floating-ui.com/docs/detectOverflow
+ */ async function detectOverflow(state, options) {
+    var _await$platform$isEle;
+    if (options === void 0) options = {};
+    const { x, y, platform, rects, elements, strategy } = state;
+    const { boundary = "clippingAncestors", rootBoundary = "viewport", elementContext = "floating", altBoundary = false, padding = 0 } = (0, _utils.evaluate)(options, state);
+    const paddingObject = (0, _utils.getPaddingObject)(padding);
+    const altContext = elementContext === "floating" ? "reference" : "floating";
+    const element = elements[altBoundary ? altContext : elementContext];
+    const clippingClientRect = (0, _utils.rectToClientRect)(await platform.getClippingRect({
+        element: ((_await$platform$isEle = await (platform.isElement == null ? void 0 : platform.isElement(element))) != null ? _await$platform$isEle : true) ? element : element.contextElement || await (platform.getDocumentElement == null ? void 0 : platform.getDocumentElement(elements.floating)),
+        boundary,
+        rootBoundary,
+        strategy
+    }));
+    const rect = elementContext === "floating" ? {
+        x,
+        y,
+        width: rects.floating.width,
+        height: rects.floating.height
+    } : rects.reference;
+    const offsetParent = await (platform.getOffsetParent == null ? void 0 : platform.getOffsetParent(elements.floating));
+    const offsetScale = await (platform.isElement == null ? void 0 : platform.isElement(offsetParent)) ? await (platform.getScale == null ? void 0 : platform.getScale(offsetParent)) || {
+        x: 1,
+        y: 1
+    } : {
+        x: 1,
+        y: 1
+    };
+    const elementClientRect = (0, _utils.rectToClientRect)(platform.convertOffsetParentRelativeRectToViewportRelativeRect ? await platform.convertOffsetParentRelativeRectToViewportRelativeRect({
+        elements,
+        rect,
+        offsetParent,
+        strategy
+    }) : rect);
+    return {
+        top: (clippingClientRect.top - elementClientRect.top + paddingObject.top) / offsetScale.y,
+        bottom: (elementClientRect.bottom - clippingClientRect.bottom + paddingObject.bottom) / offsetScale.y,
+        left: (clippingClientRect.left - elementClientRect.left + paddingObject.left) / offsetScale.x,
+        right: (elementClientRect.right - clippingClientRect.right + paddingObject.right) / offsetScale.x
+    };
+}
+/**
+ * Provides data to position an inner element of the floating element so that it
+ * appears centered to the reference element.
+ * @see https://floating-ui.com/docs/arrow
+ */ const arrow = (options)=>({
+        name: "arrow",
+        options,
+        async fn (state) {
+            const { x, y, placement, rects, platform, elements, middlewareData } = state;
+            // Since `element` is required, we don't Partial<> the type.
+            const { element, padding = 0 } = (0, _utils.evaluate)(options, state) || {};
+            if (element == null) return {};
+            const paddingObject = (0, _utils.getPaddingObject)(padding);
+            const coords = {
+                x,
+                y
+            };
+            const axis = (0, _utils.getAlignmentAxis)(placement);
+            const length = (0, _utils.getAxisLength)(axis);
+            const arrowDimensions = await platform.getDimensions(element);
+            const isYAxis = axis === "y";
+            const minProp = isYAxis ? "top" : "left";
+            const maxProp = isYAxis ? "bottom" : "right";
+            const clientProp = isYAxis ? "clientHeight" : "clientWidth";
+            const endDiff = rects.reference[length] + rects.reference[axis] - coords[axis] - rects.floating[length];
+            const startDiff = coords[axis] - rects.reference[axis];
+            const arrowOffsetParent = await (platform.getOffsetParent == null ? void 0 : platform.getOffsetParent(element));
+            let clientSize = arrowOffsetParent ? arrowOffsetParent[clientProp] : 0;
+            // DOM platform can return `window` as the `offsetParent`.
+            if (!clientSize || !await (platform.isElement == null ? void 0 : platform.isElement(arrowOffsetParent))) clientSize = elements.floating[clientProp] || rects.floating[length];
+            const centerToReference = endDiff / 2 - startDiff / 2;
+            // If the padding is large enough that it causes the arrow to no longer be
+            // centered, modify the padding so that it is centered.
+            const largestPossiblePadding = clientSize / 2 - arrowDimensions[length] / 2 - 1;
+            const minPadding = (0, _utils.min)(paddingObject[minProp], largestPossiblePadding);
+            const maxPadding = (0, _utils.min)(paddingObject[maxProp], largestPossiblePadding);
+            // Make sure the arrow doesn't overflow the floating element if the center
+            // point is outside the floating element's bounds.
+            const min$1 = minPadding;
+            const max = clientSize - arrowDimensions[length] - maxPadding;
+            const center = clientSize / 2 - arrowDimensions[length] / 2 + centerToReference;
+            const offset = (0, _utils.clamp)(min$1, center, max);
+            // If the reference is small enough that the arrow's padding causes it to
+            // to point to nothing for an aligned placement, adjust the offset of the
+            // floating element itself. To ensure `shift()` continues to take action,
+            // a single reset is performed when this is true.
+            const shouldAddOffset = !middlewareData.arrow && (0, _utils.getAlignment)(placement) != null && center !== offset && rects.reference[length] / 2 - (center < min$1 ? minPadding : maxPadding) - arrowDimensions[length] / 2 < 0;
+            const alignmentOffset = shouldAddOffset ? center < min$1 ? center - min$1 : center - max : 0;
+            return {
+                [axis]: coords[axis] + alignmentOffset,
+                data: {
+                    [axis]: offset,
+                    centerOffset: center - offset - alignmentOffset,
+                    ...shouldAddOffset && {
+                        alignmentOffset
+                    }
+                },
+                reset: shouldAddOffset
+            };
+        }
+    });
+function getPlacementList(alignment, autoAlignment, allowedPlacements) {
+    const allowedPlacementsSortedByAlignment = alignment ? [
+        ...allowedPlacements.filter((placement)=>(0, _utils.getAlignment)(placement) === alignment),
+        ...allowedPlacements.filter((placement)=>(0, _utils.getAlignment)(placement) !== alignment)
+    ] : allowedPlacements.filter((placement)=>(0, _utils.getSide)(placement) === placement);
+    return allowedPlacementsSortedByAlignment.filter((placement)=>{
+        if (alignment) return (0, _utils.getAlignment)(placement) === alignment || (autoAlignment ? (0, _utils.getOppositeAlignmentPlacement)(placement) !== placement : false);
+        return true;
+    });
+}
+/**
+ * Optimizes the visibility of the floating element by choosing the placement
+ * that has the most space available automatically, without needing to specify a
+ * preferred placement. Alternative to `flip`.
+ * @see https://floating-ui.com/docs/autoPlacement
+ */ const autoPlacement = function(options) {
+    if (options === void 0) options = {};
+    return {
+        name: "autoPlacement",
+        options,
+        async fn (state) {
+            var _middlewareData$autoP, _middlewareData$autoP2, _placementsThatFitOnE;
+            const { rects, middlewareData, placement, platform, elements } = state;
+            const { crossAxis = false, alignment, allowedPlacements = (0, _utils.placements), autoAlignment = true, ...detectOverflowOptions } = (0, _utils.evaluate)(options, state);
+            const placements$1 = alignment !== undefined || allowedPlacements === (0, _utils.placements) ? getPlacementList(alignment || null, autoAlignment, allowedPlacements) : allowedPlacements;
+            const overflow = await detectOverflow(state, detectOverflowOptions);
+            const currentIndex = ((_middlewareData$autoP = middlewareData.autoPlacement) == null ? void 0 : _middlewareData$autoP.index) || 0;
+            const currentPlacement = placements$1[currentIndex];
+            if (currentPlacement == null) return {};
+            const alignmentSides = (0, _utils.getAlignmentSides)(currentPlacement, rects, await (platform.isRTL == null ? void 0 : platform.isRTL(elements.floating)));
+            // Make `computeCoords` start from the right place.
+            if (placement !== currentPlacement) return {
+                reset: {
+                    placement: placements$1[0]
+                }
+            };
+            const currentOverflows = [
+                overflow[(0, _utils.getSide)(currentPlacement)],
+                overflow[alignmentSides[0]],
+                overflow[alignmentSides[1]]
+            ];
+            const allOverflows = [
+                ...((_middlewareData$autoP2 = middlewareData.autoPlacement) == null ? void 0 : _middlewareData$autoP2.overflows) || [],
+                {
+                    placement: currentPlacement,
+                    overflows: currentOverflows
+                }
+            ];
+            const nextPlacement = placements$1[currentIndex + 1];
+            // There are more placements to check.
+            if (nextPlacement) return {
+                data: {
+                    index: currentIndex + 1,
+                    overflows: allOverflows
+                },
+                reset: {
+                    placement: nextPlacement
+                }
+            };
+            const placementsSortedByMostSpace = allOverflows.map((d)=>{
+                const alignment = (0, _utils.getAlignment)(d.placement);
+                return [
+                    d.placement,
+                    alignment && crossAxis ? // Check along the mainAxis and main crossAxis side.
+                    d.overflows.slice(0, 2).reduce((acc, v)=>acc + v, 0) : // Check only the mainAxis.
+                    d.overflows[0],
+                    d.overflows
+                ];
+            }).sort((a, b)=>a[1] - b[1]);
+            const placementsThatFitOnEachSide = placementsSortedByMostSpace.filter((d)=>d[2].slice(0, // Aligned placements should not check their opposite crossAxis
+                // side.
+                (0, _utils.getAlignment)(d[0]) ? 2 : 3).every((v)=>v <= 0));
+            const resetPlacement = ((_placementsThatFitOnE = placementsThatFitOnEachSide[0]) == null ? void 0 : _placementsThatFitOnE[0]) || placementsSortedByMostSpace[0][0];
+            if (resetPlacement !== placement) return {
+                data: {
+                    index: currentIndex + 1,
+                    overflows: allOverflows
+                },
+                reset: {
+                    placement: resetPlacement
+                }
+            };
+            return {};
+        }
+    };
+};
+/**
+ * Optimizes the visibility of the floating element by flipping the `placement`
+ * in order to keep it in view when the preferred placement(s) will overflow the
+ * clipping boundary. Alternative to `autoPlacement`.
+ * @see https://floating-ui.com/docs/flip
+ */ const flip = function(options) {
+    if (options === void 0) options = {};
+    return {
+        name: "flip",
+        options,
+        async fn (state) {
+            var _middlewareData$arrow, _middlewareData$flip;
+            const { placement, middlewareData, rects, initialPlacement, platform, elements } = state;
+            const { mainAxis: checkMainAxis = true, crossAxis: checkCrossAxis = true, fallbackPlacements: specifiedFallbackPlacements, fallbackStrategy = "bestFit", fallbackAxisSideDirection = "none", flipAlignment = true, ...detectOverflowOptions } = (0, _utils.evaluate)(options, state);
+            // If a reset by the arrow was caused due to an alignment offset being
+            // added, we should skip any logic now since `flip()` has already done its
+            // work.
+            // https://github.com/floating-ui/floating-ui/issues/2549#issuecomment-1719601643
+            if ((_middlewareData$arrow = middlewareData.arrow) != null && _middlewareData$arrow.alignmentOffset) return {};
+            const side = (0, _utils.getSide)(placement);
+            const initialSideAxis = (0, _utils.getSideAxis)(initialPlacement);
+            const isBasePlacement = (0, _utils.getSide)(initialPlacement) === initialPlacement;
+            const rtl = await (platform.isRTL == null ? void 0 : platform.isRTL(elements.floating));
+            const fallbackPlacements = specifiedFallbackPlacements || (isBasePlacement || !flipAlignment ? [
+                (0, _utils.getOppositePlacement)(initialPlacement)
+            ] : (0, _utils.getExpandedPlacements)(initialPlacement));
+            const hasFallbackAxisSideDirection = fallbackAxisSideDirection !== "none";
+            if (!specifiedFallbackPlacements && hasFallbackAxisSideDirection) fallbackPlacements.push(...(0, _utils.getOppositeAxisPlacements)(initialPlacement, flipAlignment, fallbackAxisSideDirection, rtl));
+            const placements = [
+                initialPlacement,
+                ...fallbackPlacements
+            ];
+            const overflow = await detectOverflow(state, detectOverflowOptions);
+            const overflows = [];
+            let overflowsData = ((_middlewareData$flip = middlewareData.flip) == null ? void 0 : _middlewareData$flip.overflows) || [];
+            if (checkMainAxis) overflows.push(overflow[side]);
+            if (checkCrossAxis) {
+                const sides = (0, _utils.getAlignmentSides)(placement, rects, rtl);
+                overflows.push(overflow[sides[0]], overflow[sides[1]]);
+            }
+            overflowsData = [
+                ...overflowsData,
+                {
+                    placement,
+                    overflows
+                }
+            ];
+            // One or more sides is overflowing.
+            if (!overflows.every((side)=>side <= 0)) {
+                var _middlewareData$flip2, _overflowsData$filter;
+                const nextIndex = (((_middlewareData$flip2 = middlewareData.flip) == null ? void 0 : _middlewareData$flip2.index) || 0) + 1;
+                const nextPlacement = placements[nextIndex];
+                if (nextPlacement) // Try next placement and re-run the lifecycle.
+                return {
+                    data: {
+                        index: nextIndex,
+                        overflows: overflowsData
+                    },
+                    reset: {
+                        placement: nextPlacement
+                    }
+                };
+                // First, find the candidates that fit on the mainAxis side of overflow,
+                // then find the placement that fits the best on the main crossAxis side.
+                let resetPlacement = (_overflowsData$filter = overflowsData.filter((d)=>d.overflows[0] <= 0).sort((a, b)=>a.overflows[1] - b.overflows[1])[0]) == null ? void 0 : _overflowsData$filter.placement;
+                // Otherwise fallback.
+                if (!resetPlacement) switch(fallbackStrategy){
+                    case "bestFit":
+                        {
+                            var _overflowsData$filter2;
+                            const placement = (_overflowsData$filter2 = overflowsData.filter((d)=>{
+                                if (hasFallbackAxisSideDirection) {
+                                    const currentSideAxis = (0, _utils.getSideAxis)(d.placement);
+                                    return currentSideAxis === initialSideAxis || // Create a bias to the `y` side axis due to horizontal
+                                    // reading directions favoring greater width.
+                                    currentSideAxis === "y";
+                                }
+                                return true;
+                            }).map((d)=>[
+                                    d.placement,
+                                    d.overflows.filter((overflow)=>overflow > 0).reduce((acc, overflow)=>acc + overflow, 0)
+                                ]).sort((a, b)=>a[1] - b[1])[0]) == null ? void 0 : _overflowsData$filter2[0];
+                            if (placement) resetPlacement = placement;
+                            break;
+                        }
+                    case "initialPlacement":
+                        resetPlacement = initialPlacement;
+                        break;
+                }
+                if (placement !== resetPlacement) return {
+                    reset: {
+                        placement: resetPlacement
+                    }
+                };
+            }
+            return {};
+        }
+    };
+};
+function getSideOffsets(overflow, rect) {
+    return {
+        top: overflow.top - rect.height,
+        right: overflow.right - rect.width,
+        bottom: overflow.bottom - rect.height,
+        left: overflow.left - rect.width
+    };
+}
+function isAnySideFullyClipped(overflow) {
+    return (0, _utils.sides).some((side)=>overflow[side] >= 0);
+}
+/**
+ * Provides data to hide the floating element in applicable situations, such as
+ * when it is not in the same clipping context as the reference element.
+ * @see https://floating-ui.com/docs/hide
+ */ const hide = function(options) {
+    if (options === void 0) options = {};
+    return {
+        name: "hide",
+        options,
+        async fn (state) {
+            const { rects } = state;
+            const { strategy = "referenceHidden", ...detectOverflowOptions } = (0, _utils.evaluate)(options, state);
+            switch(strategy){
+                case "referenceHidden":
+                    {
+                        const overflow = await detectOverflow(state, {
+                            ...detectOverflowOptions,
+                            elementContext: "reference"
+                        });
+                        const offsets = getSideOffsets(overflow, rects.reference);
+                        return {
+                            data: {
+                                referenceHiddenOffsets: offsets,
+                                referenceHidden: isAnySideFullyClipped(offsets)
+                            }
+                        };
+                    }
+                case "escaped":
+                    {
+                        const overflow = await detectOverflow(state, {
+                            ...detectOverflowOptions,
+                            altBoundary: true
+                        });
+                        const offsets = getSideOffsets(overflow, rects.floating);
+                        return {
+                            data: {
+                                escapedOffsets: offsets,
+                                escaped: isAnySideFullyClipped(offsets)
+                            }
+                        };
+                    }
+                default:
+                    return {};
+            }
+        }
+    };
+};
+function getBoundingRect(rects) {
+    const minX = (0, _utils.min)(...rects.map((rect)=>rect.left));
+    const minY = (0, _utils.min)(...rects.map((rect)=>rect.top));
+    const maxX = (0, _utils.max)(...rects.map((rect)=>rect.right));
+    const maxY = (0, _utils.max)(...rects.map((rect)=>rect.bottom));
+    return {
+        x: minX,
+        y: minY,
+        width: maxX - minX,
+        height: maxY - minY
+    };
+}
+function getRectsByLine(rects) {
+    const sortedRects = rects.slice().sort((a, b)=>a.y - b.y);
+    const groups = [];
+    let prevRect = null;
+    for(let i = 0; i < sortedRects.length; i++){
+        const rect = sortedRects[i];
+        if (!prevRect || rect.y - prevRect.y > prevRect.height / 2) groups.push([
+            rect
+        ]);
+        else groups[groups.length - 1].push(rect);
+        prevRect = rect;
+    }
+    return groups.map((rect)=>(0, _utils.rectToClientRect)(getBoundingRect(rect)));
+}
+/**
+ * Provides improved positioning for inline reference elements that can span
+ * over multiple lines, such as hyperlinks or range selections.
+ * @see https://floating-ui.com/docs/inline
+ */ const inline = function(options) {
+    if (options === void 0) options = {};
+    return {
+        name: "inline",
+        options,
+        async fn (state) {
+            const { placement, elements, rects, platform, strategy } = state;
+            // A MouseEvent's client{X,Y} coords can be up to 2 pixels off a
+            // ClientRect's bounds, despite the event listener being triggered. A
+            // padding of 2 seems to handle this issue.
+            const { padding = 2, x, y } = (0, _utils.evaluate)(options, state);
+            const nativeClientRects = Array.from(await (platform.getClientRects == null ? void 0 : platform.getClientRects(elements.reference)) || []);
+            const clientRects = getRectsByLine(nativeClientRects);
+            const fallback = (0, _utils.rectToClientRect)(getBoundingRect(nativeClientRects));
+            const paddingObject = (0, _utils.getPaddingObject)(padding);
+            function getBoundingClientRect() {
+                // There are two rects and they are disjoined.
+                if (clientRects.length === 2 && clientRects[0].left > clientRects[1].right && x != null && y != null) // Find the first rect in which the point is fully inside.
+                return clientRects.find((rect)=>x > rect.left - paddingObject.left && x < rect.right + paddingObject.right && y > rect.top - paddingObject.top && y < rect.bottom + paddingObject.bottom) || fallback;
+                // There are 2 or more connected rects.
+                if (clientRects.length >= 2) {
+                    if ((0, _utils.getSideAxis)(placement) === "y") {
+                        const firstRect = clientRects[0];
+                        const lastRect = clientRects[clientRects.length - 1];
+                        const isTop = (0, _utils.getSide)(placement) === "top";
+                        const top = firstRect.top;
+                        const bottom = lastRect.bottom;
+                        const left = isTop ? firstRect.left : lastRect.left;
+                        const right = isTop ? firstRect.right : lastRect.right;
+                        const width = right - left;
+                        const height = bottom - top;
+                        return {
+                            top,
+                            bottom,
+                            left,
+                            right,
+                            width,
+                            height,
+                            x: left,
+                            y: top
+                        };
+                    }
+                    const isLeftSide = (0, _utils.getSide)(placement) === "left";
+                    const maxRight = (0, _utils.max)(...clientRects.map((rect)=>rect.right));
+                    const minLeft = (0, _utils.min)(...clientRects.map((rect)=>rect.left));
+                    const measureRects = clientRects.filter((rect)=>isLeftSide ? rect.left === minLeft : rect.right === maxRight);
+                    const top = measureRects[0].top;
+                    const bottom = measureRects[measureRects.length - 1].bottom;
+                    const left = minLeft;
+                    const right = maxRight;
+                    const width = right - left;
+                    const height = bottom - top;
+                    return {
+                        top,
+                        bottom,
+                        left,
+                        right,
+                        width,
+                        height,
+                        x: left,
+                        y: top
+                    };
+                }
+                return fallback;
+            }
+            const resetRects = await platform.getElementRects({
+                reference: {
+                    getBoundingClientRect
+                },
+                floating: elements.floating,
+                strategy
+            });
+            if (rects.reference.x !== resetRects.reference.x || rects.reference.y !== resetRects.reference.y || rects.reference.width !== resetRects.reference.width || rects.reference.height !== resetRects.reference.height) return {
+                reset: {
+                    rects: resetRects
+                }
+            };
+            return {};
+        }
+    };
+};
+// For type backwards-compatibility, the `OffsetOptions` type was also
+// Derivable.
+async function convertValueToCoords(state, options) {
+    const { placement, platform, elements } = state;
+    const rtl = await (platform.isRTL == null ? void 0 : platform.isRTL(elements.floating));
+    const side = (0, _utils.getSide)(placement);
+    const alignment = (0, _utils.getAlignment)(placement);
+    const isVertical = (0, _utils.getSideAxis)(placement) === "y";
+    const mainAxisMulti = [
+        "left",
+        "top"
+    ].includes(side) ? -1 : 1;
+    const crossAxisMulti = rtl && isVertical ? -1 : 1;
+    const rawValue = (0, _utils.evaluate)(options, state);
+    // eslint-disable-next-line prefer-const
+    let { mainAxis, crossAxis, alignmentAxis } = typeof rawValue === "number" ? {
+        mainAxis: rawValue,
+        crossAxis: 0,
+        alignmentAxis: null
+    } : {
+        mainAxis: 0,
+        crossAxis: 0,
+        alignmentAxis: null,
+        ...rawValue
+    };
+    if (alignment && typeof alignmentAxis === "number") crossAxis = alignment === "end" ? alignmentAxis * -1 : alignmentAxis;
+    return isVertical ? {
+        x: crossAxis * crossAxisMulti,
+        y: mainAxis * mainAxisMulti
+    } : {
+        x: mainAxis * mainAxisMulti,
+        y: crossAxis * crossAxisMulti
+    };
+}
+/**
+ * Modifies the placement by translating the floating element along the
+ * specified axes.
+ * A number (shorthand for `mainAxis` or distance), or an axes configuration
+ * object may be passed.
+ * @see https://floating-ui.com/docs/offset
+ */ const offset = function(options) {
+    if (options === void 0) options = 0;
+    return {
+        name: "offset",
+        options,
+        async fn (state) {
+            var _middlewareData$offse, _middlewareData$arrow;
+            const { x, y, placement, middlewareData } = state;
+            const diffCoords = await convertValueToCoords(state, options);
+            // If the placement is the same and the arrow caused an alignment offset
+            // then we don't need to change the positioning coordinates.
+            if (placement === ((_middlewareData$offse = middlewareData.offset) == null ? void 0 : _middlewareData$offse.placement) && (_middlewareData$arrow = middlewareData.arrow) != null && _middlewareData$arrow.alignmentOffset) return {};
+            return {
+                x: x + diffCoords.x,
+                y: y + diffCoords.y,
+                data: {
+                    ...diffCoords,
+                    placement
+                }
+            };
+        }
+    };
+};
+/**
+ * Optimizes the visibility of the floating element by shifting it in order to
+ * keep it in view when it will overflow the clipping boundary.
+ * @see https://floating-ui.com/docs/shift
+ */ const shift = function(options) {
+    if (options === void 0) options = {};
+    return {
+        name: "shift",
+        options,
+        async fn (state) {
+            const { x, y, placement } = state;
+            const { mainAxis: checkMainAxis = true, crossAxis: checkCrossAxis = false, limiter = {
+                fn: (_ref)=>{
+                    let { x, y } = _ref;
+                    return {
+                        x,
+                        y
+                    };
+                }
+            }, ...detectOverflowOptions } = (0, _utils.evaluate)(options, state);
+            const coords = {
+                x,
+                y
+            };
+            const overflow = await detectOverflow(state, detectOverflowOptions);
+            const crossAxis = (0, _utils.getSideAxis)((0, _utils.getSide)(placement));
+            const mainAxis = (0, _utils.getOppositeAxis)(crossAxis);
+            let mainAxisCoord = coords[mainAxis];
+            let crossAxisCoord = coords[crossAxis];
+            if (checkMainAxis) {
+                const minSide = mainAxis === "y" ? "top" : "left";
+                const maxSide = mainAxis === "y" ? "bottom" : "right";
+                const min = mainAxisCoord + overflow[minSide];
+                const max = mainAxisCoord - overflow[maxSide];
+                mainAxisCoord = (0, _utils.clamp)(min, mainAxisCoord, max);
+            }
+            if (checkCrossAxis) {
+                const minSide = crossAxis === "y" ? "top" : "left";
+                const maxSide = crossAxis === "y" ? "bottom" : "right";
+                const min = crossAxisCoord + overflow[minSide];
+                const max = crossAxisCoord - overflow[maxSide];
+                crossAxisCoord = (0, _utils.clamp)(min, crossAxisCoord, max);
+            }
+            const limitedCoords = limiter.fn({
+                ...state,
+                [mainAxis]: mainAxisCoord,
+                [crossAxis]: crossAxisCoord
+            });
+            return {
+                ...limitedCoords,
+                data: {
+                    x: limitedCoords.x - x,
+                    y: limitedCoords.y - y
+                }
+            };
+        }
+    };
+};
+/**
+ * Built-in `limiter` that will stop `shift()` at a certain point.
+ */ const limitShift = function(options) {
+    if (options === void 0) options = {};
+    return {
+        options,
+        fn (state) {
+            const { x, y, placement, rects, middlewareData } = state;
+            const { offset = 0, mainAxis: checkMainAxis = true, crossAxis: checkCrossAxis = true } = (0, _utils.evaluate)(options, state);
+            const coords = {
+                x,
+                y
+            };
+            const crossAxis = (0, _utils.getSideAxis)(placement);
+            const mainAxis = (0, _utils.getOppositeAxis)(crossAxis);
+            let mainAxisCoord = coords[mainAxis];
+            let crossAxisCoord = coords[crossAxis];
+            const rawOffset = (0, _utils.evaluate)(offset, state);
+            const computedOffset = typeof rawOffset === "number" ? {
+                mainAxis: rawOffset,
+                crossAxis: 0
+            } : {
+                mainAxis: 0,
+                crossAxis: 0,
+                ...rawOffset
+            };
+            if (checkMainAxis) {
+                const len = mainAxis === "y" ? "height" : "width";
+                const limitMin = rects.reference[mainAxis] - rects.floating[len] + computedOffset.mainAxis;
+                const limitMax = rects.reference[mainAxis] + rects.reference[len] - computedOffset.mainAxis;
+                if (mainAxisCoord < limitMin) mainAxisCoord = limitMin;
+                else if (mainAxisCoord > limitMax) mainAxisCoord = limitMax;
+            }
+            if (checkCrossAxis) {
+                var _middlewareData$offse, _middlewareData$offse2;
+                const len = mainAxis === "y" ? "width" : "height";
+                const isOriginSide = [
+                    "top",
+                    "left"
+                ].includes((0, _utils.getSide)(placement));
+                const limitMin = rects.reference[crossAxis] - rects.floating[len] + (isOriginSide ? ((_middlewareData$offse = middlewareData.offset) == null ? void 0 : _middlewareData$offse[crossAxis]) || 0 : 0) + (isOriginSide ? 0 : computedOffset.crossAxis);
+                const limitMax = rects.reference[crossAxis] + rects.reference[len] + (isOriginSide ? 0 : ((_middlewareData$offse2 = middlewareData.offset) == null ? void 0 : _middlewareData$offse2[crossAxis]) || 0) - (isOriginSide ? computedOffset.crossAxis : 0);
+                if (crossAxisCoord < limitMin) crossAxisCoord = limitMin;
+                else if (crossAxisCoord > limitMax) crossAxisCoord = limitMax;
+            }
+            return {
+                [mainAxis]: mainAxisCoord,
+                [crossAxis]: crossAxisCoord
+            };
+        }
+    };
+};
+/**
+ * Provides data that allows you to change the size of the floating element —
+ * for instance, prevent it from overflowing the clipping boundary or match the
+ * width of the reference element.
+ * @see https://floating-ui.com/docs/size
+ */ const size = function(options) {
+    if (options === void 0) options = {};
+    return {
+        name: "size",
+        options,
+        async fn (state) {
+            const { placement, rects, platform, elements } = state;
+            const { apply = ()=>{}, ...detectOverflowOptions } = (0, _utils.evaluate)(options, state);
+            const overflow = await detectOverflow(state, detectOverflowOptions);
+            const side = (0, _utils.getSide)(placement);
+            const alignment = (0, _utils.getAlignment)(placement);
+            const isYAxis = (0, _utils.getSideAxis)(placement) === "y";
+            const { width, height } = rects.floating;
+            let heightSide;
+            let widthSide;
+            if (side === "top" || side === "bottom") {
+                heightSide = side;
+                widthSide = alignment === (await (platform.isRTL == null ? void 0 : platform.isRTL(elements.floating)) ? "start" : "end") ? "left" : "right";
+            } else {
+                widthSide = side;
+                heightSide = alignment === "end" ? "top" : "bottom";
+            }
+            const maximumClippingHeight = height - overflow.top - overflow.bottom;
+            const maximumClippingWidth = width - overflow.left - overflow.right;
+            const overflowAvailableHeight = (0, _utils.min)(height - overflow[heightSide], maximumClippingHeight);
+            const overflowAvailableWidth = (0, _utils.min)(width - overflow[widthSide], maximumClippingWidth);
+            const noShift = !state.middlewareData.shift;
+            let availableHeight = overflowAvailableHeight;
+            let availableWidth = overflowAvailableWidth;
+            if (isYAxis) availableWidth = alignment || noShift ? (0, _utils.min)(overflowAvailableWidth, maximumClippingWidth) : maximumClippingWidth;
+            else availableHeight = alignment || noShift ? (0, _utils.min)(overflowAvailableHeight, maximumClippingHeight) : maximumClippingHeight;
+            if (noShift && !alignment) {
+                const xMin = (0, _utils.max)(overflow.left, 0);
+                const xMax = (0, _utils.max)(overflow.right, 0);
+                const yMin = (0, _utils.max)(overflow.top, 0);
+                const yMax = (0, _utils.max)(overflow.bottom, 0);
+                if (isYAxis) availableWidth = width - 2 * (xMin !== 0 || xMax !== 0 ? xMin + xMax : (0, _utils.max)(overflow.left, overflow.right));
+                else availableHeight = height - 2 * (yMin !== 0 || yMax !== 0 ? yMin + yMax : (0, _utils.max)(overflow.top, overflow.bottom));
+            }
+            await apply({
+                ...state,
+                availableWidth,
+                availableHeight
+            });
+            const nextDimensions = await platform.getDimensions(elements.floating);
+            if (width !== nextDimensions.width || height !== nextDimensions.height) return {
+                reset: {
+                    rects: true
+                }
+            };
+            return {};
+        }
+    };
+};
+
+},{"@floating-ui/utils":"cIhJF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cIhJF":[function(require,module,exports) {
+/**
+ * Custom positioning reference element.
+ * @see https://floating-ui.com/docs/virtual-elements
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "alignments", ()=>alignments);
+parcelHelpers.export(exports, "clamp", ()=>clamp);
+parcelHelpers.export(exports, "createCoords", ()=>createCoords);
+parcelHelpers.export(exports, "evaluate", ()=>evaluate);
+parcelHelpers.export(exports, "expandPaddingObject", ()=>expandPaddingObject);
+parcelHelpers.export(exports, "floor", ()=>floor);
+parcelHelpers.export(exports, "getAlignment", ()=>getAlignment);
+parcelHelpers.export(exports, "getAlignmentAxis", ()=>getAlignmentAxis);
+parcelHelpers.export(exports, "getAlignmentSides", ()=>getAlignmentSides);
+parcelHelpers.export(exports, "getAxisLength", ()=>getAxisLength);
+parcelHelpers.export(exports, "getExpandedPlacements", ()=>getExpandedPlacements);
+parcelHelpers.export(exports, "getOppositeAlignmentPlacement", ()=>getOppositeAlignmentPlacement);
+parcelHelpers.export(exports, "getOppositeAxis", ()=>getOppositeAxis);
+parcelHelpers.export(exports, "getOppositeAxisPlacements", ()=>getOppositeAxisPlacements);
+parcelHelpers.export(exports, "getOppositePlacement", ()=>getOppositePlacement);
+parcelHelpers.export(exports, "getPaddingObject", ()=>getPaddingObject);
+parcelHelpers.export(exports, "getSide", ()=>getSide);
+parcelHelpers.export(exports, "getSideAxis", ()=>getSideAxis);
+parcelHelpers.export(exports, "max", ()=>max);
+parcelHelpers.export(exports, "min", ()=>min);
+parcelHelpers.export(exports, "placements", ()=>placements);
+parcelHelpers.export(exports, "rectToClientRect", ()=>rectToClientRect);
+parcelHelpers.export(exports, "round", ()=>round);
+parcelHelpers.export(exports, "sides", ()=>sides);
+const sides = [
+    "top",
+    "right",
+    "bottom",
+    "left"
+];
+const alignments = [
+    "start",
+    "end"
+];
+const placements = /*#__PURE__*/ sides.reduce((acc, side)=>acc.concat(side, side + "-" + alignments[0], side + "-" + alignments[1]), []);
+const min = Math.min;
+const max = Math.max;
+const round = Math.round;
+const floor = Math.floor;
+const createCoords = (v)=>({
+        x: v,
+        y: v
+    });
+const oppositeSideMap = {
+    left: "right",
+    right: "left",
+    bottom: "top",
+    top: "bottom"
+};
+const oppositeAlignmentMap = {
+    start: "end",
+    end: "start"
+};
+function clamp(start, value, end) {
+    return max(start, min(value, end));
+}
+function evaluate(value, param) {
+    return typeof value === "function" ? value(param) : value;
+}
+function getSide(placement) {
+    return placement.split("-")[0];
+}
+function getAlignment(placement) {
+    return placement.split("-")[1];
+}
+function getOppositeAxis(axis) {
+    return axis === "x" ? "y" : "x";
+}
+function getAxisLength(axis) {
+    return axis === "y" ? "height" : "width";
+}
+function getSideAxis(placement) {
+    return [
+        "top",
+        "bottom"
+    ].includes(getSide(placement)) ? "y" : "x";
+}
+function getAlignmentAxis(placement) {
+    return getOppositeAxis(getSideAxis(placement));
+}
+function getAlignmentSides(placement, rects, rtl) {
+    if (rtl === void 0) rtl = false;
+    const alignment = getAlignment(placement);
+    const alignmentAxis = getAlignmentAxis(placement);
+    const length = getAxisLength(alignmentAxis);
+    let mainAlignmentSide = alignmentAxis === "x" ? alignment === (rtl ? "end" : "start") ? "right" : "left" : alignment === "start" ? "bottom" : "top";
+    if (rects.reference[length] > rects.floating[length]) mainAlignmentSide = getOppositePlacement(mainAlignmentSide);
+    return [
+        mainAlignmentSide,
+        getOppositePlacement(mainAlignmentSide)
+    ];
+}
+function getExpandedPlacements(placement) {
+    const oppositePlacement = getOppositePlacement(placement);
+    return [
+        getOppositeAlignmentPlacement(placement),
+        oppositePlacement,
+        getOppositeAlignmentPlacement(oppositePlacement)
+    ];
+}
+function getOppositeAlignmentPlacement(placement) {
+    return placement.replace(/start|end/g, (alignment)=>oppositeAlignmentMap[alignment]);
+}
+function getSideList(side, isStart, rtl) {
+    const lr = [
+        "left",
+        "right"
+    ];
+    const rl = [
+        "right",
+        "left"
+    ];
+    const tb = [
+        "top",
+        "bottom"
+    ];
+    const bt = [
+        "bottom",
+        "top"
+    ];
+    switch(side){
+        case "top":
+        case "bottom":
+            if (rtl) return isStart ? rl : lr;
+            return isStart ? lr : rl;
+        case "left":
+        case "right":
+            return isStart ? tb : bt;
+        default:
+            return [];
+    }
+}
+function getOppositeAxisPlacements(placement, flipAlignment, direction, rtl) {
+    const alignment = getAlignment(placement);
+    let list = getSideList(getSide(placement), direction === "start", rtl);
+    if (alignment) {
+        list = list.map((side)=>side + "-" + alignment);
+        if (flipAlignment) list = list.concat(list.map(getOppositeAlignmentPlacement));
+    }
+    return list;
+}
+function getOppositePlacement(placement) {
+    return placement.replace(/left|right|bottom|top/g, (side)=>oppositeSideMap[side]);
+}
+function expandPaddingObject(padding) {
+    return {
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0,
+        ...padding
+    };
+}
+function getPaddingObject(padding) {
+    return typeof padding !== "number" ? expandPaddingObject(padding) : {
+        top: padding,
+        right: padding,
+        bottom: padding,
+        left: padding
+    };
+}
+function rectToClientRect(rect) {
+    const { x, y, width, height } = rect;
+    return {
+        width,
+        height,
+        top: y,
+        left: x,
+        right: x + width,
+        bottom: y + height,
+        x,
+        y
+    };
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aBFfa":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getComputedStyle", ()=>getComputedStyle);
+parcelHelpers.export(exports, "getContainingBlock", ()=>getContainingBlock);
+parcelHelpers.export(exports, "getDocumentElement", ()=>getDocumentElement);
+parcelHelpers.export(exports, "getNearestOverflowAncestor", ()=>getNearestOverflowAncestor);
+parcelHelpers.export(exports, "getNodeName", ()=>getNodeName);
+parcelHelpers.export(exports, "getNodeScroll", ()=>getNodeScroll);
+parcelHelpers.export(exports, "getOverflowAncestors", ()=>getOverflowAncestors);
+parcelHelpers.export(exports, "getParentNode", ()=>getParentNode);
+parcelHelpers.export(exports, "getWindow", ()=>getWindow);
+parcelHelpers.export(exports, "isContainingBlock", ()=>isContainingBlock);
+parcelHelpers.export(exports, "isElement", ()=>isElement);
+parcelHelpers.export(exports, "isHTMLElement", ()=>isHTMLElement);
+parcelHelpers.export(exports, "isLastTraversableNode", ()=>isLastTraversableNode);
+parcelHelpers.export(exports, "isNode", ()=>isNode);
+parcelHelpers.export(exports, "isOverflowElement", ()=>isOverflowElement);
+parcelHelpers.export(exports, "isShadowRoot", ()=>isShadowRoot);
+parcelHelpers.export(exports, "isTableElement", ()=>isTableElement);
+parcelHelpers.export(exports, "isTopLayer", ()=>isTopLayer);
+parcelHelpers.export(exports, "isWebKit", ()=>isWebKit);
+function getNodeName(node) {
+    if (isNode(node)) return (node.nodeName || "").toLowerCase();
+    // Mocked nodes in testing environments may not be instances of Node. By
+    // returning `#document` an infinite loop won't occur.
+    // https://github.com/floating-ui/floating-ui/issues/2317
+    return "#document";
+}
+function getWindow(node) {
+    var _node$ownerDocument;
+    return (node == null || (_node$ownerDocument = node.ownerDocument) == null ? void 0 : _node$ownerDocument.defaultView) || window;
+}
+function getDocumentElement(node) {
+    var _ref;
+    return (_ref = (isNode(node) ? node.ownerDocument : node.document) || window.document) == null ? void 0 : _ref.documentElement;
+}
+function isNode(value) {
+    return value instanceof Node || value instanceof getWindow(value).Node;
+}
+function isElement(value) {
+    return value instanceof Element || value instanceof getWindow(value).Element;
+}
+function isHTMLElement(value) {
+    return value instanceof HTMLElement || value instanceof getWindow(value).HTMLElement;
+}
+function isShadowRoot(value) {
+    // Browsers without `ShadowRoot` support.
+    if (typeof ShadowRoot === "undefined") return false;
+    return value instanceof ShadowRoot || value instanceof getWindow(value).ShadowRoot;
+}
+function isOverflowElement(element) {
+    const { overflow, overflowX, overflowY, display } = getComputedStyle(element);
+    return /auto|scroll|overlay|hidden|clip/.test(overflow + overflowY + overflowX) && ![
+        "inline",
+        "contents"
+    ].includes(display);
+}
+function isTableElement(element) {
+    return [
+        "table",
+        "td",
+        "th"
+    ].includes(getNodeName(element));
+}
+function isTopLayer(element) {
+    return [
+        ":popover-open",
+        ":modal"
+    ].some((selector)=>{
+        try {
+            return element.matches(selector);
+        } catch (e) {
+            return false;
+        }
+    });
+}
+function isContainingBlock(elementOrCss) {
+    const webkit = isWebKit();
+    const css = isElement(elementOrCss) ? getComputedStyle(elementOrCss) : elementOrCss;
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block
+    return css.transform !== "none" || css.perspective !== "none" || (css.containerType ? css.containerType !== "normal" : false) || !webkit && (css.backdropFilter ? css.backdropFilter !== "none" : false) || !webkit && (css.filter ? css.filter !== "none" : false) || [
+        "transform",
+        "perspective",
+        "filter"
+    ].some((value)=>(css.willChange || "").includes(value)) || [
+        "paint",
+        "layout",
+        "strict",
+        "content"
+    ].some((value)=>(css.contain || "").includes(value));
+}
+function getContainingBlock(element) {
+    let currentNode = getParentNode(element);
+    while(isHTMLElement(currentNode) && !isLastTraversableNode(currentNode)){
+        if (isContainingBlock(currentNode)) return currentNode;
+        else if (isTopLayer(currentNode)) return null;
+        currentNode = getParentNode(currentNode);
+    }
+    return null;
+}
+function isWebKit() {
+    if (typeof CSS === "undefined" || !CSS.supports) return false;
+    return CSS.supports("-webkit-backdrop-filter", "none");
+}
+function isLastTraversableNode(node) {
+    return [
+        "html",
+        "body",
+        "#document"
+    ].includes(getNodeName(node));
+}
+function getComputedStyle(element) {
+    return getWindow(element).getComputedStyle(element);
+}
+function getNodeScroll(element) {
+    if (isElement(element)) return {
+        scrollLeft: element.scrollLeft,
+        scrollTop: element.scrollTop
+    };
+    return {
+        scrollLeft: element.scrollX,
+        scrollTop: element.scrollY
+    };
+}
+function getParentNode(node) {
+    if (getNodeName(node) === "html") return node;
+    const result = // Step into the shadow DOM of the parent of a slotted node.
+    node.assignedSlot || // DOM Element detected.
+    node.parentNode || // ShadowRoot detected.
+    isShadowRoot(node) && node.host || // Fallback.
+    getDocumentElement(node);
+    return isShadowRoot(result) ? result.host : result;
+}
+function getNearestOverflowAncestor(node) {
+    const parentNode = getParentNode(node);
+    if (isLastTraversableNode(parentNode)) return node.ownerDocument ? node.ownerDocument.body : node.body;
+    if (isHTMLElement(parentNode) && isOverflowElement(parentNode)) return parentNode;
+    return getNearestOverflowAncestor(parentNode);
+}
+function getOverflowAncestors(node, list, traverseIframes) {
+    var _node$ownerDocument2;
+    if (list === void 0) list = [];
+    if (traverseIframes === void 0) traverseIframes = true;
+    const scrollableAncestor = getNearestOverflowAncestor(node);
+    const isBody = scrollableAncestor === ((_node$ownerDocument2 = node.ownerDocument) == null ? void 0 : _node$ownerDocument2.body);
+    const win = getWindow(scrollableAncestor);
+    if (isBody) return list.concat(win, win.visualViewport || [], isOverflowElement(scrollableAncestor) ? scrollableAncestor : [], win.frameElement && traverseIframes ? getOverflowAncestors(win.frameElement) : []);
+    return list.concat(scrollableAncestor, getOverflowAncestors(scrollableAncestor, [], traverseIframes));
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9YtA0":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9fee = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -42168,7 +44980,7 @@ $RefreshReg$(_c, "LoginView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"k2eh7","react-bootstrap/Button":"aPzUt","react-bootstrap/Form":"iBZ80"}],"4OGiN":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap/Button":"aPzUt","react-bootstrap/Form":"iBZ80"}],"4OGiN":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$73d1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -42181,6 +44993,7 @@ parcelHelpers.export(exports, "SignupView", ()=>SignupView);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
 var _button = require("react-bootstrap/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
 var _form = require("react-bootstrap/Form");
@@ -42192,7 +45005,7 @@ const SignupView = ()=>{
     const [password, setPassword] = (0, _react.useState)("");
     const [email, setEmail] = (0, _react.useState)("");
     const [birthDate, setBirthDate] = (0, _react.useState)("");
-    const navigate = useNavigate();
+    const navigate = (0, _reactRouterDom.useNavigate)();
     const handleSubmit = (event)=>{
         event.preventDefault();
         const data = {
@@ -42225,7 +45038,7 @@ const SignupView = ()=>{
                         children: "Username:"
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
-                        lineNumber: 42,
+                        lineNumber: 43,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
@@ -42236,13 +45049,13 @@ const SignupView = ()=>{
                         minLength: "3"
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
-                        lineNumber: 43,
+                        lineNumber: 44,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/signup-view/signup-view.jsx",
-                lineNumber: 41,
+                lineNumber: 42,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Group, {
@@ -42252,7 +45065,7 @@ const SignupView = ()=>{
                         children: "Password:"
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
-                        lineNumber: 52,
+                        lineNumber: 53,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
@@ -42262,13 +45075,13 @@ const SignupView = ()=>{
                         required: true
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
-                        lineNumber: 53,
+                        lineNumber: 54,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/signup-view/signup-view.jsx",
-                lineNumber: 51,
+                lineNumber: 52,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Group, {
@@ -42278,7 +45091,7 @@ const SignupView = ()=>{
                         children: "Email:"
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
-                        lineNumber: 61,
+                        lineNumber: 62,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
@@ -42288,13 +45101,13 @@ const SignupView = ()=>{
                         required: true
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
-                        lineNumber: 62,
+                        lineNumber: 63,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/signup-view/signup-view.jsx",
-                lineNumber: 60,
+                lineNumber: 61,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Group, {
@@ -42304,7 +45117,7 @@ const SignupView = ()=>{
                         children: "Birthday:"
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
-                        lineNumber: 70,
+                        lineNumber: 71,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
@@ -42314,13 +45127,13 @@ const SignupView = ()=>{
                         required: true
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
-                        lineNumber: 71,
+                        lineNumber: 72,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/signup-view/signup-view.jsx",
-                lineNumber: 69,
+                lineNumber: 70,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
@@ -42328,17 +45141,21 @@ const SignupView = ()=>{
                 children: "Submit"
             }, void 0, false, {
                 fileName: "src/components/signup-view/signup-view.jsx",
-                lineNumber: 78,
+                lineNumber: 79,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/signup-view/signup-view.jsx",
-        lineNumber: 40,
+        lineNumber: 41,
         columnNumber: 5
     }, undefined);
 };
-_s(SignupView, "IXuUi7W2XddVrKT1v2uSOBygEtw=", true);
+_s(SignupView, "IXuUi7W2XddVrKT1v2uSOBygEtw=", false, function() {
+    return [
+        (0, _reactRouterDom.useNavigate)
+    ];
+});
 _c = SignupView;
 var _c;
 $RefreshReg$(_c, "SignupView");
@@ -42348,7 +45165,7 @@ $RefreshReg$(_c, "SignupView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"k2eh7","react-bootstrap/Button":"aPzUt","react-bootstrap/Form":"iBZ80"}],"bsPVM":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap/Button":"aPzUt","react-bootstrap/Form":"iBZ80","react-router-dom":"9xmpe"}],"bsPVM":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$abf5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -42475,7 +45292,7 @@ $RefreshReg$(_c, "NavigationBar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-bootstrap":"3AD9A","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"k2eh7","react":"21dqq"}],"2vVqf":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-bootstrap":"3AD9A","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"2vVqf":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$3c12 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -42488,12 +45305,15 @@ parcelHelpers.export(exports, "ProfileView", ()=>ProfileView);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+//for moviecard
+var _reactBootstrap = require("react-bootstrap");
 var _reactRouterDom = require("react-router-dom");
 var _movieCard = require("../movie-card/movie-card");
 var _s = $RefreshSig$();
-const ProfileView = ({ user, token, movies, onLoggedOut })=>{
+const ProfileView = ({ user, token, onLoggedOut, updateFavoriteMovies })=>{
     _s();
     const [userInfo, setUserInfo] = (0, _react.useState)({});
+    const [movies, setMovies] = (0, _react.useState)([]);
     const [favoriteMovies, setFavoriteMovies] = (0, _react.useState)([]);
     const [formData, setFormData] = (0, _react.useState)({
         username: "",
@@ -42501,6 +45321,10 @@ const ProfileView = ({ user, token, movies, onLoggedOut })=>{
         email: "",
         birthDate: ""
     });
+    const formatDate = (dateInput)=>{
+        const date = new Date(dateInput);
+        return date.toISOString().split("T")[0];
+    };
     (0, _react.useEffect)(()=>{
         fetch(`https://your-heroku-app.herokuapp.com/users/${user}`, {
             method: "GET",
@@ -42565,7 +45389,95 @@ const ProfileView = ({ user, token, movies, onLoggedOut })=>{
                 children: "Profile"
             }, void 0, false, {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 83,
+                lineNumber: 94,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "User Info"
+            }, void 0, false, {
+                fileName: "src/components/profile-view/profile-view.jsx",
+                lineNumber: 95,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: "Username: "
+                            }, void 0, false, {
+                                fileName: "src/components/profile-view/profile-view.jsx",
+                                lineNumber: 98,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: user.Username
+                            }, void 0, false, {
+                                fileName: "src/components/profile-view/profile-view.jsx",
+                                lineNumber: 99,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/profile-view/profile-view.jsx",
+                        lineNumber: 97,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: "Email: "
+                            }, void 0, false, {
+                                fileName: "src/components/profile-view/profile-view.jsx",
+                                lineNumber: 102,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: user.Email
+                            }, void 0, false, {
+                                fileName: "src/components/profile-view/profile-view.jsx",
+                                lineNumber: 103,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/profile-view/profile-view.jsx",
+                        lineNumber: 101,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: "Birthday: "
+                            }, void 0, false, {
+                                fileName: "src/components/profile-view/profile-view.jsx",
+                                lineNumber: 106,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: formatDate(user.BirthDate)
+                            }, void 0, false, {
+                                fileName: "src/components/profile-view/profile-view.jsx",
+                                lineNumber: 107,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/profile-view/profile-view.jsx",
+                        lineNumber: 105,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/profile-view/profile-view.jsx",
+                lineNumber: 96,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "Update Info"
+            }, void 0, false, {
+                fileName: "src/components/profile-view/profile-view.jsx",
+                lineNumber: 110,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -42574,7 +45486,7 @@ const ProfileView = ({ user, token, movies, onLoggedOut })=>{
                         children: "Username:"
                     }, void 0, false, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 85,
+                        lineNumber: 112,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -42586,13 +45498,13 @@ const ProfileView = ({ user, token, movies, onLoggedOut })=>{
                             })
                     }, void 0, false, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 86,
+                        lineNumber: 113,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 84,
+                lineNumber: 111,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -42601,7 +45513,7 @@ const ProfileView = ({ user, token, movies, onLoggedOut })=>{
                         children: "Password:"
                     }, void 0, false, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 93,
+                        lineNumber: 120,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -42613,13 +45525,13 @@ const ProfileView = ({ user, token, movies, onLoggedOut })=>{
                             })
                     }, void 0, false, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 94,
+                        lineNumber: 121,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 92,
+                lineNumber: 119,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -42628,7 +45540,7 @@ const ProfileView = ({ user, token, movies, onLoggedOut })=>{
                         children: "Email:"
                     }, void 0, false, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 101,
+                        lineNumber: 128,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -42640,13 +45552,13 @@ const ProfileView = ({ user, token, movies, onLoggedOut })=>{
                             })
                     }, void 0, false, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 102,
+                        lineNumber: 129,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 100,
+                lineNumber: 127,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -42655,7 +45567,7 @@ const ProfileView = ({ user, token, movies, onLoggedOut })=>{
                         children: "Date of Birth:"
                     }, void 0, false, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 109,
+                        lineNumber: 136,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -42667,13 +45579,13 @@ const ProfileView = ({ user, token, movies, onLoggedOut })=>{
                             })
                     }, void 0, false, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 110,
+                        lineNumber: 137,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 108,
+                lineNumber: 135,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -42681,7 +45593,7 @@ const ProfileView = ({ user, token, movies, onLoggedOut })=>{
                 children: "Update Profile"
             }, void 0, false, {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 116,
+                lineNumber: 143,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -42689,29 +45601,64 @@ const ProfileView = ({ user, token, movies, onLoggedOut })=>{
                 children: "Deregister"
             }, void 0, false, {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 117,
+                lineNumber: 144,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Favorite Movies"
-            }, void 0, false, {
-                fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 118,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: favoriteMovies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
-                        movie: movie
-                    }, movie._id, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                            xs: 12,
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                children: "Favorite Movies"
+                            }, void 0, false, {
+                                fileName: "src/components/profile-view/profile-view.jsx",
+                                lineNumber: 154,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/profile-view/profile-view.jsx",
+                            lineNumber: 153,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 121,
-                        columnNumber: 11
-                    }, undefined))
-            }, void 0, false, {
-                fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 119,
-                columnNumber: 7
-            }, undefined),
+                        lineNumber: 152,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
+                        children: favoriteMovies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                            children: "No favorite movies yet..."
+                        }, void 0, false, {
+                            fileName: "src/components/profile-view/profile-view.jsx",
+                            lineNumber: 159,
+                            columnNumber: 13
+                        }, undefined) : favoriteMovies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                                xs: 12,
+                                sm: 6,
+                                md: 4,
+                                lg: 3,
+                                className: "movie-container",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
+                                    movie: movie,
+                                    updateAction: ()=>updateFavoriteMovies(movie._id)
+                                }, void 0, false, {
+                                    fileName: "src/components/profile-view/profile-view.jsx",
+                                    lineNumber: 170,
+                                    columnNumber: 17
+                                }, undefined)
+                            }, movie._id, false, {
+                                fileName: "src/components/profile-view/profile-view.jsx",
+                                lineNumber: 162,
+                                columnNumber: 15
+                            }, undefined))
+                    }, void 0, false, {
+                        fileName: "src/components/profile-view/profile-view.jsx",
+                        lineNumber: 157,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                 to: `/`,
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -42719,23 +45666,23 @@ const ProfileView = ({ user, token, movies, onLoggedOut })=>{
                     children: "Back"
                 }, void 0, false, {
                     fileName: "src/components/profile-view/profile-view.jsx",
-                    lineNumber: 125,
-                    columnNumber: 11
+                    lineNumber: 181,
+                    columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 124,
+                lineNumber: 180,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/profile-view/profile-view.jsx",
-        lineNumber: 82,
+        lineNumber: 93,
         columnNumber: 5
     }, undefined);
 }; // I think not needed
  // export default ProfileView;
-_s(ProfileView, "IjJjVWWLGx0WFO38PtskIUUZwQY=");
+_s(ProfileView, "KPrhCR2hmidHzEqHRs0O6w6v094=");
 _c = ProfileView;
 var _c;
 $RefreshReg$(_c, "ProfileView");
@@ -42745,6 +45692,6 @@ $RefreshReg$(_c, "ProfileView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"di2gD","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"k2eh7","react":"21dqq","../movie-card/movie-card":"bwuIu"}]},["3xV27","aKYic","d8Dch"], "d8Dch", "parcelRequireaec4")
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../movie-card/movie-card":"bwuIu","react-bootstrap":"3AD9A"}]},["gjUm6","1xC6H","d8Dch"], "d8Dch", "parcelRequireaec4")
 
 //# sourceMappingURL=index.b4b6dfad.js.map

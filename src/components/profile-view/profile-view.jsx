@@ -1,10 +1,16 @@
 import React from "react";
 import { useEffect, useState } from 'react';
+
+//for moviecard
+import { Row, Col } from 'react-bootstrap';
+
 import { Link } from "react-router-dom";
 import { MovieCard } from "../movie-card/movie-card";
 
-export const ProfileView = ({ user, token, movies, onLoggedOut }) => {
+//taking movies and favoriteMovies out for now
+export const ProfileView = ({ user, token, onLoggedOut,  updateFavoriteMovies }) => {
   const [userInfo, setUserInfo] = useState({});
+  const [movies, setMovies] = useState([]);
   const [favoriteMovies, setFavoriteMovies] = useState([]);
   const [formData, setFormData] = useState({
     username: '',
@@ -12,6 +18,11 @@ export const ProfileView = ({ user, token, movies, onLoggedOut }) => {
     email: '',
     birthDate: ''
   });
+
+  const formatDate = (dateInput) => {
+    const date = new Date(dateInput);
+    return date.toISOString().split('T')[0];
+  };
 
   useEffect(() => {
     fetch(`https://your-heroku-app.herokuapp.com/users/${user}`, {
@@ -21,20 +32,20 @@ export const ProfileView = ({ user, token, movies, onLoggedOut }) => {
         'Authorization': `Bearer ${token}`
       }
     })
-    .then(response => response.json())
-    .then(data => {
-      setUserInfo(data);
-      setFormData({
-        username: data.Username,
-        password: '',
-        email: data.Email,
-        birthDate: data.BirthDate
+      .then(response => response.json())
+      .then(data => {
+        setUserInfo(data);
+        setFormData({
+          username: data.Username,
+          password: '',
+          email: data.Email,
+          birthDate: data.BirthDate
+        });
+        setFavoriteMovies(movies.filter(m => data.FavoriteMovies.includes(m._id)));
+      })
+      .catch(error => {
+        console.error('Error fetching user data', error);
       });
-      setFavoriteMovies(movies.filter(m => data.FavoriteMovies.includes(m._id)));
-    })
-    .catch(error => {
-      console.error('Error fetching user data', error);
-    });
   }, [user, token, movies]);
 
   const handleUpdate = () => {
@@ -51,14 +62,14 @@ export const ProfileView = ({ user, token, movies, onLoggedOut }) => {
         BirthDate: formData.birthDate
       })
     })
-    .then(response => response.json())
-    .then(data => {
-      setUserInfo(data);
-      alert('Profile updated successfully');
-    })
-    .catch(error => {
-      console.error('Error updating user data', error);
-    });
+      .then(response => response.json())
+      .then(data => {
+        setUserInfo(data);
+        alert('Profile updated successfully');
+      })
+      .catch(error => {
+        console.error('Error updating user data', error);
+      });
   };
 
   const handleDeregister = () => {
@@ -69,18 +80,34 @@ export const ProfileView = ({ user, token, movies, onLoggedOut }) => {
         'Authorization': `Bearer ${token}`
       }
     })
-    .then(() => {
-      onLoggedOut();
-      alert('Account deleted successfully');
-    })
-    .catch(error => {
-      console.error('Error deleting user account', error);
-    });
+      .then(() => {
+        onLoggedOut();
+        alert('Account deleted successfully');
+      })
+      .catch(error => {
+        console.error('Error deleting user account', error);
+      });
   };
 
   return (
     <div>
       <h1>Profile</h1>
+      <h2>User Info</h2>
+      <div>
+        <div>
+          <span>Username: </span>
+          <span>{user.Username}</span>
+        </div>
+        <div>
+          <span>Email: </span>
+          <span>{user.Email}</span>
+        </div>
+        <div>
+          <span>Birthday: </span>
+          <span>{formatDate(user.BirthDate)}</span>
+        </div>
+      </div>
+      <h2>Update Info</h2>
       <div>
         <label>Username:</label>
         <input
@@ -115,15 +142,44 @@ export const ProfileView = ({ user, token, movies, onLoggedOut }) => {
       </div>
       <button onClick={handleUpdate}>Update Profile</button>
       <button onClick={handleDeregister}>Deregister</button>
-      <h2>Favorite Movies</h2>
+      {/* <h2>Favorite Movies</h2>
       <div>
         {favoriteMovies.map(movie => (
           <MovieCard key={movie._id} movie={movie} />
         ))}
-      </div>
+      </div> */}
+      <>
+        <Row>
+          <Col xs={12}>
+            <h2>Favorite Movies</h2>
+          </Col>
+        </Row>
+        <Row>
+          {favoriteMovies.length === 0 ? (
+            <p>No favorite movies yet...</p>
+          ) : (
+            favoriteMovies.map((movie) => (
+              <Col
+                xs={12}
+                sm={6}
+                md={4}
+                lg={3}
+                key={movie._id}
+                className="movie-container"
+              >
+                <MovieCard
+                  movie={movie}
+                  updateAction={() => updateFavoriteMovies(movie._id)}
+                />
+
+              </Col>
+            ))
+          )}
+        </Row>
+      </>
       <Link to={`/`}>
-          <button className="back-button">Back</button>
-        </Link>
+        <button className="back-button">Back</button>
+      </Link>
     </div>
   );
 };

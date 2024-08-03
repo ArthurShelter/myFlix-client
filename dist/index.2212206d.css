@@ -13192,11 +13192,43 @@ textarea.form-control-lg {
   }
 }
 
+.card-poster {
+  width: 184px;
+  height: 276px;
+}
+
 .back-button {
   color: #f5f5f5;
   background-color: #1e90ff;
   border: none;
   border-radius: 4px;
   padding: 4px 12px;
+}
+
+.favorite-button {
+  color: #f5f5f5;
+  background-color: #2ecc71;
+  border: 0;
+  border-radius: 4px;
+  padding: 4px 12px;
+}
+
+.view-poster {
+  width: 323px;
+  height: 485px;
+}
+
+.genre-container #my-genre-tooltip {
+  --rt-color-white: #fff;
+  --rt-color-dark: #222;
+  --rt-color-success: #8dc572;
+  --rt-color-error: #be6464;
+  --rt-color-warning: #f0ad4e;
+  --rt-color-info: #337ab7;
+  --rt-opacity: 1;
+  --rt-transition-show-delay: .15s;
+  --rt-transition-closing-delay: .15s;
+  width: 400px;
+  padding: 4px;
 }
 /*# sourceMappingURL=index.2212206d.css.map */

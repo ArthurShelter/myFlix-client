@@ -2,6 +2,48 @@
     padding: 4px 12px 4px 12px;
     color: whitesmoke;
     background-color: dodgerblue;
+    //dodgerblue
     border: none;
     border-radius: 4px;
   }
+
+  .favorite-button {
+    padding: 4px 12px 4px 12px;
+    color: whitesmoke;
+    background-color: #2ECC71;
+    //dodgerblue
+    border: 0;
+    border-radius: 4px;
+  }
+
+.view-poster {
+    width: 323px;
+    height: 485px;
+}
+
+.genre-container #my-genre-tooltip {
+  --rt-color-white: #fff;
+  --rt-color-dark: #222;
+  --rt-color-success: #8dc572;
+  --rt-color-error: #be6464;
+  --rt-color-warning: #f0ad4e;
+  --rt-color-info: #337ab7;
+  --rt-opacity: 1.0;
+  --rt-transition-show-delay: 0.15s;
+  --rt-transition-closing-delay: 0.15s;
+  padding: 4px;
+  width: 400px;
+}
+
+
+// .example-container .my-tooltip-no-radius {
+//   --rt-color-white: #fff;
+//   --rt-color-dark: #222;
+//   --rt-color-success: #8dc572;
+//   --rt-color-error: #be6464;
+//   --rt-color-warning: #f0ad4e;
+//   --rt-color-info: #337ab7;
+//   --rt-opacity: 1.0;
+//   --rt-transition-show-delay: 0.15s;
+//   --rt-transition-closing-delay: 0.15s;
+// }
