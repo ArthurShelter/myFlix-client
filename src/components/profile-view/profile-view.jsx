@@ -41,7 +41,7 @@ export const ProfileView = ({ user, token, onLoggedOut,  updateFavoriteMovies })
           email: data.Email,
           birthDate: data.BirthDate
         });
-        setFavoriteMovies(movies.filter(m => data.FavoriteMovies.includes(m._id)));
+        setFavoriteMovies(movies.filter(m => data.FavoriteMovies.includes(m.id)));
       })
       .catch(error => {
         console.error('Error fetching user data', error);
@@ -164,12 +164,12 @@ export const ProfileView = ({ user, token, onLoggedOut,  updateFavoriteMovies })
                 sm={6}
                 md={4}
                 lg={3}
-                key={movie._id}
+                key={movie.id}
                 className="movie-container"
               >
                 <MovieCard
                   movie={movie}
-                  updateAction={() => updateFavoriteMovies(movie._id)}
+                  updateAction={() => updateFavoriteMovies(movie.id)}
                 />
 
               </Col>

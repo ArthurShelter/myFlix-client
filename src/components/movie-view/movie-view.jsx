@@ -24,13 +24,16 @@ export const MovieView = ({ movies }) => {
 
     //add in "try {}"?
 
-    // necessary?
     const user = JSON.parse(localStorage.getItem('user'));
+    const token = localStorage.getItem('token');
 
     const response = await fetch(`https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/users/${user.Username}/movies/${movieId}`, {
       method: "POST",
       // body: JSON.stringify(data),
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+       },
+      
     }).then((response) => {
       if (response.ok) {
         alert("Favorite successful!");
@@ -43,7 +46,7 @@ export const MovieView = ({ movies }) => {
   localStorage.setItem('user', JSON.stringify(updatedUser));
   setToFavorite(true);
 
-  // what is this?
+  // look into this
   updateAction(movieId);
   }
 
