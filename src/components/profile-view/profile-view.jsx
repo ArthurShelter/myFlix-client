@@ -11,7 +11,7 @@ import { MovieCard } from "../movie-card/movie-card";
 export const ProfileView = ({ user, token, onLoggedOut,  updateFavoriteMovies }) => {
   const [userInfo, setUserInfo] = useState({});
   const [movies, setMovies] = useState([]);
-  const [favoriteMovies, setFavoriteMovies] = useState([]);
+  const [FavoriteMovies, setFavoriteMovies] = useState([]);
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -155,10 +155,10 @@ export const ProfileView = ({ user, token, onLoggedOut,  updateFavoriteMovies })
           </Col>
         </Row>
         <Row>
-          {favoriteMovies.length === 0 ? (
+          {FavoriteMovies.length === 0 ? (
             <p>No favorite movies yet...</p>
           ) : (
-            favoriteMovies.map((movie) => (
+            FavoriteMovies.map((movie) => (
               <Col
                 xs={12}
                 sm={6}

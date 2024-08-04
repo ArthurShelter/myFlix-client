@@ -41988,10 +41988,11 @@ const MovieView = ({ movies })=>{
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${token}`
             }
-        }).then((response)=>{
-            if (response.ok) alert("Favorite successful!");
-            else alert("Favorite failed");
         });
+        if (!response.ok) {
+            if (response.status === 401) throw new Error("Unauthorized");
+            throw new Error("Favorite failed");
+        }
         const updatedUser = await response.json();
         localStorage.setItem("user", JSON.stringify(updatedUser));
         setToFavorite(true);
@@ -45315,7 +45316,7 @@ const ProfileView = ({ user, token, onLoggedOut, updateFavoriteMovies })=>{
     _s();
     const [userInfo, setUserInfo] = (0, _react.useState)({});
     const [movies, setMovies] = (0, _react.useState)([]);
-    const [favoriteMovies, setFavoriteMovies] = (0, _react.useState)([]);
+    const [FavoriteMovies, setFavoriteMovies] = (0, _react.useState)([]);
     const [formData, setFormData] = (0, _react.useState)({
         username: "",
         password: "",
@@ -45628,13 +45629,13 @@ const ProfileView = ({ user, token, onLoggedOut, updateFavoriteMovies })=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
-                        children: favoriteMovies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: FavoriteMovies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                             children: "No favorite movies yet..."
                         }, void 0, false, {
                             fileName: "src/components/profile-view/profile-view.jsx",
                             lineNumber: 159,
                             columnNumber: 13
-                        }, undefined) : favoriteMovies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                        }, undefined) : FavoriteMovies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                                 xs: 12,
                                 sm: 6,
                                 md: 4,
@@ -45683,7 +45684,7 @@ const ProfileView = ({ user, token, onLoggedOut, updateFavoriteMovies })=>{
     }, undefined);
 }; // I think not needed
  // export default ProfileView;
-_s(ProfileView, "KPrhCR2hmidHzEqHRs0O6w6v094=");
+_s(ProfileView, "REZ/gdQh/L128gHA7oMeYnBkL6Y=");
 _c = ProfileView;
 var _c;
 $RefreshReg$(_c, "ProfileView");

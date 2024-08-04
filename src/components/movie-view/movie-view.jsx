@@ -34,13 +34,13 @@ export const MovieView = ({ movies }) => {
         Authorization: `Bearer ${token}`,
        },
       
-    }).then((response) => {
-      if (response.ok) {
-        alert("Favorite successful!");
-      } else {
-        alert("Favorite failed");
-      }
     });
+    
+    if (!response.ok) {
+      if (response.status === 401) throw new Error('Unauthorized');
+      throw new Error('Favorite failed');
+    }
+
 
   const updatedUser = await response.json();
   localStorage.setItem('user', JSON.stringify(updatedUser));
