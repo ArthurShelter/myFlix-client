@@ -33,13 +33,18 @@ export const MovieView = ({ movies }) => {
       headers: { "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
        },
-      
     });
     
     if (!response.ok) {
       if (response.status === 401) throw new Error('Unauthorized');
-      throw new Error('Favorite failed');
+      else {
+        throw new Error('Favorite failed');
+      }
     }
+
+    // if (!response.ok) {
+    //     throw new Error('Favorite failed');
+    // }
 
 
   const updatedUser = await response.json();
@@ -47,7 +52,7 @@ export const MovieView = ({ movies }) => {
   setToFavorite(true);
 
   // look into this
-  updateAction(movieId);
+  // updateAction(movieId);
   }
 
   return (
