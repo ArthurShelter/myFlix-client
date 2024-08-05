@@ -27602,6 +27602,7 @@ const MainView = ()=>{
                                 }, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                     md: 8,
                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileView.ProfileView), {
+                                        onLoggedIn: (user, token),
                                         user: user
                                     }, void 0, false, {
                                         fileName: "src/components/main-view/main-view.jsx",
@@ -41982,7 +41983,7 @@ const MovieView = ({ movies })=>{
         const user = JSON.parse(localStorage.getItem("user"));
         const token = localStorage.getItem("token");
         const response = await fetch(`https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/users/${user.Username}/movies/${movieId}`, {
-            method: "POST",
+            method: "PUT",
             // body: JSON.stringify(data),
             headers: {
                 "Content-Type": "application/json",
@@ -42144,7 +42145,7 @@ const MovieView = ({ movies })=>{
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         className: "favorite-button",
-                        onClick: ()=>handleAddToFavorites(movie._id),
+                        onClick: ()=>handleAddToFavorites(movie.id),
                         children: "Add to Favorites"
                     }, void 0, false, {
                         fileName: "src/components/movie-view/movie-view.jsx",

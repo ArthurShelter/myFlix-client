@@ -28,7 +28,7 @@ export const MovieView = ({ movies }) => {
     const token = localStorage.getItem('token');
 
     const response = await fetch(`https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/users/${user.Username}/movies/${movieId}`, {
-      method: "POST",
+      method: "PUT",
       // body: JSON.stringify(data),
       headers: { "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
@@ -85,7 +85,7 @@ export const MovieView = ({ movies }) => {
       </p>
       <p>
         <div>
-          <button className="favorite-button" onClick={() => handleAddToFavorites(movie._id)}>Add to Favorites</button>
+          <button className="favorite-button" onClick={() => handleAddToFavorites(movie.id)}>Add to Favorites</button>
         </div>
       </p>
       <p>
