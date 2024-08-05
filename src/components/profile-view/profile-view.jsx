@@ -89,6 +89,10 @@ export const ProfileView = ({ user, token, onLoggedOut,  updateFavoriteMovies })
       });
   };
 
+  const updateFavoriteMovies = (movieId) => {
+    
+  }
+
   return (
     <div>
       <h1>Profile</h1>

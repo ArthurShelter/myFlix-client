@@ -4,7 +4,7 @@ import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./movie-card.scss";
 
-export const MovieCard = ({ movie }) => {
+export const MovieCard = ({ movie, updateAction }) => {
   return (
     <Card className="h-100">
       {/* no image for now */}
