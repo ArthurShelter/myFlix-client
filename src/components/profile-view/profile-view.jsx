@@ -112,7 +112,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMo
           <span>{user.Username}</span>
         </div>
         <div>
-          <span>Email: </span>
+          <span>Emailabc: </span>
           <span>{user.Email}</span>
         </div>
         <div>
