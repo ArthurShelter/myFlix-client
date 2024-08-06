@@ -45440,7 +45440,7 @@ const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMovies })
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                children: "Email: "
+                                children: "Emailaaa: "
                             }, void 0, false, {
                                 fileName: "src/components/profile-view/profile-view.jsx",
                                 lineNumber: 115,
