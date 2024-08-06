@@ -45641,16 +45641,16 @@ const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMovies })
                             lineNumber: 156,
                             columnNumber: 13
                         }, undefined) : movies.filter((movie)=>user.FavoriteMovies.includes(movie.id)).map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                                className: "mb-4",
                                 xs: 12,
                                 sm: 12,
                                 md: 6,
                                 lg: 6,
-                                className: "movie-container",
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
                                     movie: movie
                                 }, void 0, false, {
                                     fileName: "src/components/profile-view/profile-view.jsx",
-                                    lineNumber: 164,
+                                    lineNumber: 163,
                                     columnNumber: 17
                                 }, undefined)
                             }, movie.id, false, {
@@ -45672,12 +45672,12 @@ const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMovies })
                     children: "Back"
                 }, void 0, false, {
                     fileName: "src/components/profile-view/profile-view.jsx",
-                    lineNumber: 175,
+                    lineNumber: 174,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 174,
+                lineNumber: 173,
                 columnNumber: 7
             }, undefined)
         ]

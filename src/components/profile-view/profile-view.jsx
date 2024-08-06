@@ -156,10 +156,9 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMo
             <p>No favorite movies yet...</p>
           ) : (
             movies.filter((movie) => user.FavoriteMovies.includes(movie.id)).map((movie) => (
-              <Col
+              <Col className="mb-4"
                 xs={12} sm={12} md={6} lg={6}
                 key={movie.id}
-                className="movie-container"
               >
                 <MovieCard
                   movie={movie}
