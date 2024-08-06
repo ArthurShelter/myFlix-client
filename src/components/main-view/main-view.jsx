@@ -136,7 +136,7 @@ export const MainView = () => {
                   <Col>The list is empty!</Col>
                 ) : (
                     <Col md={8}>
-                      <ProfileView onLoggedIn={(user, token)} user={user}/>
+                      <ProfileView onLoggedIn={(user, token)} user={user} movies={movies}/>
                     </Col>
                 )}
               </>

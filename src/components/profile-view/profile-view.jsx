@@ -8,10 +8,10 @@ import { Link } from "react-router-dom";
 import { MovieCard } from "../movie-card/movie-card";
 
 //taking movies and favoriteMovies out for now
-export const ProfileView = ({ user, token, onLoggedOut,  updateFavoriteMovies }) => {
+export const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMovies }) => {
   const [userInfo, setUserInfo] = useState({});
-  const [movies, setMovies] = useState([]);
-  const [FavoriteMovies, setFavoriteMovies] = useState([]);
+  // const [movies, setMovies] = useState([]);
+  const [FavoriteMovieIdsFromApi, setFavoriteMovieIdsFromApi] = useState([]);
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -41,12 +41,19 @@ export const ProfileView = ({ user, token, onLoggedOut,  updateFavoriteMovies })
           email: data.Email,
           birthDate: data.BirthDate
         });
-        setFavoriteMovies(movies.filter(m => data.FavoriteMovies.includes(m.id)));
+        // setFavoriteMovieIds(movies.filter(m => data.FavoriteMovies.includes(m.id)));
+        // console.log(user.FavoriteMovies);
+        // const favoriteMovies = movies.filter(m => data.FavoriteMovies.includes(m.id));
+
+        // setFavoriteMovieIdsFromApi(data.FavoriteMovies);
+        // console.log(FavoriteMovieIdsFromApi);
       })
       .catch(error => {
         console.error('Error fetching user data', error);
       });
   }, [user, token, movies]);
+
+
 
   const handleUpdate = () => {
     fetch(`https://your-heroku-app.herokuapp.com/users/${user}`, {
@@ -89,9 +96,11 @@ export const ProfileView = ({ user, token, onLoggedOut,  updateFavoriteMovies })
       });
   };
 
-  const updateFavoriteMovies = (movieId) => {
-    
-  }
+  // const updateFavoriteMovies = (movieId) => {
+
+  // }
+
+  console.log(user.FavoriteMovies);
 
   return (
     <div>
@@ -109,6 +118,14 @@ export const ProfileView = ({ user, token, onLoggedOut,  updateFavoriteMovies })
         <div>
           <span>Birthday: </span>
           <span>{formatDate(user.BirthDate)}</span>
+        </div>
+        <div>
+          <span>variable ids:</span>
+          <span>{user.FavoriteMovies}</span>
+        </div>
+        <div>
+          <span>const ids:</span>
+          <span>{FavoriteMovieIdsFromApi}</span>
         </div>
       </div>
       <h2>Update Info</h2>
@@ -146,12 +163,6 @@ export const ProfileView = ({ user, token, onLoggedOut,  updateFavoriteMovies })
       </div>
       <button onClick={handleUpdate}>Update Profile</button>
       <button onClick={handleDeregister}>Deregister</button>
-      {/* <h2>Favorite Movies</h2>
-      <div>
-        {favoriteMovies.map(movie => (
-          <MovieCard key={movie._id} movie={movie} />
-        ))}
-      </div> */}
       <>
         <Row>
           <Col xs={12}>
@@ -159,21 +170,18 @@ export const ProfileView = ({ user, token, onLoggedOut,  updateFavoriteMovies })
           </Col>
         </Row>
         <Row>
-          {FavoriteMovies.length === 0 ? (
+          {user.FavoriteMovies.length === 0 ? (
             <p>No favorite movies yet...</p>
           ) : (
-            FavoriteMovies.map((movie) => (
+            movies.filter((movie) => user.FavoriteMovies.includes(movie.id)).map((movie) => (
               <Col
-                xs={12}
-                sm={6}
-                md={4}
-                lg={3}
+                xs={12} sm={6} md={4} lg={3}
                 key={movie.id}
                 className="movie-container"
               >
                 <MovieCard
                   movie={movie}
-                  updateAction={() => updateFavoriteMovies(movie.id)}
+                // updateAction={() => updateFavoriteMovies(movie.id)}
                 />
 
               </Col>
@@ -187,6 +195,7 @@ export const ProfileView = ({ user, token, onLoggedOut,  updateFavoriteMovies })
     </div>
   );
 };
+
 
 // I think not needed
 // export default ProfileView;

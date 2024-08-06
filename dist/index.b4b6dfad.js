@@ -27603,7 +27603,8 @@ const MainView = ()=>{
                                     md: 8,
                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileView.ProfileView), {
                                         onLoggedIn: (user, token),
-                                        user: user
+                                        user: user,
+                                        movies: movies
                                     }, void 0, false, {
                                         fileName: "src/components/main-view/main-view.jsx",
                                         lineNumber: 139,
@@ -45316,11 +45317,11 @@ var _reactBootstrap = require("react-bootstrap");
 var _reactRouterDom = require("react-router-dom");
 var _movieCard = require("../movie-card/movie-card");
 var _s = $RefreshSig$();
-const ProfileView = ({ user, token, onLoggedOut, updateFavoriteMovies })=>{
+const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMovies })=>{
     _s();
     const [userInfo, setUserInfo] = (0, _react.useState)({});
-    const [movies, setMovies] = (0, _react.useState)([]);
-    const [FavoriteMovies, setFavoriteMovies] = (0, _react.useState)([]);
+    // const [movies, setMovies] = useState([]);
+    const [FavoriteMovieIdsFromApi, setFavoriteMovieIdsFromApi] = (0, _react.useState)([]);
     const [formData, setFormData] = (0, _react.useState)({
         username: "",
         password: "",
@@ -45346,7 +45347,11 @@ const ProfileView = ({ user, token, onLoggedOut, updateFavoriteMovies })=>{
                 email: data.Email,
                 birthDate: data.BirthDate
             });
-            setFavoriteMovies(movies.filter((m)=>data.FavoriteMovies.includes(m.id)));
+        // setFavoriteMovieIds(movies.filter(m => data.FavoriteMovies.includes(m.id)));
+        // console.log(user.FavoriteMovies);
+        // const favoriteMovies = movies.filter(m => data.FavoriteMovies.includes(m.id));
+        // setFavoriteMovieIdsFromApi(data.FavoriteMovies);
+        // console.log(FavoriteMovieIdsFromApi);
         }).catch((error)=>{
             console.error("Error fetching user data", error);
         });
@@ -45389,21 +45394,23 @@ const ProfileView = ({ user, token, onLoggedOut, updateFavoriteMovies })=>{
             console.error("Error deleting user account", error);
         });
     };
-    const updateFavoriteMovies = (movieId)=>{};
+    // const updateFavoriteMovies = (movieId) => {
+    // }
+    console.log(user.FavoriteMovies);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 children: "Profile"
             }, void 0, false, {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 98,
+                lineNumber: 107,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 children: "User Info"
             }, void 0, false, {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 99,
+                lineNumber: 108,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -45414,20 +45421,20 @@ const ProfileView = ({ user, token, onLoggedOut, updateFavoriteMovies })=>{
                                 children: "Username: "
                             }, void 0, false, {
                                 fileName: "src/components/profile-view/profile-view.jsx",
-                                lineNumber: 102,
+                                lineNumber: 111,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                 children: user.Username
                             }, void 0, false, {
                                 fileName: "src/components/profile-view/profile-view.jsx",
-                                lineNumber: 103,
+                                lineNumber: 112,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 101,
+                        lineNumber: 110,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -45436,20 +45443,20 @@ const ProfileView = ({ user, token, onLoggedOut, updateFavoriteMovies })=>{
                                 children: "Email: "
                             }, void 0, false, {
                                 fileName: "src/components/profile-view/profile-view.jsx",
-                                lineNumber: 106,
+                                lineNumber: 115,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                 children: user.Email
                             }, void 0, false, {
                                 fileName: "src/components/profile-view/profile-view.jsx",
-                                lineNumber: 107,
+                                lineNumber: 116,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 105,
+                        lineNumber: 114,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -45458,33 +45465,77 @@ const ProfileView = ({ user, token, onLoggedOut, updateFavoriteMovies })=>{
                                 children: "Birthday: "
                             }, void 0, false, {
                                 fileName: "src/components/profile-view/profile-view.jsx",
-                                lineNumber: 110,
+                                lineNumber: 119,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                 children: formatDate(user.BirthDate)
                             }, void 0, false, {
                                 fileName: "src/components/profile-view/profile-view.jsx",
-                                lineNumber: 111,
+                                lineNumber: 120,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 109,
+                        lineNumber: 118,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: "variable ids:"
+                            }, void 0, false, {
+                                fileName: "src/components/profile-view/profile-view.jsx",
+                                lineNumber: 123,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: user.FavoriteMovies
+                            }, void 0, false, {
+                                fileName: "src/components/profile-view/profile-view.jsx",
+                                lineNumber: 124,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/profile-view/profile-view.jsx",
+                        lineNumber: 122,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: "const ids:"
+                            }, void 0, false, {
+                                fileName: "src/components/profile-view/profile-view.jsx",
+                                lineNumber: 127,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: FavoriteMovieIdsFromApi
+                            }, void 0, false, {
+                                fileName: "src/components/profile-view/profile-view.jsx",
+                                lineNumber: 128,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/profile-view/profile-view.jsx",
+                        lineNumber: 126,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 100,
+                lineNumber: 109,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 children: "Update Info"
             }, void 0, false, {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 114,
+                lineNumber: 131,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -45493,7 +45544,7 @@ const ProfileView = ({ user, token, onLoggedOut, updateFavoriteMovies })=>{
                         children: "Username:"
                     }, void 0, false, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 116,
+                        lineNumber: 133,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -45505,13 +45556,13 @@ const ProfileView = ({ user, token, onLoggedOut, updateFavoriteMovies })=>{
                             })
                     }, void 0, false, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 117,
+                        lineNumber: 134,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 115,
+                lineNumber: 132,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -45520,7 +45571,7 @@ const ProfileView = ({ user, token, onLoggedOut, updateFavoriteMovies })=>{
                         children: "Password:"
                     }, void 0, false, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 124,
+                        lineNumber: 141,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -45532,13 +45583,13 @@ const ProfileView = ({ user, token, onLoggedOut, updateFavoriteMovies })=>{
                             })
                     }, void 0, false, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 125,
+                        lineNumber: 142,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 123,
+                lineNumber: 140,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -45547,7 +45598,7 @@ const ProfileView = ({ user, token, onLoggedOut, updateFavoriteMovies })=>{
                         children: "Email:"
                     }, void 0, false, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 132,
+                        lineNumber: 149,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -45559,13 +45610,13 @@ const ProfileView = ({ user, token, onLoggedOut, updateFavoriteMovies })=>{
                             })
                     }, void 0, false, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 133,
+                        lineNumber: 150,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 131,
+                lineNumber: 148,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -45574,7 +45625,7 @@ const ProfileView = ({ user, token, onLoggedOut, updateFavoriteMovies })=>{
                         children: "Date of Birth:"
                     }, void 0, false, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 140,
+                        lineNumber: 157,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -45586,13 +45637,13 @@ const ProfileView = ({ user, token, onLoggedOut, updateFavoriteMovies })=>{
                             })
                     }, void 0, false, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 141,
+                        lineNumber: 158,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 139,
+                lineNumber: 156,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -45600,7 +45651,7 @@ const ProfileView = ({ user, token, onLoggedOut, updateFavoriteMovies })=>{
                 children: "Update Profile"
             }, void 0, false, {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 147,
+                lineNumber: 164,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -45608,7 +45659,7 @@ const ProfileView = ({ user, token, onLoggedOut, updateFavoriteMovies })=>{
                 children: "Deregister"
             }, void 0, false, {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 148,
+                lineNumber: 165,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
@@ -45620,48 +45671,47 @@ const ProfileView = ({ user, token, onLoggedOut, updateFavoriteMovies })=>{
                                 children: "Favorite Movies"
                             }, void 0, false, {
                                 fileName: "src/components/profile-view/profile-view.jsx",
-                                lineNumber: 158,
+                                lineNumber: 169,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/profile-view/profile-view.jsx",
-                            lineNumber: 157,
+                            lineNumber: 168,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 156,
+                        lineNumber: 167,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
-                        children: FavoriteMovies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: user.FavoriteMovies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                             children: "No favorite movies yet..."
                         }, void 0, false, {
                             fileName: "src/components/profile-view/profile-view.jsx",
-                            lineNumber: 163,
+                            lineNumber: 174,
                             columnNumber: 13
-                        }, undefined) : FavoriteMovies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                        }, undefined) : movies.filter((movie)=>user.FavoriteMovies.includes(movie.id)).map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                                 xs: 12,
                                 sm: 6,
                                 md: 4,
                                 lg: 3,
                                 className: "movie-container",
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
-                                    movie: movie,
-                                    updateAction: ()=>updateFavoriteMovies(movie.id)
+                                    movie: movie
                                 }, void 0, false, {
                                     fileName: "src/components/profile-view/profile-view.jsx",
-                                    lineNumber: 174,
+                                    lineNumber: 182,
                                     columnNumber: 17
                                 }, undefined)
                             }, movie.id, false, {
                                 fileName: "src/components/profile-view/profile-view.jsx",
-                                lineNumber: 166,
+                                lineNumber: 177,
                                 columnNumber: 15
                             }, undefined))
                     }, void 0, false, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 161,
+                        lineNumber: 172,
                         columnNumber: 9
                     }, undefined)
                 ]
@@ -45673,23 +45723,23 @@ const ProfileView = ({ user, token, onLoggedOut, updateFavoriteMovies })=>{
                     children: "Back"
                 }, void 0, false, {
                     fileName: "src/components/profile-view/profile-view.jsx",
-                    lineNumber: 185,
+                    lineNumber: 193,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 184,
+                lineNumber: 192,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/profile-view/profile-view.jsx",
-        lineNumber: 97,
+        lineNumber: 106,
         columnNumber: 5
     }, undefined);
 }; // I think not needed
  // export default ProfileView;
-_s(ProfileView, "REZ/gdQh/L128gHA7oMeYnBkL6Y=");
+_s(ProfileView, "fBBiTZOT6yWW7w3RQAt0f6u9RAo=");
 _c = ProfileView;
 var _c;
 $RefreshReg$(_c, "ProfileView");
