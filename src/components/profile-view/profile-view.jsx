@@ -119,14 +119,6 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMo
           <span>Birthday: </span>
           <span>{formatDate(user.BirthDate)}</span>
         </div>
-        <div>
-          <span>variable ids:</span>
-          <span>{user.FavoriteMovies}</span>
-        </div>
-        <div>
-          <span>const ids:</span>
-          <span>{FavoriteMovieIdsFromApi}</span>
-        </div>
       </div>
       <h2>Update Info</h2>
       <div>
@@ -175,7 +167,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMo
           ) : (
             movies.filter((movie) => user.FavoriteMovies.includes(movie.id)).map((movie) => (
               <Col
-                xs={12} sm={6} md={4} lg={3}
+                xs={12} sm={12} md={6} lg={6}
                 key={movie.id}
                 className="movie-container"
               >
