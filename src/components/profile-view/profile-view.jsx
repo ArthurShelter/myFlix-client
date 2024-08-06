@@ -41,12 +41,6 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMo
           email: data.Email,
           birthDate: data.BirthDate
         });
-        // setFavoriteMovieIds(movies.filter(m => data.FavoriteMovies.includes(m.id)));
-        // console.log(user.FavoriteMovies);
-        // const favoriteMovies = movies.filter(m => data.FavoriteMovies.includes(m.id));
-
-        // setFavoriteMovieIdsFromApi(data.FavoriteMovies);
-        // console.log(FavoriteMovieIdsFromApi);
       })
       .catch(error => {
         console.error('Error fetching user data', error);
@@ -95,10 +89,6 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMo
         console.error('Error deleting user account', error);
       });
   };
-
-  // const updateFavoriteMovies = (movieId) => {
-
-  // }
 
   console.log(user.FavoriteMovies);
 
