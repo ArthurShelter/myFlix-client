@@ -1,11 +1,19 @@
 import React from "react";
 import { useEffect, useState } from 'react';
+
+//for moviecard
+import { Row, Col } from 'react-bootstrap';
+
 import { Link } from "react-router-dom";
 import { MovieCard } from "../movie-card/movie-card";
 
-export const ProfileView = ({ user, token, movies, onLoggedOut }) => {
+//taking movies and favoriteMovies out for now
+export const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMovies }) => {
   const [userInfo, setUserInfo] = useState({});
-  const [favoriteMovies, setFavoriteMovies] = useState([]);
+  //not used yet
+  // const [movies, setMovies] = useState([]);
+
+  const [FavoriteMovieIdsFromApi, setFavoriteMovieIdsFromApi] = useState([]);
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -13,32 +21,38 @@ export const ProfileView = ({ user, token, movies, onLoggedOut }) => {
     birthDate: ''
   });
 
+  const formatDate = (dateInput) => {
+    const date = new Date(dateInput);
+    return date.toISOString().split('T')[0];
+  };
+
   useEffect(() => {
-    fetch(`https://your-heroku-app.herokuapp.com/users/${user}`, {
+    fetch(`https://your-heroku-app.herokuapp.com/users/${user.Username}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`
       }
     })
-    .then(response => response.json())
-    .then(data => {
-      setUserInfo(data);
-      setFormData({
-        username: data.Username,
-        password: '',
-        email: data.Email,
-        birthDate: data.BirthDate
+      .then(response => response.json())
+      .then(data => {
+        setUserInfo(data);
+        setFormData({
+          username: data.Username,
+          password: '',
+          email: data.Email,
+          birthDate: data.BirthDate
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching user data', error);
       });
-      setFavoriteMovies(movies.filter(m => data.FavoriteMovies.includes(m._id)));
-    })
-    .catch(error => {
-      console.error('Error fetching user data', error);
-    });
   }, [user, token, movies]);
 
+
+
   const handleUpdate = () => {
-    fetch(`https://your-heroku-app.herokuapp.com/users/${user}`, {
+    fetch(`https://your-heroku-app.herokuapp.com/users/${user.Username}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -51,36 +65,54 @@ export const ProfileView = ({ user, token, movies, onLoggedOut }) => {
         BirthDate: formData.birthDate
       })
     })
-    .then(response => response.json())
-    .then(data => {
-      setUserInfo(data);
-      alert('Profile updated successfully');
-    })
-    .catch(error => {
-      console.error('Error updating user data', error);
-    });
+      .then(response => response.json())
+      .then(data => {
+        setUserInfo(data);
+        alert('Profile updated successfully');
+      })
+      .catch(error => {
+        console.error('Error updating user data', error);
+      });
   };
 
   const handleDeregister = () => {
-    fetch(`https://your-heroku-app.herokuapp.com/users/${user}`, {
+    fetch(`https://your-heroku-app.herokuapp.com/users/${user.Username}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`
       }
     })
-    .then(() => {
-      onLoggedOut();
-      alert('Account deleted successfully');
-    })
-    .catch(error => {
-      console.error('Error deleting user account', error);
-    });
+      .then(() => {
+        onLoggedOut();
+        alert('Account deleted successfully');
+      })
+      .catch(error => {
+        console.error('Error deleting user account', error);
+      });
   };
+
+  console.log(user.FavoriteMovies);
 
   return (
     <div>
       <h1>Profile</h1>
+      <h2>User Info</h2>
+      <div>
+        <div>
+          <span>Username: </span>
+          <span>{user.Username}</span>
+        </div>
+        <div>
+          <span>Email: </span>
+          <span>{user.Email}</span>
+        </div>
+        <div>
+          <span>Birthday: </span>
+          <span>{formatDate(user.BirthDate)}</span>
+        </div>
+      </div>
+      <h2>Update Info</h2>
       <div>
         <label>Username:</label>
         <input
@@ -115,18 +147,37 @@ export const ProfileView = ({ user, token, movies, onLoggedOut }) => {
       </div>
       <button onClick={handleUpdate}>Update Profile</button>
       <button onClick={handleDeregister}>Deregister</button>
-      <h2>Favorite Movies</h2>
-      <div>
-        {favoriteMovies.map(movie => (
-          <MovieCard key={movie._id} movie={movie} />
-        ))}
-      </div>
+      <>
+        <Row>
+          <Col xs={12}>
+            <h2>Favorite Movies</h2>
+          </Col>
+        </Row>
+        <Row>
+          {user.FavoriteMovies.length === 0 ? (
+            <p>No favorite movies yet...</p>
+          ) : (
+            movies.filter((movie) => user.FavoriteMovies.includes(movie.id)).map((movie) => (
+              <Col className="mb-4"
+                xs={12} sm={12} md={6} lg={6}
+                key={movie.id}
+              >
+                <MovieCard
+                  movie={movie}
+                // updateAction={() => updateFavoriteMovies(movie.id)}
+                />
+              </Col>
+            ))
+          )}
+        </Row>
+      </>
       <Link to={`/`}>
-          <button className="back-button">Back</button>
-        </Link>
+        <button className="back-button">Back</button>
+      </Link>
     </div>
   );
 };
+
 
 // I think not needed
 // export default ProfileView;
