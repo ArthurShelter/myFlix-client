@@ -42,10 +42,32 @@ export const MovieView = ({ movies }) => {
       }
     }
 
-    // if (!response.ok) {
-    //     throw new Error('Favorite failed');
-    // }
+  const updatedUser = await response.json();
+  localStorage.setItem('user', JSON.stringify(updatedUser));
+  setToFavorite(true);
 
+  // look into this
+  // updateAction(movieId);
+  }
+
+  const handleRemoveFromFavorites = async (movieId) => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    const token = localStorage.getItem('token');
+
+    const response = await fetch(`https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/users/${user.Username}/movies/${movieId}`, {
+      method: "DELETE",
+      // body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+       },
+    });
+    
+    if (!response.ok) {
+      if (response.status === 401) throw new Error('Unauthorized');
+      else {
+        throw new Error('Remove Favorite failed');
+      }
+    }
 
   const updatedUser = await response.json();
   localStorage.setItem('user', JSON.stringify(updatedUser));
@@ -53,6 +75,7 @@ export const MovieView = ({ movies }) => {
 
   // look into this
   // updateAction(movieId);
+
   }
 
   return (
@@ -86,6 +109,14 @@ export const MovieView = ({ movies }) => {
       <p>
         <div>
           <button className="favorite-button" onClick={() => handleAddToFavorites(movie.id)}>Add to Favorites</button>
+        </div>
+      </p>
+      <p>
+        <div>
+          <button className="unfavorite-button" 
+          onClick={() => handleRemoveFromFavorites(movie.id)}
+          >
+            Remove from Favorites</button>
         </div>
       </p>
       <p>

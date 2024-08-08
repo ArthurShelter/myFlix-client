@@ -10,7 +10,9 @@ import { MovieCard } from "../movie-card/movie-card";
 //taking movies and favoriteMovies out for now
 export const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMovies }) => {
   const [userInfo, setUserInfo] = useState({});
+  //not used yet
   // const [movies, setMovies] = useState([]);
+
   const [FavoriteMovieIdsFromApi, setFavoriteMovieIdsFromApi] = useState([]);
   const [formData, setFormData] = useState({
     username: '',
@@ -164,7 +166,6 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMo
                   movie={movie}
                 // updateAction={() => updateFavoriteMovies(movie.id)}
                 />
-
               </Col>
             ))
           )}
