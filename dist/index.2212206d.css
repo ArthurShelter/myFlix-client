@@ -13213,6 +13213,14 @@ textarea.form-control-lg {
   padding: 4px 12px;
 }
 
+.unfavorite-button {
+  color: #f5f5f5;
+  background-color: #dc3545;
+  border: 0;
+  border-radius: 4px;
+  padding: 4px 12px;
+}
+
 .view-poster {
   width: 323px;
   height: 485px;

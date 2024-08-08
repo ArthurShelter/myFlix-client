@@ -15,9 +15,14 @@ export const MovieView = ({ movies }) => {
 
   const movie = movies.find((m) => m.id === movieId);
 
-  const [isFavorite, setToFavorite] = useState(false);
+  const [isFavorite, setFavoriteStatusTo] = useState(false);
 
-  console.log(movie.ImagePath);
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user && user.FavoriteMovies.includes(movieId)) {
+      setFavoriteStatusTo(true);
+    }
+  }, [movieId]);
 
   const handleAddToFavorites = async (movieId) => {
     // event.preventDefault();
@@ -30,11 +35,12 @@ export const MovieView = ({ movies }) => {
     const response = await fetch(`https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/users/${user.Username}/movies/${movieId}`, {
       method: "PUT",
       // body: JSON.stringify(data),
-      headers: { "Content-Type": "application/json",
+      headers: {
+        "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
-       },
+      },
     });
-    
+
     if (!response.ok) {
       if (response.status === 401) throw new Error('Unauthorized');
       else {
@@ -42,12 +48,14 @@ export const MovieView = ({ movies }) => {
       }
     }
 
-  const updatedUser = await response.json();
-  localStorage.setItem('user', JSON.stringify(updatedUser));
-  setToFavorite(true);
+    const updatedUser = await response.json();
+    localStorage.setItem('user', JSON.stringify(updatedUser));
+    setFavoriteStatusTo(true);
 
-  // look into this
-  // updateAction(movieId);
+    //alert('Favorited successfully');
+
+    // look into this
+    // updateAction(movieId);
   }
 
   const handleRemoveFromFavorites = async (movieId) => {
@@ -57,11 +65,12 @@ export const MovieView = ({ movies }) => {
     const response = await fetch(`https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/users/${user.Username}/movies/${movieId}`, {
       method: "DELETE",
       // body: JSON.stringify(data),
-      headers: { "Content-Type": "application/json",
+      headers: {
+        "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
-       },
+      },
     });
-    
+
     if (!response.ok) {
       if (response.status === 401) throw new Error('Unauthorized');
       else {
@@ -69,12 +78,12 @@ export const MovieView = ({ movies }) => {
       }
     }
 
-  const updatedUser = await response.json();
-  localStorage.setItem('user', JSON.stringify(updatedUser));
-  setToFavorite(true);
+    const updatedUser = await response.json();
+    localStorage.setItem('user', JSON.stringify(updatedUser));
+    setFavoriteStatusTo(false);
 
-  // look into this
-  // updateAction(movieId);
+    // look into this
+    // updateAction(movieId);
 
   }
 
@@ -106,19 +115,25 @@ export const MovieView = ({ movies }) => {
           <span>{movie.Description}</span>
         </div>
       </p>
-      <p>
-        <div>
-          <button className="favorite-button" onClick={() => handleAddToFavorites(movie.id)}>Add to Favorites</button>
-        </div>
-      </p>
-      <p>
-        <div>
-          <button className="unfavorite-button" 
-          onClick={() => handleRemoveFromFavorites(movie.id)}
-          >
-            Remove from Favorites</button>
-        </div>
-      </p>
+
+      <div>
+        {isFavorite ? (
+          <p>
+            <div>
+              <button className="unfavorite-button"
+                onClick={() => handleRemoveFromFavorites(movie.id)}
+              >
+                Remove from Favorites</button>
+            </div>
+          </p>
+        ) : (
+          <p>
+            <div>
+              <button className="favorite-button" onClick={() => handleAddToFavorites(movie.id)}>Add to Favorites</button>
+            </div>
+          </p>
+        )}
+      </div>
       <p>
         <Link to={`/`}>
           <button className="back-button">Back</button>
