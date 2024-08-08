@@ -45384,7 +45384,7 @@ const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMovies })
         return date.toISOString().split("T")[0];
     };
     (0, _react.useEffect)(()=>{
-        fetch(`https://your-heroku-app.herokuapp.com/users/${user}`, {
+        fetch(`https://your-heroku-app.herokuapp.com/users/${user.Username}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -45407,7 +45407,7 @@ const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMovies })
         movies
     ]);
     const handleUpdate = ()=>{
-        fetch(`https://your-heroku-app.herokuapp.com/users/${user}`, {
+        fetch(`https://your-heroku-app.herokuapp.com/users/${user.Username}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -45427,7 +45427,7 @@ const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMovies })
         });
     };
     const handleDeregister = ()=>{
-        fetch(`https://your-heroku-app.herokuapp.com/users/${user}`, {
+        fetch(`https://your-heroku-app.herokuapp.com/users/${user.Username}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

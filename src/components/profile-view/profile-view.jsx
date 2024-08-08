@@ -27,7 +27,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMo
   };
 
   useEffect(() => {
-    fetch(`https://your-heroku-app.herokuapp.com/users/${user}`, {
+    fetch(`https://your-heroku-app.herokuapp.com/users/${user.Username}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMo
 
 
   const handleUpdate = () => {
-    fetch(`https://your-heroku-app.herokuapp.com/users/${user}`, {
+    fetch(`https://your-heroku-app.herokuapp.com/users/${user.Username}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMo
   };
 
   const handleDeregister = () => {
-    fetch(`https://your-heroku-app.herokuapp.com/users/${user}`, {
+    fetch(`https://your-heroku-app.herokuapp.com/users/${user.Username}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
