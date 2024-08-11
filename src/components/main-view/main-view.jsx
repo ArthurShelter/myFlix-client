@@ -6,6 +6,7 @@ import { LoginView } from "../login-view/login-view";
 import { SignupView } from "../signup-view/signup-view";
 import { ProfileView } from "../profile-view/profile-view";
 import { NavigationBar } from "../navigation-bar/navigation-bar";
+import { FilterView } from "../filter-view/filter-view";
 
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -23,6 +24,10 @@ export const MainView = () => {
   const [token, setToken] = useState(storedToken ? storedToken : null);
 
   const [movies, setMovies] = useState([]);
+
+  const [searchbarText, setSearchbarText] = useState('');
+
+  const [filteredMovies, setFilteredMovies] = useState(movies);
 
   useEffect(() => {
 
@@ -48,14 +53,27 @@ export const MainView = () => {
 
   }, [token]);
 
+  const handleSearch = () => {
+    setFilteredMovies(
+      movies.filter((movie) =>
+        movie.Title.toLowerCase().includes(searchbarText.toLowerCase())
+      )
+    );
+  };
 
   return (
     <BrowserRouter>
-      <NavigationBar user={user} onLoggedOut={() => {
-        setUser(null);
-        setToken(null);
-        localStorage.clear();
-      }} />
+      <NavigationBar
+        movies={movies}
+        user={user}
+        onLoggedOut={() => {
+          setUser(null);
+          setToken(null);
+          localStorage.clear();
+        }}
+      searchbarText={searchbarText}
+
+      />
       <Row className="justify-content-md-center">
         <Routes>
           <Route
@@ -117,8 +135,8 @@ export const MainView = () => {
                   <>
                     {movies.map((movie) => (
                       <Col className="mb-4" key={movie.id} xs={12} sm={6} md={4} lg={3}>
-                        <MovieCard 
-                        movie={movie} />
+                        <MovieCard
+                          movie={movie} />
                       </Col>
                     ))}
                   </>
@@ -135,11 +153,43 @@ export const MainView = () => {
                 ) : movies.length === 0 ? (
                   <Col>The list is empty!</Col>
                 ) : (
-                    <Col md={8}>
-                      <ProfileView onLoggedIn={(user, token)} user={user} movies={movies}/>
-                    </Col>
+                  <Col md={8}>
+                    <ProfileView onLoggedIn={(user, token)} user={user} movies={movies} />
+                  </Col>
                 )}
               </>
+            }
+          />
+          <Route
+            path="/filter"
+            element={
+              <>
+                {!user ? (
+                  <Navigate to="/login" replace />
+                ) : movies.length === 0 ? (
+                  <Col>The list is empty!</Col>
+                ) : (
+                  <>
+                    {filteredMovies.map((movie) => (
+                      <Col className="mb-4" key={movie.id} xs={12} sm={6} md={4} lg={3}>
+                        <MovieCard
+                          movie={movie} />
+                      </Col>
+                    ))}
+                  </>
+                )}
+              </>
+              // <>
+              //   {!user ? (
+              //     <Navigate to="/login" replace />
+              //   ) : movies.length === 0 ? (
+              //     <Col>The List is empty!</Col>
+              //   ) : (
+              //     <Col md={8}>
+              //       <FilterView movies={movies} />
+              //     </Col>
+              //   )}
+              // </>
             }
           />
         </Routes>
