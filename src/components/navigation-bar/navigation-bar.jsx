@@ -3,9 +3,21 @@ import { Navbar, Container, Nav, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-export const NavigationBar = ({ user, onLoggedOut, onSearch, setFilteredMovies, movies }) => {
+import { useNavigate } from 'react-router';
+
+
+export const NavigationBar = ({ user, onLoggedOut }) => {
 
   const token = localStorage.getItem('token');
+
+  const [searchbarText, setSearchbarText] = useState('');
+
+  const navigate = useNavigate()
+
+  const handleSearch = () => {
+    // console.log(`Searching for: ${searchbarText}`);
+     navigate(`/filter/${encodeURIComponent(searchbarText)}`);
+  };
 
   return (
     <Navbar bg="light" expand="lg">
@@ -52,12 +64,13 @@ export const NavigationBar = ({ user, onLoggedOut, onSearch, setFilteredMovies, 
                     type="search"
                     placeholder="Search Movie"
                     className=""
+                    // I think this is not right
                     value={searchbarText}
                     onChange={(e) => setSearchbarText(e.target.value)}
                   />
                   <Button variant="" 
                   as={Link}
-                  to="/filter"
+                  to={`/filter/${encodeURIComponent(searchbarText)}`}
                   onClick={handleSearch}
                   >
                     Search</Button>

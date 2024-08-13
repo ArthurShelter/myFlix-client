@@ -25,9 +25,9 @@ export const MainView = () => {
 
   const [movies, setMovies] = useState([]);
 
-  const [searchbarText, setSearchbarText] = useState('');
+  // const [searchbarText, setSearchbarText] = useState('');
 
-  const [filteredMovies, setFilteredMovies] = useState(movies);
+  // const [filteredMovies, setFilteredMovies] = useState(movies);
 
   useEffect(() => {
 
@@ -53,13 +53,13 @@ export const MainView = () => {
 
   }, [token]);
 
-  const handleSearch = () => {
-    setFilteredMovies(
-      movies.filter((movie) =>
-        movie.Title.toLowerCase().includes(searchbarText.toLowerCase())
-      )
-    );
-  };
+  // const handleSearch = () => {
+  //   setFilteredMovies(
+  //     movies.filter((movie) =>
+  //       movie.Title.toLowerCase().includes(searchbarText.toLowerCase())
+  //     )
+  //   );
+  // };
 
   return (
     <BrowserRouter>
@@ -71,8 +71,6 @@ export const MainView = () => {
           setToken(null);
           localStorage.clear();
         }}
-      searchbarText={searchbarText}
-
       />
       <Row className="justify-content-md-center">
         <Routes>
@@ -161,35 +159,35 @@ export const MainView = () => {
             }
           />
           <Route
-            path="/filter"
+            path="/filter/:searchbarText"
             element={
-              <>
-                {!user ? (
-                  <Navigate to="/login" replace />
-                ) : movies.length === 0 ? (
-                  <Col>The list is empty!</Col>
-                ) : (
-                  <>
-                    {filteredMovies.map((movie) => (
-                      <Col className="mb-4" key={movie.id} xs={12} sm={6} md={4} lg={3}>
-                        <MovieCard
-                          movie={movie} />
-                      </Col>
-                    ))}
-                  </>
-                )}
-              </>
               // <>
               //   {!user ? (
               //     <Navigate to="/login" replace />
               //   ) : movies.length === 0 ? (
-              //     <Col>The List is empty!</Col>
+              //     <Col>The list is empty!</Col>
               //   ) : (
-              //     <Col md={8}>
-              //       <FilterView movies={movies} />
-              //     </Col>
+              //     <>
+              //       {filteredMovies.map((movie) => (
+              //         <Col className="mb-4" key={movie.id} xs={12} sm={6} md={4} lg={3}>
+              //           <MovieCard
+              //             movie={movie} />
+              //         </Col>
+              //       ))}
+              //     </>
               //   )}
               // </>
+              <>
+                {!user ? (
+                  <Navigate to="/login" replace />
+                ) : movies.length === 0 ? (
+                  <Col>The List is empty!</Col>
+                ) : (
+                  <Col md={8}>
+                    <FilterView movies={movies} />
+                  </Col>
+                )}
+              </>
             }
           />
         </Routes>
