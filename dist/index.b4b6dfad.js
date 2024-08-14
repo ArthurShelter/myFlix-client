@@ -45879,13 +45879,19 @@ var _col = require("react-bootstrap/Col");
 var _colDefault = parcelHelpers.interopDefault(_col);
 var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
-const FilterView = ({ user, movies, searchbarText })=>{
+const FilterView = ({ movies })=>{
     _s();
     const [filteredMovies, setFilteredMovies] = (0, _react.useState)(movies);
     // use url param instead of searchbar text?
+    const { searchbarParams } = useParams();
     (0, _react.useEffect)(()=>{
-        setFilteredMovies(movies.filter((movie)=>movie.Title.toLowerCase().includes(searchbarText.toLowerCase())));
-        console.log("Navigated to PageComponent");
+        // setFilteredMovies(
+        //     movies.filter((movie) =>
+        //         movie.Title.toLowerCase().includes(searchbarText.toLowerCase())
+        //     )
+        // );
+        setFilteredMovies(movies.filter((movie)=>movie.Title.toLowerCase().includes(searchbarParams.toLowerCase())));
+        console.log("Navigated to FilterView");
     // Fetch data, update state, etc.
     }, []); // Empty dependency array ensures this runs only once when the component mounts
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -45899,17 +45905,17 @@ const FilterView = ({ user, movies, searchbarText })=>{
                                 children: "Search Results"
                             }, void 0, false, {
                                 fileName: "src/components/filter-view/filter-view.jsx",
-                                lineNumber: 34,
+                                lineNumber: 43,
                                 columnNumber: 25
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/filter-view/filter-view.jsx",
-                            lineNumber: 33,
+                            lineNumber: 42,
                             columnNumber: 21
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/filter-view/filter-view.jsx",
-                        lineNumber: 32,
+                        lineNumber: 41,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
@@ -45917,7 +45923,7 @@ const FilterView = ({ user, movies, searchbarText })=>{
                             children: "No movies here..."
                         }, void 0, false, {
                             fileName: "src/components/filter-view/filter-view.jsx",
-                            lineNumber: 39,
+                            lineNumber: 48,
                             columnNumber: 25
                         }, undefined) : // movies.filter((movie) => user.FavoriteMovies.includes(movie.id)).map((movie) => (
                         filteredMovies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
@@ -45930,17 +45936,17 @@ const FilterView = ({ user, movies, searchbarText })=>{
                                     movie: movie
                                 }, void 0, false, {
                                     fileName: "src/components/filter-view/filter-view.jsx",
-                                    lineNumber: 47,
+                                    lineNumber: 56,
                                     columnNumber: 33
                                 }, undefined)
                             }, movie.id, false, {
                                 fileName: "src/components/filter-view/filter-view.jsx",
-                                lineNumber: 43,
+                                lineNumber: 52,
                                 columnNumber: 29
                             }, undefined))
                     }, void 0, false, {
                         fileName: "src/components/filter-view/filter-view.jsx",
-                        lineNumber: 37,
+                        lineNumber: 46,
                         columnNumber: 17
                     }, undefined)
                 ]
@@ -45952,22 +45958,22 @@ const FilterView = ({ user, movies, searchbarText })=>{
                     children: "Back"
                 }, void 0, false, {
                     fileName: "src/components/filter-view/filter-view.jsx",
-                    lineNumber: 58,
+                    lineNumber: 67,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/filter-view/filter-view.jsx",
-                lineNumber: 57,
+                lineNumber: 66,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/filter-view/filter-view.jsx",
-        lineNumber: 30,
+        lineNumber: 39,
         columnNumber: 9
     }, undefined);
 };
-_s(FilterView, "HtkrHBHRc0qB3gM78egAKi+L72U=");
+_s(FilterView, "hEUqBFOZBNu+Tbutr0RTPBfWICY=", true);
 _c = FilterView;
 var _c;
 $RefreshReg$(_c, "FilterView");
