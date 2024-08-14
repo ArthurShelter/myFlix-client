@@ -8,17 +8,23 @@ import Col from "react-bootstrap/Col";
 
 import { Link } from "react-router-dom";
 
-export const FilterView = ({ user, movies, searchbarText, filteredMovies }) => {
+export const FilterView = ({ user, movies, searchbarText }) => {
 
-    // const [filteredMovies, setFilteredMovies] = useState(movies);
+    const [filteredMovies, setFilteredMovies] = useState(movies);
 
-    // const handleSearch = () => {
-    //     setFilteredMovies(
-    //         movies.filter((movie) =>
-    //             movie.Title.toLowerCase().includes(searchbarText.toLowerCase())
-    //         )
-    //     );
-    // };
+    // use url param instead of searchbar text?
+
+    useEffect(() => {
+        setFilteredMovies(
+            movies.filter((movie) =>
+                movie.Title.toLowerCase().includes(searchbarText.toLowerCase())
+            )
+        );
+        console.log('Navigated to PageComponent');
+        // Fetch data, update state, etc.
+
+      }, []); // Empty dependency array ensures this runs only once when the component mounts
+
 
     return (
         <div>

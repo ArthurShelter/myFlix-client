@@ -45306,11 +45306,15 @@ const NavigationBar = ({ user, onLoggedOut, movies })=>{
     _s();
     const token = localStorage.getItem("token");
     const [searchbarText, setSearchbarText] = (0, _react.useState)("");
-    const [filteredMovies, setFilteredMovies] = (0, _react.useState)(movies);
-    const navigate = (0, _reactRouter.useNavigate)();
+    // const [filteredMovies, setFilteredMovies] = useState(movies);
+    // const navigate = useNavigate();
     const handleSearch = ()=>{
-        // console.log(`Searching for: ${searchbarText}`);
-        setFilteredMovies(movies.filter((movie)=>movie.Title.toLowerCase().includes(searchbarText.toLowerCase())));
+        console.log(`Searching for: ${searchbarText}`);
+        // setFilteredMovies(
+        //   movies.filter((movie) =>
+        //     movie.Title.toLowerCase().includes(searchbarText.toLowerCase())
+        //   )
+        // );
         navigate(`/filter/${encodeURIComponent(searchbarText)}`);
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar), {
@@ -45324,14 +45328,14 @@ const NavigationBar = ({ user, onLoggedOut, movies })=>{
                     children: "Movies App"
                 }, void 0, false, {
                     fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                    lineNumber: 33,
+                    lineNumber: 32,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar).Toggle, {
                     "aria-controls": "basic-navbar-nav"
                 }, void 0, false, {
                     fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                    lineNumber: 36,
+                    lineNumber: 35,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar).Collapse, {
@@ -45347,7 +45351,7 @@ const NavigationBar = ({ user, onLoggedOut, movies })=>{
                                         children: "Login"
                                     }, void 0, false, {
                                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                        lineNumber: 41,
+                                        lineNumber: 40,
                                         columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
@@ -45356,7 +45360,7 @@ const NavigationBar = ({ user, onLoggedOut, movies })=>{
                                         children: "Signup"
                                     }, void 0, false, {
                                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                        lineNumber: 44,
+                                        lineNumber: 43,
                                         columnNumber: 17
                                     }, undefined)
                                 ]
@@ -45369,7 +45373,7 @@ const NavigationBar = ({ user, onLoggedOut, movies })=>{
                                         children: "Home"
                                     }, void 0, false, {
                                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                        lineNumber: 51,
+                                        lineNumber: 50,
                                         columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
@@ -45378,7 +45382,7 @@ const NavigationBar = ({ user, onLoggedOut, movies })=>{
                                         children: "Profile"
                                     }, void 0, false, {
                                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                        lineNumber: 54,
+                                        lineNumber: 53,
                                         columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
@@ -45386,7 +45390,7 @@ const NavigationBar = ({ user, onLoggedOut, movies })=>{
                                         children: "Logout"
                                     }, void 0, false, {
                                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                        lineNumber: 57,
+                                        lineNumber: 56,
                                         columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form), {
@@ -45400,24 +45404,24 @@ const NavigationBar = ({ user, onLoggedOut, movies })=>{
                                                 onChange: (e)=>setSearchbarText(e.target.value)
                                             }, void 0, false, {
                                                 fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                                lineNumber: 71,
+                                                lineNumber: 70,
                                                 columnNumber: 19
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
-                                                variant: "",
+                                                // variant=""
                                                 as: (0, _reactRouterDom.Link),
-                                                to: `/filter/${encodeURIComponent(searchbarText)}`,
+                                                // to={`/filter/${encodeURIComponent(searchbarText)}`}
                                                 onClick: handleSearch,
                                                 children: "Search"
                                             }, void 0, false, {
                                                 fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                                lineNumber: 78,
+                                                lineNumber: 77,
                                                 columnNumber: 19
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                        lineNumber: 70,
+                                        lineNumber: 69,
                                         columnNumber: 17
                                     }, undefined)
                                 ]
@@ -45425,31 +45429,27 @@ const NavigationBar = ({ user, onLoggedOut, movies })=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                        lineNumber: 38,
+                        lineNumber: 37,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                    lineNumber: 37,
+                    lineNumber: 36,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/navigation-bar/navigation-bar.jsx",
-            lineNumber: 32,
+            lineNumber: 31,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-        lineNumber: 31,
+        lineNumber: 30,
         columnNumber: 5
     }, undefined);
 };
-_s(NavigationBar, "Ho2V5HO2A6Pa7Xdvl0qjVH3rFuY=", false, function() {
-    return [
-        (0, _reactRouter.useNavigate)
-    ];
-});
+_s(NavigationBar, "v3icIsizq8J5+k7P/45/iT1oKMk=");
 _c = NavigationBar;
 var _c;
 $RefreshReg$(_c, "NavigationBar");
@@ -45878,15 +45878,16 @@ var _rowDefault = parcelHelpers.interopDefault(_row);
 var _col = require("react-bootstrap/Col");
 var _colDefault = parcelHelpers.interopDefault(_col);
 var _reactRouterDom = require("react-router-dom");
-const FilterView = ({ user, movies, searchbarText, filteredMovies })=>{
-    // const [filteredMovies, setFilteredMovies] = useState(movies);
-    // const handleSearch = () => {
-    //     setFilteredMovies(
-    //         movies.filter((movie) =>
-    //             movie.Title.toLowerCase().includes(searchbarText.toLowerCase())
-    //         )
-    //     );
-    // };
+var _s = $RefreshSig$();
+const FilterView = ({ user, movies, searchbarText })=>{
+    _s();
+    const [filteredMovies, setFilteredMovies] = (0, _react.useState)(movies);
+    // use url param instead of searchbar text?
+    (0, _react.useEffect)(()=>{
+        setFilteredMovies(movies.filter((movie)=>movie.Title.toLowerCase().includes(searchbarText.toLowerCase())));
+        console.log("Navigated to PageComponent");
+    // Fetch data, update state, etc.
+    }, []); // Empty dependency array ensures this runs only once when the component mounts
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
@@ -45898,17 +45899,17 @@ const FilterView = ({ user, movies, searchbarText, filteredMovies })=>{
                                 children: "Search Results"
                             }, void 0, false, {
                                 fileName: "src/components/filter-view/filter-view.jsx",
-                                lineNumber: 28,
+                                lineNumber: 34,
                                 columnNumber: 25
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/filter-view/filter-view.jsx",
-                            lineNumber: 27,
+                            lineNumber: 33,
                             columnNumber: 21
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/filter-view/filter-view.jsx",
-                        lineNumber: 26,
+                        lineNumber: 32,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
@@ -45916,7 +45917,7 @@ const FilterView = ({ user, movies, searchbarText, filteredMovies })=>{
                             children: "No movies here..."
                         }, void 0, false, {
                             fileName: "src/components/filter-view/filter-view.jsx",
-                            lineNumber: 33,
+                            lineNumber: 39,
                             columnNumber: 25
                         }, undefined) : // movies.filter((movie) => user.FavoriteMovies.includes(movie.id)).map((movie) => (
                         filteredMovies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
@@ -45929,17 +45930,17 @@ const FilterView = ({ user, movies, searchbarText, filteredMovies })=>{
                                     movie: movie
                                 }, void 0, false, {
                                     fileName: "src/components/filter-view/filter-view.jsx",
-                                    lineNumber: 41,
+                                    lineNumber: 47,
                                     columnNumber: 33
                                 }, undefined)
                             }, movie.id, false, {
                                 fileName: "src/components/filter-view/filter-view.jsx",
-                                lineNumber: 37,
+                                lineNumber: 43,
                                 columnNumber: 29
                             }, undefined))
                     }, void 0, false, {
                         fileName: "src/components/filter-view/filter-view.jsx",
-                        lineNumber: 31,
+                        lineNumber: 37,
                         columnNumber: 17
                     }, undefined)
                 ]
@@ -45951,21 +45952,22 @@ const FilterView = ({ user, movies, searchbarText, filteredMovies })=>{
                     children: "Back"
                 }, void 0, false, {
                     fileName: "src/components/filter-view/filter-view.jsx",
-                    lineNumber: 52,
+                    lineNumber: 58,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/filter-view/filter-view.jsx",
-                lineNumber: 51,
+                lineNumber: 57,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/filter-view/filter-view.jsx",
-        lineNumber: 24,
+        lineNumber: 30,
         columnNumber: 9
     }, undefined);
 };
+_s(FilterView, "HtkrHBHRc0qB3gM78egAKi+L72U=");
 _c = FilterView;
 var _c;
 $RefreshReg$(_c, "FilterView");

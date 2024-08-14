@@ -12,18 +12,17 @@ export const NavigationBar = ({ user, onLoggedOut, movies }) => {
 
   const [searchbarText, setSearchbarText] = useState('');
 
-  const [filteredMovies, setFilteredMovies] = useState(movies);
+  // const [filteredMovies, setFilteredMovies] = useState(movies);
 
-  const navigate = useNavigate()
+  // const navigate = useNavigate();
 
   const handleSearch = () => {
-    // console.log(`Searching for: ${searchbarText}`);
-    setFilteredMovies(
-      movies.filter((movie) =>
-          movie.Title.toLowerCase().includes(searchbarText.toLowerCase())
-      )
-  );
-
+    console.log(`Searching for: ${searchbarText}`);
+    // setFilteredMovies(
+    //   movies.filter((movie) =>
+    //     movie.Title.toLowerCase().includes(searchbarText.toLowerCase())
+    //   )
+    // );
     navigate(`/filter/${encodeURIComponent(searchbarText)}`);
   };
 
@@ -75,9 +74,10 @@ export const NavigationBar = ({ user, onLoggedOut, movies }) => {
                     value={searchbarText}
                     onChange={(e) => setSearchbarText(e.target.value)}
                   />
-                  <Button variant=""
+                  <Button
+                    // variant=""
                     as={Link}
-                    to={`/filter/${encodeURIComponent(searchbarText)}`}
+                    // to={`/filter/${encodeURIComponent(searchbarText)}`}
                     onClick={handleSearch}
                   >
                     Search
