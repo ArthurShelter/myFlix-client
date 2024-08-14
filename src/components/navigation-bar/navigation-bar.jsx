@@ -6,17 +6,25 @@ import { useEffect, useState } from "react";
 import { useNavigate } from 'react-router';
 
 
-export const NavigationBar = ({ user, onLoggedOut }) => {
+export const NavigationBar = ({ user, onLoggedOut, movies }) => {
 
   const token = localStorage.getItem('token');
 
   const [searchbarText, setSearchbarText] = useState('');
 
+  const [filteredMovies, setFilteredMovies] = useState(movies);
+
   const navigate = useNavigate()
 
   const handleSearch = () => {
     // console.log(`Searching for: ${searchbarText}`);
-     navigate(`/filter/${encodeURIComponent(searchbarText)}`);
+    setFilteredMovies(
+      movies.filter((movie) =>
+          movie.Title.toLowerCase().includes(searchbarText.toLowerCase())
+      )
+  );
+
+    navigate(`/filter/${encodeURIComponent(searchbarText)}`);
   };
 
   return (
@@ -64,16 +72,16 @@ export const NavigationBar = ({ user, onLoggedOut }) => {
                     type="search"
                     placeholder="Search Movie"
                     className=""
-                    // I think this is not right
                     value={searchbarText}
                     onChange={(e) => setSearchbarText(e.target.value)}
                   />
-                  <Button variant="" 
-                  as={Link}
-                  to={`/filter/${encodeURIComponent(searchbarText)}`}
-                  onClick={handleSearch}
+                  <Button variant=""
+                    as={Link}
+                    to={`/filter/${encodeURIComponent(searchbarText)}`}
+                    onClick={handleSearch}
                   >
-                    Search</Button>
+                    Search
+                  </Button>
                 </Form>
               </>
             )}

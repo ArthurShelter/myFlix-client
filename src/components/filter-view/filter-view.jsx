@@ -1,23 +1,24 @@
 import React from "react";
+// not using useEffect at the moment
 import { useEffect, useState } from "react";
 import { MovieCard } from "../movie-card/movie-card";
 
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import { BrowserRouter, Routes, Route, Navigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export const FilterView = ({ user, movies, searchbarText }) => {
+export const FilterView = ({ user, movies, searchbarText, filteredMovies }) => {
 
-    const [filteredMovies, setFilteredMovies] = useState(movies);
+    // const [filteredMovies, setFilteredMovies] = useState(movies);
 
-    const handleSearch = () => {
-        setFilteredMovies(
-            movies.filter((movie) =>
-                movie.Title.toLowerCase().includes(searchbarText.toLowerCase())
-            )
-        );
-    };
+    // const handleSearch = () => {
+    //     setFilteredMovies(
+    //         movies.filter((movie) =>
+    //             movie.Title.toLowerCase().includes(searchbarText.toLowerCase())
+    //         )
+    //     );
+    // };
 
     return (
         <div>
