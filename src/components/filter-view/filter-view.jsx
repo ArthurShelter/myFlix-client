@@ -14,18 +14,16 @@ export const FilterView = ({ movies }) => {
 
     // use url param instead of searchbar text?
 
-    const { searchbarParams } = useParams();
+    const searchbarText = searchParams.get('query');
+
+    console.log(searchbarText);
+
+    // const { searchbarText } = useParams();
 
     useEffect(() => {
-        // setFilteredMovies(
-        //     movies.filter((movie) =>
-        //         movie.Title.toLowerCase().includes(searchbarText.toLowerCase())
-        //     )
-        // );
-
         setFilteredMovies(
             movies.filter((movie) =>
-                movie.Title.toLowerCase().includes(searchbarParams.toLowerCase())
+                movie.Title.toLowerCase().includes(searchbarText.toLowerCase())
             )
         );
 
