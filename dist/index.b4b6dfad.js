@@ -27405,8 +27405,6 @@ const MainView = ()=>{
     const [user, setUser] = (0, _react.useState)(storedUser ? storedUser : null);
     const [token, setToken] = (0, _react.useState)(storedToken ? storedToken : null);
     const [movies, setMovies] = (0, _react.useState)([]);
-    // const [searchbarText, setSearchbarText] = useState('');
-    // const [filteredMovies, setFilteredMovies] = useState(movies);
     (0, _react.useEffect)(()=>{
         if (!token) return;
         fetch("https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/movies", {
@@ -27431,13 +27429,6 @@ const MainView = ()=>{
     }, [
         token
     ]);
-    // const handleSearch = () => {
-    //   setFilteredMovies(
-    //     movies.filter((movie) =>
-    //       movie.Title.toLowerCase().includes(searchbarText.toLowerCase())
-    //     )
-    //   );
-    // };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.BrowserRouter), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navigationBar.NavigationBar), {
@@ -27450,7 +27441,7 @@ const MainView = ()=>{
                 }
             }, void 0, false, {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 66,
+                lineNumber: 54,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
@@ -27464,24 +27455,24 @@ const MainView = ()=>{
                                     to: "/"
                                 }, void 0, false, {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 82,
+                                    lineNumber: 70,
                                     columnNumber: 19
                                 }, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                     md: 5,
                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _signupView.SignupView), {}, void 0, false, {
                                         fileName: "src/components/main-view/main-view.jsx",
-                                        lineNumber: 85,
+                                        lineNumber: 73,
                                         columnNumber: 21
                                     }, void 0)
                                 }, void 0, false, {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 84,
+                                    lineNumber: 72,
                                     columnNumber: 19
                                 }, void 0)
                             }, void 0, false)
                         }, void 0, false, {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 77,
+                            lineNumber: 65,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27491,7 +27482,7 @@ const MainView = ()=>{
                                     to: "/"
                                 }, void 0, false, {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 96,
+                                    lineNumber: 84,
                                     columnNumber: 19
                                 }, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                     md: 5,
@@ -27502,18 +27493,18 @@ const MainView = ()=>{
                                         }
                                     }, void 0, false, {
                                         fileName: "src/components/main-view/main-view.jsx",
-                                        lineNumber: 99,
+                                        lineNumber: 87,
                                         columnNumber: 21
                                     }, void 0)
                                 }, void 0, false, {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 98,
+                                    lineNumber: 86,
                                     columnNumber: 19
                                 }, void 0)
                             }, void 0, false)
                         }, void 0, false, {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 91,
+                            lineNumber: 79,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27524,13 +27515,13 @@ const MainView = ()=>{
                                     replace: true
                                 }, void 0, false, {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 113,
+                                    lineNumber: 101,
                                     columnNumber: 19
                                 }, void 0) : movies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                     children: "The List is empty!"
                                 }, void 0, false, {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 115,
+                                    lineNumber: 103,
                                     columnNumber: 19
                                 }, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                     md: 8,
@@ -27538,18 +27529,18 @@ const MainView = ()=>{
                                         movies: movies
                                     }, void 0, false, {
                                         fileName: "src/components/main-view/main-view.jsx",
-                                        lineNumber: 118,
+                                        lineNumber: 106,
                                         columnNumber: 21
                                     }, void 0)
                                 }, void 0, false, {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 117,
+                                    lineNumber: 105,
                                     columnNumber: 19
                                 }, void 0)
                             }, void 0, false)
                         }, void 0, false, {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 108,
+                            lineNumber: 96,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27560,13 +27551,13 @@ const MainView = ()=>{
                                     replace: true
                                 }, void 0, false, {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 129,
+                                    lineNumber: 117,
                                     columnNumber: 19
                                 }, void 0) : movies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                     children: "The list is empty!"
                                 }, void 0, false, {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 131,
+                                    lineNumber: 119,
                                     columnNumber: 19
                                 }, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                                     children: movies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
@@ -27579,19 +27570,19 @@ const MainView = ()=>{
                                                 movie: movie
                                             }, void 0, false, {
                                                 fileName: "src/components/main-view/main-view.jsx",
-                                                lineNumber: 136,
+                                                lineNumber: 124,
                                                 columnNumber: 25
                                             }, void 0)
                                         }, movie.id, false, {
                                             fileName: "src/components/main-view/main-view.jsx",
-                                            lineNumber: 135,
+                                            lineNumber: 123,
                                             columnNumber: 23
                                         }, void 0))
                                 }, void 0, false)
                             }, void 0, false)
                         }, void 0, false, {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 124,
+                            lineNumber: 112,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27602,13 +27593,13 @@ const MainView = ()=>{
                                     replace: true
                                 }, void 0, false, {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 150,
+                                    lineNumber: 138,
                                     columnNumber: 19
                                 }, void 0) : movies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                     children: "The list is empty!"
                                 }, void 0, false, {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 152,
+                                    lineNumber: 140,
                                     columnNumber: 19
                                 }, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                     md: 8,
@@ -27618,51 +27609,35 @@ const MainView = ()=>{
                                         movies: movies
                                     }, void 0, false, {
                                         fileName: "src/components/main-view/main-view.jsx",
-                                        lineNumber: 155,
+                                        lineNumber: 143,
                                         columnNumber: 21
                                     }, void 0)
                                 }, void 0, false, {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 154,
+                                    lineNumber: 142,
                                     columnNumber: 19
                                 }, void 0)
                             }, void 0, false)
                         }, void 0, false, {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 145,
+                            lineNumber: 133,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                            path: "/filter/:searchbarText",
-                            element: // <>
-                            //   {!user ? (
-                            //     <Navigate to="/login" replace />
-                            //   ) : movies.length === 0 ? (
-                            //     <Col>The list is empty!</Col>
-                            //   ) : (
-                            //     <>
-                            //       {filteredMovies.map((movie) => (
-                            //         <Col className="mb-4" key={movie.id} xs={12} sm={6} md={4} lg={3}>
-                            //           <MovieCard
-                            //             movie={movie} />
-                            //         </Col>
-                            //       ))}
-                            //     </>
-                            //   )}
-                            // </>
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                            path: "/filter",
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                                 children: !user ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Navigate), {
                                     to: "/login",
                                     replace: true
                                 }, void 0, false, {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 182,
+                                    lineNumber: 154,
                                     columnNumber: 19
                                 }, void 0) : movies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                     children: "The List is empty!"
                                 }, void 0, false, {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 184,
+                                    lineNumber: 156,
                                     columnNumber: 19
                                 }, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                     md: 8,
@@ -27670,35 +27645,35 @@ const MainView = ()=>{
                                         movies: movies
                                     }, void 0, false, {
                                         fileName: "src/components/main-view/main-view.jsx",
-                                        lineNumber: 187,
+                                        lineNumber: 159,
                                         columnNumber: 21
                                     }, void 0)
                                 }, void 0, false, {
                                     fileName: "src/components/main-view/main-view.jsx",
-                                    lineNumber: 186,
+                                    lineNumber: 158,
                                     columnNumber: 19
                                 }, void 0)
                             }, void 0, false)
                         }, void 0, false, {
                             fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 161,
+                            lineNumber: 149,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/main-view/main-view.jsx",
-                    lineNumber: 76,
+                    lineNumber: 64,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 75,
+                lineNumber: 63,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/main-view/main-view.jsx",
-        lineNumber: 65,
+        lineNumber: 53,
         columnNumber: 5
     }, undefined);
 };
@@ -45302,17 +45277,14 @@ var _reactBootstrap = require("react-bootstrap");
 var _reactRouterDom = require("react-router-dom");
 var _reactRouter = require("react-router");
 var _s = $RefreshSig$();
-const NavigationBar = ({ user, onLoggedOut, movies })=>{
+const NavigationBar = ({ user, onLoggedOut })=>{
     _s();
     const token = localStorage.getItem("token");
     const [searchbarText, setSearchbarText] = (0, _react.useState)("");
-    const [_, setSearchParams] = (0, _reactRouterDom.useSearchParams)();
-    // const [filteredMovies, setFilteredMovies] = useState(movies);
     const navigate = (0, _reactRouter.useNavigate)();
     const handleSearch = (e)=>{
         e.preventDefault();
-        //https://reactrouter.com/en/6.26.1/hooks/use-search-params
-        setSearchParams(`query=${encodeURIComponent(searchbarText)}`);
+        if (searchbarText) navigate(`/filter/?query=${encodeURIComponent(searchbarText)}`);
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar), {
         bg: "light",
@@ -45325,15 +45297,15 @@ const NavigationBar = ({ user, onLoggedOut, movies })=>{
                     children: "Movies App"
                 }, void 0, false, {
                     fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                    lineNumber: 30,
-                    columnNumber: 7
+                    lineNumber: 27,
+                    columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar).Toggle, {
                     "aria-controls": "basic-navbar-nav"
                 }, void 0, false, {
                     fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                    lineNumber: 33,
-                    columnNumber: 7
+                    lineNumber: 30,
+                    columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar).Collapse, {
                     id: "basic-navbar-nav",
@@ -45348,8 +45320,8 @@ const NavigationBar = ({ user, onLoggedOut, movies })=>{
                                         children: "Login"
                                     }, void 0, false, {
                                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                        lineNumber: 38,
-                                        columnNumber: 15
+                                        lineNumber: 35,
+                                        columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
                                         as: (0, _reactRouterDom.Link),
@@ -45357,8 +45329,8 @@ const NavigationBar = ({ user, onLoggedOut, movies })=>{
                                         children: "Signup"
                                     }, void 0, false, {
                                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                        lineNumber: 41,
-                                        columnNumber: 15
+                                        lineNumber: 38,
+                                        columnNumber: 17
                                     }, undefined)
                                 ]
                             }, void 0, true),
@@ -45370,8 +45342,8 @@ const NavigationBar = ({ user, onLoggedOut, movies })=>{
                                         children: "Home"
                                     }, void 0, false, {
                                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                        lineNumber: 48,
-                                        columnNumber: 15
+                                        lineNumber: 45,
+                                        columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
                                         as: (0, _reactRouterDom.Link),
@@ -45379,16 +45351,16 @@ const NavigationBar = ({ user, onLoggedOut, movies })=>{
                                         children: "Profile"
                                     }, void 0, false, {
                                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                        lineNumber: 51,
-                                        columnNumber: 15
+                                        lineNumber: 48,
+                                        columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
                                         onClick: onLoggedOut,
                                         children: "Logout"
                                     }, void 0, false, {
                                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                        lineNumber: 54,
-                                        columnNumber: 15
+                                        lineNumber: 51,
+                                        columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form), {
                                         onSubmit: handleSearch,
@@ -45399,14 +45371,11 @@ const NavigationBar = ({ user, onLoggedOut, movies })=>{
                                                 placeholder: "Search Movie",
                                                 className: "",
                                                 value: searchbarText,
-                                                onChange: (e)=>{
-                                                    if (e.target.value.length === 0) setSearchParams("query=");
-                                                    setSearchbarText(e.target.value);
-                                                }
+                                                onChange: (e)=>setSearchbarText(e.target.value)
                                             }, void 0, false, {
                                                 fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                                lineNumber: 58,
-                                                columnNumber: 17
+                                                lineNumber: 55,
+                                                columnNumber: 19
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
                                                 variant: "",
@@ -45414,43 +45383,42 @@ const NavigationBar = ({ user, onLoggedOut, movies })=>{
                                                 children: "Search"
                                             }, void 0, false, {
                                                 fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                                lineNumber: 71,
-                                                columnNumber: 17
+                                                lineNumber: 62,
+                                                columnNumber: 19
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                        lineNumber: 57,
-                                        columnNumber: 15
+                                        lineNumber: 54,
+                                        columnNumber: 17
                                     }, undefined)
                                 ]
                             }, void 0, true)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                        lineNumber: 35,
-                        columnNumber: 9
+                        lineNumber: 32,
+                        columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                    lineNumber: 34,
-                    columnNumber: 7
+                    lineNumber: 31,
+                    columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/navigation-bar/navigation-bar.jsx",
-            lineNumber: 29,
-            columnNumber: 5
+            lineNumber: 26,
+            columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-        lineNumber: 28,
-        columnNumber: 3
+        lineNumber: 25,
+        columnNumber: 5
     }, undefined);
 };
-_s(NavigationBar, "/ICOdflc6Q9QPkGQvfR/kpacuWs=", false, function() {
+_s(NavigationBar, "Ary7ozgc3lDhSdxsnoQp2h3T2Zo=", false, function() {
     return [
-        (0, _reactRouterDom.useSearchParams),
         (0, _reactRouter.useNavigate)
     ];
 });
@@ -45886,14 +45854,12 @@ var _s = $RefreshSig$();
 const FilterView = ({ movies })=>{
     _s();
     const [filteredMovies, setFilteredMovies] = (0, _react.useState)(movies);
-    // use url param instead of searchbar text?
+    const [searchParams] = (0, _reactRouterDom.useSearchParams)();
     const searchbarText = searchParams.get("query");
     console.log(searchbarText);
-    // const { searchbarText } = useParams();
     (0, _react.useEffect)(()=>{
         setFilteredMovies(movies.filter((movie)=>movie.Title.toLowerCase().includes(searchbarText.toLowerCase())));
         console.log("Navigated to FilterView");
-    // Fetch data, update state, etc.
     }, []); // Empty dependency array ensures this runs only once when the component mounts
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
@@ -45906,17 +45872,17 @@ const FilterView = ({ movies })=>{
                                 children: "Search Results"
                             }, void 0, false, {
                                 fileName: "src/components/filter-view/filter-view.jsx",
-                                lineNumber: 41,
+                                lineNumber: 38,
                                 columnNumber: 25
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/filter-view/filter-view.jsx",
-                            lineNumber: 40,
+                            lineNumber: 37,
                             columnNumber: 21
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/filter-view/filter-view.jsx",
-                        lineNumber: 39,
+                        lineNumber: 36,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
@@ -45924,7 +45890,7 @@ const FilterView = ({ movies })=>{
                             children: "No movies here..."
                         }, void 0, false, {
                             fileName: "src/components/filter-view/filter-view.jsx",
-                            lineNumber: 46,
+                            lineNumber: 43,
                             columnNumber: 25
                         }, undefined) : // movies.filter((movie) => user.FavoriteMovies.includes(movie.id)).map((movie) => (
                         filteredMovies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
@@ -45937,17 +45903,17 @@ const FilterView = ({ movies })=>{
                                     movie: movie
                                 }, void 0, false, {
                                     fileName: "src/components/filter-view/filter-view.jsx",
-                                    lineNumber: 54,
+                                    lineNumber: 51,
                                     columnNumber: 33
                                 }, undefined)
                             }, movie.id, false, {
                                 fileName: "src/components/filter-view/filter-view.jsx",
-                                lineNumber: 50,
+                                lineNumber: 47,
                                 columnNumber: 29
                             }, undefined))
                     }, void 0, false, {
                         fileName: "src/components/filter-view/filter-view.jsx",
-                        lineNumber: 44,
+                        lineNumber: 41,
                         columnNumber: 17
                     }, undefined)
                 ]
@@ -45959,22 +45925,26 @@ const FilterView = ({ movies })=>{
                     children: "Back"
                 }, void 0, false, {
                     fileName: "src/components/filter-view/filter-view.jsx",
-                    lineNumber: 65,
+                    lineNumber: 62,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/filter-view/filter-view.jsx",
-                lineNumber: 64,
+                lineNumber: 61,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/filter-view/filter-view.jsx",
-        lineNumber: 37,
+        lineNumber: 34,
         columnNumber: 9
     }, undefined);
 };
-_s(FilterView, "HtkrHBHRc0qB3gM78egAKi+L72U=");
+_s(FilterView, "jgIZ3Dl1pcDxWY4Jr9/RkYKCE1E=", false, function() {
+    return [
+        (0, _reactRouterDom.useSearchParams)
+    ];
+});
 _c = FilterView;
 var _c;
 $RefreshReg$(_c, "FilterView");

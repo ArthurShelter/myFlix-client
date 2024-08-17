@@ -6,19 +6,18 @@ import { MovieCard } from "../movie-card/movie-card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import { Link } from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
+
 
 export const FilterView = ({ movies }) => {
 
     const [filteredMovies, setFilteredMovies] = useState(movies);
 
-    // use url param instead of searchbar text?
+    const [searchParams] = useSearchParams();
 
     const searchbarText = searchParams.get('query');
 
     console.log(searchbarText);
-
-    // const { searchbarText } = useParams();
 
     useEffect(() => {
         setFilteredMovies(
@@ -28,8 +27,6 @@ export const FilterView = ({ movies }) => {
         );
 
         console.log('Navigated to FilterView');
-        // Fetch data, update state, etc.
-
     }, []); // Empty dependency array ensures this runs only once when the component mounts
 
 

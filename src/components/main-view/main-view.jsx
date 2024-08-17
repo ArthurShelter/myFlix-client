@@ -25,10 +25,6 @@ export const MainView = () => {
 
   const [movies, setMovies] = useState([]);
 
-  // const [searchbarText, setSearchbarText] = useState('');
-
-  // const [filteredMovies, setFilteredMovies] = useState(movies);
-
   useEffect(() => {
 
     if (!token) return;
@@ -52,14 +48,6 @@ export const MainView = () => {
       });
 
   }, [token]);
-
-  // const handleSearch = () => {
-  //   setFilteredMovies(
-  //     movies.filter((movie) =>
-  //       movie.Title.toLowerCase().includes(searchbarText.toLowerCase())
-  //     )
-  //   );
-  // };
 
   return (
     <BrowserRouter>
@@ -159,24 +147,8 @@ export const MainView = () => {
             }
           />
           <Route
-            path="/filter/:searchbarText"
+            path="/filter"
             element={
-              // <>
-              //   {!user ? (
-              //     <Navigate to="/login" replace />
-              //   ) : movies.length === 0 ? (
-              //     <Col>The list is empty!</Col>
-              //   ) : (
-              //     <>
-              //       {filteredMovies.map((movie) => (
-              //         <Col className="mb-4" key={movie.id} xs={12} sm={6} md={4} lg={3}>
-              //           <MovieCard
-              //             movie={movie} />
-              //         </Col>
-              //       ))}
-              //     </>
-              //   )}
-              // </>
               <>
                 {!user ? (
                   <Navigate to="/login" replace />
