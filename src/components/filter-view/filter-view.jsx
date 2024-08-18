@@ -27,7 +27,7 @@ export const FilterView = ({ movies }) => {
         );
 
         console.log('Navigated to FilterView');
-    }, []); // Empty dependency array ensures this runs only once when the component mounts
+    }, [movies, searchbarText]);
 
 
     return (

@@ -49,10 +49,12 @@ export const MainView = () => {
 
   }, [token]);
 
+  const movieList = movies;
+
   return (
     <BrowserRouter>
       <NavigationBar
-        movies={movies}
+        movies={movieList}
         user={user}
         onLoggedOut={() => {
           setUser(null);
@@ -99,11 +101,11 @@ export const MainView = () => {
               <>
                 {!user ? (
                   <Navigate to="/login" replace />
-                ) : movies.length === 0 ? (
+                ) : movieList.length === 0 ? (
                   <Col>The List is empty!</Col>
                 ) : (
                   <Col md={8}>
-                    <MovieView movies={movies} />
+                    <MovieView movies={movieList} setUser={setUser}/>
                   </Col>
                 )}
               </>
@@ -115,11 +117,11 @@ export const MainView = () => {
               <>
                 {!user ? (
                   <Navigate to="/login" replace />
-                ) : movies.length === 0 ? (
+                ) : movieList.length === 0 ? (
                   <Col>The list is empty!</Col>
                 ) : (
                   <>
-                    {movies.map((movie) => (
+                    {movieList.map((movie) => (
                       <Col className="mb-4" key={movie.id} xs={12} sm={6} md={4} lg={3}>
                         <MovieCard
                           movie={movie} />
@@ -136,11 +138,11 @@ export const MainView = () => {
               <>
                 {!user ? (
                   <Navigate to="/login" replace />
-                ) : movies.length === 0 ? (
+                ) : movieList.length === 0 ? (
                   <Col>The list is empty!</Col>
                 ) : (
                   <Col md={8}>
-                    <ProfileView onLoggedIn={(user, token)} user={user} movies={movies} />
+                    <ProfileView onLoggedIn={(user, token)} user={user} movies={movieList} />
                   </Col>
                 )}
               </>
@@ -152,11 +154,11 @@ export const MainView = () => {
               <>
                 {!user ? (
                   <Navigate to="/login" replace />
-                ) : movies.length === 0 ? (
+                ) : movieList.length === 0 ? (
                   <Col>The List is empty!</Col>
                 ) : (
                   <Col md={8}>
-                    <FilterView movies={movies} />
+                    <FilterView movies={movieList} />
                   </Col>
                 )}
               </>
