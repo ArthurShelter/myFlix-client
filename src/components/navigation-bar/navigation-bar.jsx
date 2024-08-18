@@ -51,11 +51,12 @@ export const NavigationBar = ({ user, onLoggedOut }) => {
                 <Nav.Link onClick={onLoggedOut}>
                   Logout
                 </Nav.Link>
-                <Form onSubmit={handleSearch} className="">
+                <Form onSubmit={handleSearch} className="search-bar" id="navbar-search-bar">
                   <Form.Control
                     type="search"
                     placeholder="Search Movie"
-                    className=""
+                    className="search-bar-control"
+                    id="navbar-search-bar-control"
                     value={searchbarText}
                     onChange={(e) => setSearchbarText(e.target.value)}
                   />

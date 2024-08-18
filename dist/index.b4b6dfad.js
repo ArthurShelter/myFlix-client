@@ -45364,12 +45364,14 @@ const NavigationBar = ({ user, onLoggedOut })=>{
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form), {
                                         onSubmit: handleSearch,
-                                        className: "",
+                                        className: "search-bar",
+                                        id: "navbar-search-bar",
                                         children: [
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
                                                 type: "search",
                                                 placeholder: "Search Movie",
-                                                className: "",
+                                                className: "search-bar-control",
+                                                id: "navbar-search-bar-control",
                                                 value: searchbarText,
                                                 onChange: (e)=>setSearchbarText(e.target.value)
                                             }, void 0, false, {
@@ -45383,7 +45385,7 @@ const NavigationBar = ({ user, onLoggedOut })=>{
                                                 children: "Search"
                                             }, void 0, false, {
                                                 fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                                lineNumber: 62,
+                                                lineNumber: 63,
                                                 columnNumber: 19
                                             }, undefined)
                                         ]
