@@ -49,8 +49,6 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMo
       });
   }, [user, token, movies]);
 
-
-
   const handleUpdate = () => {
     fetch(`https://your-heroku-app.herokuapp.com/users/${user.Username}`, {
       method: 'PUT',
@@ -177,7 +175,3 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMo
     </div>
   );
 };
-
-
-// I think not needed
-// export default ProfileView;
