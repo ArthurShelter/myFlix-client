@@ -10,7 +10,7 @@ import "./movie-view.scss";
 
 // This is the "single movie view" that appears when you click a movie
 
-export const MovieView = ({ movies }) => {
+export const MovieView = ({ movies, setUser }) => {
   const { movieId } = useParams();
 
   const movie = movies.find((m) => m.id === movieId);
@@ -52,6 +52,8 @@ export const MovieView = ({ movies }) => {
     localStorage.setItem('user', JSON.stringify(updatedUser));
     setFavoriteStatusTo(true);
 
+    setUser(updatedUser);
+
     //alert('Favorited successfully');
 
     // look into this
@@ -81,6 +83,8 @@ export const MovieView = ({ movies }) => {
     const updatedUser = await response.json();
     localStorage.setItem('user', JSON.stringify(updatedUser));
     setFavoriteStatusTo(false);
+
+    setUser(updatedUser);
 
     // look into this
     // updateAction(movieId);
