@@ -7,13 +7,9 @@ import { Row, Col } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import { MovieCard } from "../movie-card/movie-card";
 
-//taking movies and favoriteMovies out for now
-export const ProfileView = ({ user, token, onLoggedOut, movies, updateFavoriteMovies }) => {
+export const ProfileView = ({ user, token, onLoggedOut, movies }) => {
   const [userInfo, setUserInfo] = useState({});
-  //not used yet
-  // const [movies, setMovies] = useState([]);
 
-  const [FavoriteMovieIdsFromApi, setFavoriteMovieIdsFromApi] = useState([]);
   const [formData, setFormData] = useState({
     username: '',
     password: '',
