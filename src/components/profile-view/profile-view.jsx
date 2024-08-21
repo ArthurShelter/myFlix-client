@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from 'react';
 
 //for moviecard
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Form, Button, Card } from 'react-bootstrap';
 
 import { Link } from "react-router-dom";
 import { MovieCard } from "../movie-card/movie-card";
@@ -106,41 +106,82 @@ export const ProfileView = ({ user, token, onLoggedOut, movies }) => {
           <span>{formatDate(user.BirthDate)}</span>
         </div>
       </div>
-      <h2>Update Info</h2>
+
+      <Form className="profile-form h-100" onSubmit={handleUpdate}>
+        <h4>Update your profile:</h4>
+        <Form.Group controlId="formUsername">
+          <Form.Label>Username:</Form.Label>
+          <Form.Control
+            type="text"
+            name="Username"
+            value={formData.username}
+            onChange={e => setFormData({ ...formData, username: e.target.value })}
+            required
+            minLength="5"
+            placeholder="Username must be at least 5 characters."
+          />
+        </Form.Group>
+        <Form.Group controlId="formPassword">
+          <Form.Label>Password:</Form.Label>
+          <Form.Control
+            type="password"
+            name="Password"
+            onChange={e => setFormData({ ...formData, password: e.target.value })}
+            required
+            minLength="5"
+            placeholder="Password must be at least 5 characters."
+          />
+        </Form.Group>
+        <Form.Group controlId="formEmail">
+          <Form.Label>Email Address:</Form.Label>
+          <Form.Control
+            type="email"
+            name="Email"
+            value={formData.email}
+            onChange={e => setFormData({ ...formData, email: e.target.value })}
+            required
+            placeholder="Enter a valid email address."
+          />
+        </Form.Group>
+        <Form.Group controlId="formBirthdate">
+          <Form.Label>Birthdate:</Form.Label>
+          <Form.Control
+            type="date"
+            name="Birthdate"
+            value={formData.birthDate}
+            onChange={e => setFormData({ ...formData, birthDate: e.target.value })}
+            required
+            placeholder="Enter your birth date."
+          />
+        </Form.Group>
+
+        <div>
+          <Button
+            className="submit-button"
+            style={{ cursor: 'pointer', marginTop: '10px' }}
+            variant="primary"
+            type="submit"
+          >
+            Submit change
+          </Button>
+        </div>
+      </Form>
       <div>
-        <label>Username:</label>
-        <input
-          type="text"
-          value={formData.username}
-          onChange={e => setFormData({ ...formData, username: e.target.value })}
-        />
+        <h2>Deregister</h2>
       </div>
-      <div>
-        <label>Password:</label>
-        <input
-          type="password"
-          value={formData.password}
-          onChange={e => setFormData({ ...formData, password: e.target.value })}
-        />
-      </div>
-      <div>
-        <label>Email:</label>
-        <input
-          type="email"
-          value={formData.email}
-          onChange={e => setFormData({ ...formData, email: e.target.value })}
-        />
-      </div>
-      <div>
-        <label>Date of Birth:</label>
-        <input
-          type="date"
-          value={formData.birthDate}
-          onChange={e => setFormData({ ...formData, birthDate: e.target.value })}
-        />
-      </div>
-      <button onClick={handleUpdate}>Update Profile</button>
-      <button onClick={handleDeregister}>Deregister</button>
+      <p>
+        <div>
+          <Button
+            className="deregister-button"
+            variant="danger"
+            style={{ cursor: 'pointer' }}
+            onClick={handleDeregister}
+          >
+            Delete account
+          </Button>
+        </div>
+      </p>
+
       <>
         <Row>
           <Col xs={12}>
