@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from 'react';
 
 //for moviecard
-import { Row, Col, Form, Button, Card } from 'react-bootstrap';
+import { Row, Col, Form, Button, Card, Container } from 'react-bootstrap';
 
 import { Link } from "react-router-dom";
 import { MovieCard } from "../movie-card/movie-card";
@@ -89,23 +89,29 @@ export const ProfileView = ({ user, token, onLoggedOut, movies }) => {
   console.log(user.FavoriteMovies);
 
   return (
-    <div>
-      <h1>Profile</h1>
-      <h2>User Info</h2>
-      <div>
-        <div>
-          <span>Username: </span>
-          <span>{user.Username}</span>
-        </div>
-        <div>
-          <span>Email: </span>
-          <span>{user.Email}</span>
-        </div>
-        <div>
-          <span>Birthday: </span>
-          <span>{formatDate(user.BirthDate)}</span>
-        </div>
-      </div>
+    <Container style={{ height: '100vh' }}>
+      <Card>
+        <Card.Body>
+          <div>
+            <h1>Profile</h1>
+            <h2>User Info</h2>
+            <div>
+              <div>
+                <span>Username: </span>
+                <span>{user.Username}</span>
+              </div>
+              <div>
+                <span>Email: </span>
+                <span>{user.Email}</span>
+              </div>
+              <div>
+                <span>Birthday: </span>
+                <span>{formatDate(user.BirthDate)}</span>
+              </div>
+            </div>
+          </div>
+        </Card.Body>
+      </Card>
 
       <Form className="profile-form h-100" onSubmit={handleUpdate}>
         <h4>Update your profile:</h4>
@@ -209,6 +215,6 @@ export const ProfileView = ({ user, token, onLoggedOut, movies }) => {
       <Link to={`/`}>
         <button className="back-button">Back</button>
       </Link>
-    </div>
+    </Container>
   );
 };
