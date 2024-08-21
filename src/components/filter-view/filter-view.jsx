@@ -1,5 +1,4 @@
 import React from "react";
-// not using useEffect at the moment
 import { useEffect, useState } from "react";
 import { MovieCard } from "../movie-card/movie-card";
 
@@ -42,7 +41,6 @@ export const FilterView = ({ movies }) => {
                     {filteredMovies.length === 0 ? (
                         <p>No movies here...</p>
                     ) : (
-                        // movies.filter((movie) => user.FavoriteMovies.includes(movie.id)).map((movie) => (
                         filteredMovies.map((movie) => (
                             <Col className="mb-4"
                                 xs={12} sm={12} md={6} lg={6}
@@ -50,8 +48,6 @@ export const FilterView = ({ movies }) => {
                             >
                                 <MovieCard
                                     movie={movie}
-                                // updateAction={() => updateFavoriteMovies(movie.id)}
-
                                 />
                             </Col>
                         ))

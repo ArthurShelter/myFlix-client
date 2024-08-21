@@ -29,7 +29,7 @@ export const MainView = () => {
 
     if (!token) return;
 
-    fetch("https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/movies", { headers: { Authorization: `Bearer ${token}` }, })
+    fetch("https://myflixproject2024.netlify.app/movies", { headers: { Authorization: `Bearer ${token}` }, })
       .then((response) => response.json())
       .then((data) => {
         console.log(data);

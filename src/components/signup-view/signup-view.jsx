@@ -22,7 +22,7 @@ export const SignupView = () => {
       BirthDate: birthDate,
     };
 
-    fetch("https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/users", {
+    fetch("https://myflixproject2024.netlify.app/users", {
       method: "POST",
       body: JSON.stringify(data),
       headers: { "Content-Type": "application/json" },

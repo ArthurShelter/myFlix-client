@@ -7,7 +7,6 @@ import "./movie-card.scss";
 export const MovieCard = ({ movie, updateAction }) => {
   return (
     <Card className="h-100">
-      {/* no image for now */}
       <Card.Body>
         <Card.Img variant="top" className="card-poster" src={movie.ImagePath}/>
         <Card.Title>{movie.Title}</Card.Title>
@@ -20,7 +19,6 @@ export const MovieCard = ({ movie, updateAction }) => {
   );
 };
 
-// commenting out for now  
   MovieCard.propTypes = {
     movie: PropTypes.shape({
       Title: PropTypes.string.isRequired,

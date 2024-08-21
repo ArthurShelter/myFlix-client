@@ -1,12 +1,9 @@
 import React from "react";
-// not using useEffect... yet
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import { Tooltip } from 'react-tooltip'
 import "./movie-view.scss";
-
-//note to self: fix class names
 
 // This is the "single movie view" that appears when you click a movie
 
@@ -32,7 +29,7 @@ export const MovieView = ({ movies, setUser }) => {
     const user = JSON.parse(localStorage.getItem('user'));
     const token = localStorage.getItem('token');
 
-    const response = await fetch(`https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/users/${user.Username}/movies/${movieId}`, {
+    const response = await fetch(`https://myflixproject2024.netlify.app/users/${user.Username}/movies/${movieId}`, {
       method: "PUT",
       // body: JSON.stringify(data),
       headers: {
@@ -53,20 +50,14 @@ export const MovieView = ({ movies, setUser }) => {
     setFavoriteStatusTo(true);
 
     setUser(updatedUser);
-
-    //alert('Favorited successfully');
-
-    // look into this
-    // updateAction(movieId);
   }
 
   const handleRemoveFromFavorites = async (movieId) => {
     const user = JSON.parse(localStorage.getItem('user'));
     const token = localStorage.getItem('token');
 
-    const response = await fetch(`https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/users/${user.Username}/movies/${movieId}`, {
+    const response = await fetch(`https://myflixproject2024.netlify.app/users/${user.Username}/movies/${movieId}`, {
       method: "DELETE",
-      // body: JSON.stringify(data),
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
@@ -85,10 +76,6 @@ export const MovieView = ({ movies, setUser }) => {
     setFavoriteStatusTo(false);
 
     setUser(updatedUser);
-
-    // look into this
-    // updateAction(movieId);
-
   }
 
   return (
