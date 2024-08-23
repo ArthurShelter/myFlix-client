@@ -32,7 +32,7 @@ export const SignupView = () => {
         navigate("/login");
         // window.location.reload;
       } else {
-        alert("signup failed");
+        alert("signup failed, sorry");
       }
     });
   };
