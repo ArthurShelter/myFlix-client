@@ -23,7 +23,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies }) => {
   };
 
   useEffect(() => {
-    fetch(`https://myflixproject2024.netlify.app/users/${user.Username}`, {
+    fetch(`https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/users/${user.Username}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies }) => {
   }, [user, token, movies]);
 
   const handleUpdate = () => {
-    fetch(`https://myflixproject2024.netlify.app/users/${user.Username}`, {
+    fetch(`https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/users/${user.Username}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies }) => {
   };
 
   const handleDeregister = () => {
-    fetch(`https://myflixproject2024.netlify.app/users/${user.Username}`, {
+    fetch(`https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/users/${user.Username}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

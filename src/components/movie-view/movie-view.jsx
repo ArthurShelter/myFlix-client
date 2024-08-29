@@ -29,7 +29,7 @@ export const MovieView = ({ movies, setUser }) => {
     const user = JSON.parse(localStorage.getItem('user'));
     const token = localStorage.getItem('token');
 
-    const response = await fetch(`https://myflixproject2024.netlify.app/users/${user.Username}/movies/${movieId}`, {
+    const response = await fetch(`https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/users/${user.Username}/movies/${movieId}`, {
       method: "PUT",
       // body: JSON.stringify(data),
       headers: {
@@ -56,7 +56,7 @@ export const MovieView = ({ movies, setUser }) => {
     const user = JSON.parse(localStorage.getItem('user'));
     const token = localStorage.getItem('token');
 
-    const response = await fetch(`https://myflixproject2024.netlify.app/users/${user.Username}/movies/${movieId}`, {
+    const response = await fetch(`https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/users/${user.Username}/movies/${movieId}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

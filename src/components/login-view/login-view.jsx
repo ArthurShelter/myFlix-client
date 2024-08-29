@@ -14,7 +14,7 @@ export const LoginView = ({ onLoggedIn }) => {
       Password: password,
     };
 
-    fetch("https://myflixproject2024.netlify.app/login", {
+    fetch("https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
