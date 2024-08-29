@@ -6,6 +6,7 @@ import { Row, Col, Form, Button, Card, Container } from 'react-bootstrap';
 
 import { Link } from "react-router-dom";
 import { MovieCard } from "../movie-card/movie-card";
+import "./profile-view.scss";
 
 export const ProfileView = ({ user, token, onLoggedOut, movies }) => {
   const [userInfo, setUserInfo] = useState({});
@@ -212,7 +213,6 @@ export const ProfileView = ({ user, token, onLoggedOut, movies }) => {
                   >
                     <MovieCard
                       movie={movie}
-                    // updateAction={() => updateFavoriteMovies(movie.id)}
                     />
                   </Col>
                 ))
