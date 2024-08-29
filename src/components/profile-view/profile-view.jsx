@@ -80,7 +80,9 @@ export const ProfileView = ({ user, token, onLoggedOut, movies }) => {
       }
     })
       .then(() => {
-        onLoggedOut();
+        // onLoggedOut();
+        localStorage.clear();
+        window.location.reload();
         alert('Account deleted successfully');
       })
       .catch(error => {
