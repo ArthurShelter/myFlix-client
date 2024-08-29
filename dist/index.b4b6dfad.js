@@ -45117,7 +45117,7 @@ const SignupView = ()=>{
                 alert("Signup successful!");
                 navigate("/login");
             // window.location.reload;
-            } else alert("signup failed");
+            } else alert("signup failed, sorry");
         });
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default), {
