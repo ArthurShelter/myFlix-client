@@ -98,8 +98,8 @@ export const ProfileView = ({ user, token, onLoggedOut, movies }) => {
       })
       .then(() => {
         localStorage.clear();
-        window.location.reload();
         alert('Account deleted successfully');
+        window.location.reload();
       })
       .catch(error => {
         console.error('Error deleting user account', error);
