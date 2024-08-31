@@ -70,7 +70,12 @@ export const ProfileView = ({ user, token, onLoggedOut, movies }) => {
       .then(response => response.json())
       .then(data => {
         setUserInfo(data);
+
+        localStorage.setItem('user', JSON.stringify(data));
+
         alert('Profile updated successfully');
+
+        window.location.reload();
       })
       .catch(error => {
         console.error('Error updating user data', error);
@@ -92,7 +97,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies }) => {
         if (!response.ok) {
           throw new Error('Failed to delete account');
         }
-        
+
         return response.text().then(text => {
           try {
             return JSON.parse(text); // Try to parse as JSON
