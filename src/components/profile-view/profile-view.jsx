@@ -25,6 +25,9 @@ export const ProfileView = ({ user, token, onLoggedOut, movies }) => {
   };
 
   useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    const token = localStorage.getItem('token');
+
     fetch(`https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/users/${user.Username}`, {
       method: 'GET',
       headers: {
@@ -48,11 +51,14 @@ export const ProfileView = ({ user, token, onLoggedOut, movies }) => {
   }, [user, token, movies]);
 
   const handleUpdate = () => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    const token = localStorage.getItem('token');
+
     fetch(`https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/users/${user.Username}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`
+        Authorization: `Bearer ${token}`
       },
       body: JSON.stringify({
         Username: formData.username,
@@ -72,6 +78,9 @@ export const ProfileView = ({ user, token, onLoggedOut, movies }) => {
   };
 
   const handleDeregister = () => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    const token = localStorage.getItem('token');
+
     fetch(`https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/users/${user.Username}`, {
       method: 'DELETE',
       headers: {
@@ -79,15 +88,6 @@ export const ProfileView = ({ user, token, onLoggedOut, movies }) => {
         'Authorization': `Bearer ${token}`
       }
     })
-      // .then(() => {
-      //   // onLoggedOut();
-      //   localStorage.clear();
-      //   window.location.reload();
-      //   alert('Account deleted successfully');
-      // })
-      // .catch(error => {
-      //   console.error('Error deleting user account', error);
-      // });
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to delete account');

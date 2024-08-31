@@ -22,10 +22,6 @@ export const MovieView = ({ movies, setUser }) => {
   }, [movieId]);
 
   const handleAddToFavorites = async (movieId) => {
-    // event.preventDefault();
-
-    //add in "try {}"?
-
     const user = JSON.parse(localStorage.getItem('user'));
     const token = localStorage.getItem('token');
 
