@@ -79,14 +79,29 @@ export const ProfileView = ({ user, token, onLoggedOut, movies }) => {
         'Authorization': `Bearer ${token}`
       }
     })
+      // .then(() => {
+      //   // onLoggedOut();
+      //   localStorage.clear();
+      //   window.location.reload();
+      //   alert('Account deleted successfully');
+      // })
+      // .catch(error => {
+      //   console.error('Error deleting user account', error);
+      // });
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to delete account');
+        }
+        return response.json();
+      })
       .then(() => {
-        // onLoggedOut();
         localStorage.clear();
         window.location.reload();
         alert('Account deleted successfully');
       })
       .catch(error => {
         console.error('Error deleting user account', error);
+        alert('There was an error deleting your account. Please try again.');
       });
   };
 
@@ -184,16 +199,16 @@ export const ProfileView = ({ user, token, onLoggedOut, movies }) => {
           <div>
             <h2>Deregister</h2>
           </div>
-            <div>
-              <Button
-                className="deregister-button"
-                variant="danger"
-                style={{ cursor: 'pointer' }}
-                onClick={handleDeregister}
-              >
-                Delete account
-              </Button>
-            </div>
+          <div>
+            <Button
+              className="deregister-button"
+              variant="danger"
+              style={{ cursor: 'pointer' }}
+              onClick={handleDeregister}
+            >
+              Delete account
+            </Button>
+          </div>
         </Card.Body>
       </Card>
 
