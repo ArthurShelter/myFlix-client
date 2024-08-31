@@ -92,7 +92,9 @@ export const ProfileView = ({ user, token, onLoggedOut, movies }) => {
         if (!response.ok) {
           throw new Error('Failed to delete account');
         }
-        return response.json();
+
+        return response.text().then(text => text ? JSON.parse(text) : {});
+
       })
       .then(() => {
         localStorage.clear();
