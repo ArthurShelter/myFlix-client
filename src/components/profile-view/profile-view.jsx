@@ -129,6 +129,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
   };
 
   // console.log(user.FavoriteMovies); debugging code, not needed at the moment
+  console.log(userInfo); 
 
   return (
     <Container>
