@@ -20,8 +20,10 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
   });
 
   const formatDate = (dateInput) => {
+    if (!dateInput) return "N/A";
     const date = new Date(dateInput);
-    return date.toISOString().split('T')[0];
+    return isNaN(date.getTime()) ? "N/A" : date.toISOString().split('T')[0];
+    // return date.toISOString().split('T')[0];
   };
 
   useEffect(() => {
