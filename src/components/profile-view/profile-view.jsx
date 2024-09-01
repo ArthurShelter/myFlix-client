@@ -22,6 +22,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
   const formatDate = (dateInput) => {
     if (!dateInput) return "N/A";
     const date = new Date(dateInput);
+    if (isNaN(date)) return "N/A"; // If date is invalid, return "N/A"
     return isNaN(date.getTime()) ? "N/A" : date.toISOString().split('T')[0];
     // return date.toISOString().split('T')[0];
   };
@@ -39,6 +40,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
     })
       .then(response => response.json())
       .then(data => {
+        console.log("Fetched user data:", data); // Debugging log
         setUserInfo(data);
         setFormData({
           username: user.Username,
