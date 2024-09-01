@@ -146,7 +146,11 @@ export const MainView = () => {
                   <Col>The list is empty!</Col>
                 ) : (
                   <Col md={8}>
-                    <ProfileView onLoggedIn={(user, token)} user={user} movies={movieList} onUserUpdate={handleUserUpdate} />
+                    <ProfileView 
+                    onLoggedIn={(user, token)} 
+                    user={user} 
+                    movies={movieList} 
+                    onUserUpdate={handleUserUpdate} />
                   </Col>
                 )}
               </>
