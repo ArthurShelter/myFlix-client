@@ -23,7 +23,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
     if (!dateInput) return "N/A";
     const date = new Date(dateInput);
     if (isNaN(date)) return "N/A"; // If date is invalid, return "N/A"
-    return isNaN(date.getTime()) ? "N/A" : date.toISOString().split('T')[0];
+    return date.toISOString().split("T")[0];
     // return date.toISOString().split('T')[0];
   };
 
@@ -127,7 +127,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
       });
   };
 
-  console.log(user.FavoriteMovies);
+  // console.log(user.FavoriteMovies); debugging code, not needed at the moment
 
   return (
     <Container>
