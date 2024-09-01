@@ -51,6 +51,10 @@ export const MainView = () => {
 
   const movieList = movies;
 
+  const handleUserUpdate = (updatedUser) => {
+    setUser(updatedUser); // This updates the user state in the parent component
+  };
+
   return (
     <BrowserRouter>
       <NavigationBar
@@ -142,7 +146,7 @@ export const MainView = () => {
                   <Col>The list is empty!</Col>
                 ) : (
                   <Col md={8}>
-                    <ProfileView onLoggedIn={(user, token)} user={user} movies={movieList} />
+                    <ProfileView onLoggedIn={(user, token)} user={user} movies={movieList} onUserUpdate={handleUserUpdate} />
                   </Col>
                 )}
               </>

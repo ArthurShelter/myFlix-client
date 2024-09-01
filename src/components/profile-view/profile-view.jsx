@@ -39,10 +39,10 @@ export const ProfileView = ({ user, token, onLoggedOut, movies }) => {
       .then(data => {
         setUserInfo(data);
         setFormData({
-          username: data.Username,
+          username: user.Username,
           password: '',
-          email: data.Email,
-          birthDate: data.BirthDate
+          email: user.Email,
+          birthDate: user.BirthDate
         });
       })
       .catch(error => {
@@ -72,6 +72,9 @@ export const ProfileView = ({ user, token, onLoggedOut, movies }) => {
         setUserInfo(data);
 
         localStorage.setItem('user', JSON.stringify(data));
+
+        // Call the parent update function to update the user state
+        onUserUpdate(data);
 
         alert('Profile updated successfully');
 
