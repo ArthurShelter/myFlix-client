@@ -27,8 +27,10 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
   };
 
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem('user'));
-    const token = localStorage.getItem('token');
+    // const user = JSON.parse(localStorage.getItem('user'));
+    // const token = localStorage.getItem('token');
+    // not appropriate
+
 
     fetch(`https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/users/${user.Username}`, {
       method: 'GET',
@@ -42,10 +44,10 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
         console.log("Fetched user data:", data); // Debugging log
         setUserInfo(data);
         setFormData({
-          username: user.Username,
+          username: data.Username,
           password: '',
-          email: user.Email,
-          birthDate: user.BirthDate
+          email: data.Email,
+          birthDate: data.BirthDate
         });
       })
       .catch(error => {
@@ -53,7 +55,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
       });
   }, [user, token, movies]);
 
-  const handleUpdate = () => {
+  const handleUpdate = (e) => {
     e.preventDefault();
 
     const user = JSON.parse(localStorage.getItem('user'));
@@ -194,7 +196,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
               <Form.Control
                 type="date"
                 name="Birthdate"
-                value={formData.birthDate}
+                value={formatDate(formData.birthDate)}
                 onChange={e => setFormData({ ...formData, birthDate: e.target.value })}
                 required
                 placeholder="Enter your birth date."
