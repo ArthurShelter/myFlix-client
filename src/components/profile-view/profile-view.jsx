@@ -24,7 +24,6 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
     const date = new Date(dateInput);
     if (isNaN(date)) return "N/A"; // If date is invalid, return "N/A"
     return date.toISOString().split("T")[0];
-    // return date.toISOString().split('T')[0];
   };
 
   useEffect(() => {
