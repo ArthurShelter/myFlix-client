@@ -17,10 +17,10 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
   const [userInfo, setUserInfo] = useState(user ? user : null);
 
   const [formData, setFormData] = useState({
-    username: '',
-    password: '',
-    email: '',
-    birthDate: ''
+    Username: userInfo ? userInfo.Username : '',
+    Password: '',
+    Email: userInfo ? userInfo.Email : '',
+    BirthDate: userInfo ? userInfo.BirthDate : '',
   });
 
   const formatDate = (dateInput) => {
@@ -50,16 +50,16 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
         // setUserInfo(data);
 
         setUserInfo({
-          username: data.Username, // Ensuring consistent keys
-          email: data.Email,
-          birthDate: data.BirthDate
+          Username: data.Username, // Ensuring consistent keys
+          Email: data.Email,
+          BirthDate: data.BirthDate
         });
 
         setFormData({
-          username: data.Username,
-          password: '',
-          email: data.Email,
-          birthDate: data.BirthDate
+          Username: data.Username,
+          Password: '',
+          Email: data.Email,
+          BirthDate: data.BirthDate
         });
       })
       .catch(error => {
@@ -81,10 +81,10 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
         Authorization: `Bearer ${token}`
       },
       body: JSON.stringify({
-        Username: formData.username,
-        Password: formData.password,
-        Email: formData.email,
-        BirthDate: formData.birthDate
+        Username: formData.Username,
+        Password: formData.Password,
+        Email: formData.Email,
+        BirthDate: formData.BirthDate
       })
     })
       .then(response => response.json())
@@ -92,9 +92,9 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
         // setUserInfo(data);
 
         setUserInfo({
-          username: data.Username,
-          email: data.Email,
-          birthDate: data.BirthDate
+          Username: data.Username,
+          Email: data.Email,
+          BirthDate: data.BirthDate
         });
 
         localStorage.setItem('user', JSON.stringify(data));
@@ -185,7 +185,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
               <Form.Control
                 type="text"
                 name="Username"
-                value={formData.username}
+                value={formData.Username}
                 onChange={e => setFormData({ ...formData, username: e.target.value })}
                 required
                 minLength="5"
@@ -197,7 +197,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
               <Form.Control
                 type="password"
                 name="Password"
-                onChange={e => setFormData({ ...formData, password: e.target.value })}
+                onChange={e => setFormData({ ...formData, Password: e.target.value })}
                 required
                 minLength="5"
                 placeholder="Password must be at least 5 characters."
@@ -208,8 +208,8 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
               <Form.Control
                 type="email"
                 name="Email"
-                value={formData.email}
-                onChange={e => setFormData({ ...formData, email: e.target.value })}
+                value={formData.Email}
+                onChange={e => setFormData({ ...formData, Email: e.target.value })}
                 required
                 placeholder="Enter a valid email address."
               />
@@ -219,8 +219,8 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
               <Form.Control
                 type="date"
                 name="Birthdate"
-                value={formatDate(formData.birthDate)}
-                onChange={e => setFormData({ ...formData, birthDate: e.target.value })}
+                value={formatDate(formData.BirthDate)}
+                onChange={e => setFormData({ ...formData, BirthDate: e.target.value })}
                 required
                 placeholder="Enter your birth date."
               />
