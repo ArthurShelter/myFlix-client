@@ -142,15 +142,15 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
           <div>
             <div>
               <span>Username: </span>
-              <span>{userInfo.username}</span>
+              <span>{userInfo.Username}</span>
             </div>
             <div>
               <span>Email: </span>
-              <span>{userInfo.email}</span>
+              <span>{userInfo.Email}</span>
             </div>
             <div>
               <span>Birthday: </span>
-              <span>{formatDate(userInfo.birthDate)}</span>
+              <span>{formatDate(userInfo.BirthDate)}</span>
             </div>
           </div>
         </Card.Body>
