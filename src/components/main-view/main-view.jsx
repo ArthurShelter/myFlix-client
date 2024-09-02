@@ -32,7 +32,7 @@ export const MainView = () => {
     fetch("https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/movies", { headers: { Authorization: `Bearer ${token}` }, })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         const moviesFromApi = data.map((movie) => {
           return {
             id: movie._id,
@@ -43,7 +43,7 @@ export const MainView = () => {
             ImagePath: movie.ImagePath
           };
         });
-        console.log(moviesFromApi);
+        // console.log(moviesFromApi);
         setMovies(moviesFromApi);
       });
 

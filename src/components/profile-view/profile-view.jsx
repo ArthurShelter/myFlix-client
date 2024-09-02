@@ -56,6 +56,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
   }, [user, token, movies]);
 
   const handleUpdate = (e) => {
+    console.log(userInfo); 
     e.preventDefault();
 
     const user = JSON.parse(localStorage.getItem('user'));
@@ -86,6 +87,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
         alert('Profile updated successfully');
 
         window.location.reload();
+        console.log(userInfo); 
       })
       .catch(error => {
         console.error('Error updating user data', error);
