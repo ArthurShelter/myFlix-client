@@ -12,9 +12,9 @@ import "../movie-card/movie-card.scss";
 export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  }) => {
   // const [userInfo, setUserInfo] = useState({});
 
-  const storedUser = JSON.parse(localStorage.getItem("user"));
+  // const storedUser = JSON.parse(localStorage.getItem("user"));
 
-  const [userInfo, setUserInfo] = useState(storedUser ? storedUser : null);
+  const [userInfo, setUserInfo] = useState(user ? user : null);
 
   const [formData, setFormData] = useState({
     username: '',
