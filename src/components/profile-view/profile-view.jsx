@@ -87,7 +87,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
         alert('Profile updated successfully');
 
         window.location.reload();
-        console.log(userInfo); 
+        console.log("Here is the updated user info:", userInfo); 
       })
       .catch(error => {
         console.error('Error updating user data', error);
