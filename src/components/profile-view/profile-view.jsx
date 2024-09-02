@@ -161,12 +161,12 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
             <div>
               <span>Username: </span>
               {/* <span>{userInfo.Username}</span> */}
-              <span>{userInfo.username}</span>
+              <span>{userInfo.Username}</span>
             </div>
             <div>
               <span>Email: </span>
               {/* <span>{userInfo.Email}</span> */}
-              <span>{userInfo.email}</span>
+              <span>{userInfo.Email}</span>
             </div>
             <div>
               <span>Birthday: </span>
