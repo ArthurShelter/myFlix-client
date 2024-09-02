@@ -76,7 +76,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
       })
     })
       .then(response => response.json())
-      .then(data => {
+      .then((data) => {
         setUserInfo(data);
 
         localStorage.setItem('user', JSON.stringify(data));
