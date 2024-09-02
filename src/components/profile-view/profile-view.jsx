@@ -42,7 +42,15 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
       .then(response => response.json())
       .then(data => {
         console.log("Fetched user data:", data); // Debugging log
-        setUserInfo(data);
+
+        // setUserInfo(data);
+
+        setUserInfo({
+          username: data.Username, // Ensuring consistent keys
+          email: data.Email,
+          birthDate: data.BirthDate
+        });
+
         setFormData({
           username: data.Username,
           password: '',
@@ -77,7 +85,13 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
     })
       .then(response => response.json())
       .then((data) => {
-        setUserInfo(data);
+        // setUserInfo(data);
+
+        setUserInfo({
+          username: data.Username,
+          email: data.Email,
+          birthDate: data.BirthDate
+        });
 
         localStorage.setItem('user', JSON.stringify(data));
 
