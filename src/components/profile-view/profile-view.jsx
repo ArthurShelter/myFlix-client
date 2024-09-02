@@ -89,8 +89,6 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
     })
       .then(response => response.json())
       .then((data) => {
-        // setUserInfo(data);
-
         setUserInfo({
           Username: data.Username,
           Email: data.Email,
@@ -160,12 +158,10 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
           <div>
             <div>
               <span>Username: </span>
-              {/* <span>{userInfo.Username}</span> */}
               <span>{userInfo.Username}</span>
             </div>
             <div>
               <span>Email: </span>
-              {/* <span>{userInfo.Email}</span> */}
               <span>{userInfo.Email}</span>
             </div>
             <div>
