@@ -182,7 +182,7 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
                 type="text"
                 name="Username"
                 value={formData.Username}
-                onChange={e => setFormData({ ...formData, username: e.target.value })}
+                onChange={e => setFormData({ ...formData, Username: e.target.value })}
                 required
                 minLength="5"
                 placeholder="Username must be at least 5 characters."
