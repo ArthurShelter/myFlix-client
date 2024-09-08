@@ -31,11 +31,6 @@ export const ProfileView = ({ user, token, onLoggedOut, movies, onUserUpdate  })
   };
 
   useEffect(() => {
-    // const user = JSON.parse(localStorage.getItem('user'));
-    // const token = localStorage.getItem('token');
-    // not appropriate
-
-
     fetch(`https://movie-db-fullstack-2-27a48700ab77.herokuapp.com/users/${user.Username}`, {
       method: 'GET',
       headers: {

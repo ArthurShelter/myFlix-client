@@ -3,7 +3,7 @@ import { MainView } from "./components/main-view/main-view";
 import Container from "react-bootstrap/Container";
 
 
-// Import statement to indicate that you need to bundle `./index.scss`
+// Import statement
 
 import "./index.scss";
 
@@ -12,7 +12,8 @@ const MyFlixApplication = () => {
     return (
         <Container>
             <MainView />
-        </Container>);
+        </Container>
+    );
 };
 
 // Finds the root of your app
