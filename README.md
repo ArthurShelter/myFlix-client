@@ -4,6 +4,8 @@
 
 This is an example website built using React JS. It contains ten movies I like, and it uses an API to retrieve them from a MongoDB.
 
+You can find the website here: https://myflixproject2024.netlify.app/
+
 ## Features
 Basic account functionality (sign up, log in, edit profile information, log out)
 Add movies to their favorites.
